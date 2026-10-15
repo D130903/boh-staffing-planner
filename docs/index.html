@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Back-of-House Staffing Planner - Crown Melbourne outlets (sample data)</title>
+<script src="https://cdn.plot.ly/plotly-2.35.2.min.js" charset="utf-8"></script>
+<style>
+  /* Always dark: black page, gold accent. Short = red, over = blue (diverging pair, grey midpoint).
+     Series colours validated for colour-blind separation and contrast on the #141414 card surface. */
+  .viz-root {
+    color-scheme: dark;
+    --page: #000000; --surface-1: #141414;
+    --text-primary: #f0efec; --text-secondary: #c3c2b7; --muted: #8d8b85;
+    --grid: #262624; --axis: #3a3a37; --border: rgba(255,255,255,0.09);
+    --short: #e66767; --over: #3987e5; --need: #c98500; --mid: #383835;
+    --accent: #fab219;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; }
+  .viz-root { background: var(--page); color: var(--text-primary); min-height: 100vh;
+    font: 15px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 32px 24px 64px; }
+  header h1 { font-size: 30px; margin: 0 0 6px; letter-spacing: -0.01em; }
+  header h1 span { color: var(--accent); }
+  header { border-bottom: 1px solid var(--border); padding-bottom: 18px; }
+  header p { margin: 0; color: var(--text-secondary); }
+  .banner { margin-top: 14px; padding: 10px 14px; border: 1px dashed var(--accent); border-radius: 10px;
+    color: var(--text-secondary); font-size: 13px; }
+  .banner b { color: var(--accent); }
+  .filters { display: flex; gap: 18px; align-items: center; margin: 24px 0 16px; flex-wrap: wrap; }
+  .filters label { color: var(--text-secondary); font-size: 13px; display: flex; gap: 8px; align-items: center; }
+  select { font: inherit; color: var(--text-primary); background: var(--surface-1);
+    border: 1px solid var(--border); border-radius: 8px; padding: 6px 10px; }
+  .seg { display: inline-flex; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+  .seg button { font: inherit; font-size: 13px; color: var(--text-secondary); background: var(--surface-1);
+    border: 0; padding: 6px 12px; cursor: pointer; }
+  .seg button[aria-pressed="true"] { background: var(--accent); color: #000; font-weight: 600; }
+  .takeaways { margin-top: 20px; background: var(--surface-1); border: 1px solid var(--border);
+    border-left: 3px solid var(--accent); border-radius: 12px; padding: 16px 20px 6px; }
+  .takeaways h3 { margin: 0 0 6px; font-size: 16px; color: var(--accent); }
+  .takeaways ol { margin: 0; padding-left: 20px; }
+  .takeaways li { margin-bottom: 8px; color: var(--text-secondary); }
+  .takeaways b { color: var(--text-primary); }
+  .how { margin: 0 0 8px; font-size: 12.5px; color: var(--accent); }
+  .tiles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+  .tile, .card { background: var(--surface-1); border: 1px solid var(--border); border-radius: 12px; }
+  .tile { padding: 16px 18px; border-top: 2px solid var(--accent); }
+  .tile .label { color: var(--text-secondary); font-size: 13px; }
+  .tile .value { font-size: 30px; font-weight: 600; margin-top: 2px; }
+  .tile .sub { color: var(--muted); font-size: 12px; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 12px; }
+  .card { padding: 18px 18px 8px; margin-top: 12px; }
+  .grid2 .card { margin-top: 0; }
+  .card h3 { margin: 0; font-size: 16px; }
+  .card .note { margin: 2px 0 6px; color: var(--text-secondary); font-size: 13px; }
+  .key { display: flex; gap: 16px; font-size: 12.5px; color: var(--text-secondary); margin: 2px 0 6px; flex-wrap: wrap; }
+  .key i { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 6px; vertical-align: -1px; }
+  h2 { font-size: 20px; margin: 40px 0 4px; padding-left: 10px; border-left: 3px solid var(--accent); }
+  h2 + p { margin: 0 0 4px; color: var(--text-secondary); }
+  details { margin: 4px 0 10px; font-size: 13px; color: var(--text-secondary); }
+  summary { cursor: pointer; }
+  table { border-collapse: collapse; width: 100%; font-size: 13px; margin-top: 6px; }
+  th, td { text-align: left; padding: 7px 8px; border-bottom: 1px solid var(--grid); }
+  th { color: var(--text-secondary); font-weight: 600; }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+  td .tag { font-size: 12px; padding: 1px 8px; border-radius: 99px; border: 1px solid var(--short); color: var(--text-primary); }
+  .steps { padding-left: 20px; color: var(--text-secondary); }
+  .steps b { color: var(--text-primary); }
+  footer { margin-top: 40px; color: var(--muted); font-size: 12px; }
+  @media (max-width: 860px) { .tiles { grid-template-columns: 1fr 1fr; } .grid2 { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div class="viz-root">
+<div class="wrap">
+<header>
+  <h1>Back-of-House <span>Staffing Planner</span></h1>
+  <p>Which Crown Melbourne outlets get busy, at what time, and where the kitchen and stewarding roster falls short,
+     so shifts can be rostered to match demand instead of the same pattern every day.</p>
+  <div class="banner"><b>Sample data.</b> Outlet names are real Crown venues, but covers, staffing standards and the
+     roster are modelled for demonstration. Swap in real POS covers and roster exports to use it for real
+     (see "Use it with real data" at the bottom).</div>
+</header>
+
+<div class="filters" role="group" aria-label="Filters">
+  <label>Day <select id="day"></select></label>
+  <label>Demand
+    <span class="seg" id="evt">
+      <button type="button" data-v="0" aria-pressed="true">Normal day</button>
+      <button type="button" data-v="1" aria-pressed="false">Big event day</button>
+    </span>
+  </label>
+</div>
+
+<div class="tiles" id="tiles"></div>
+
+<div class="takeaways">
+  <h3>What this shows, in plain English</h3>
+  <ol id="takeaways"></ol>
+</div>
+
+<h2>1. When is each outlet busy?</h2>
+<p>How busy each outlet is, hour by hour, compared with its own busiest hour of the week. Brighter = busier. This is what the roster should follow.</p>
+<div class="card">
+  <p class="how">How to read: each row is an outlet, each column an hour. Hover a square for the exact numbers.</p>
+  <div id="heatCovers" style="height:420px"></div>
+</div>
+
+<h2>2. Where are we short-staffed?</h2>
+<p>Kitchen and stewarding staff needed (from covers) minus staff rostered, for every outlet and hour.</p>
+<div class="card">
+  <p class="how">How to read: red squares need more staff (the number is how many), blue squares have spare staff, grey is right.</p>
+  <div class="key"><span><i style="background:var(--short)"></i>Short-staffed</span>
+    <span><i style="background:var(--mid)"></i>About right</span>
+    <span><i style="background:var(--over)"></i>Spare staff</span></div>
+  <div id="heatGap" style="height:420px"></div>
+</div>
+
+<div class="grid2">
+  <div class="card">
+    <h3>Across all outlets: staff needed vs rostered</h3>
+    <p class="note">Gold = staff the covers call for. Blue = staff on the roster. Where gold is above blue, kitchens run short.</p>
+    <div id="lineDay" style="height:300px"></div>
+  </div>
+  <div class="card">
+    <h3>Every day of the week</h3>
+    <p class="note">Staff-hours short (red) and spare (blue). The same roster every day leaves weekends short and early week heavy.</p>
+    <div id="barWeek" style="height:300px"></div>
+  </div>
+</div>
+
+<h2>3. Roster changes to make</h2>
+<p>The biggest gaps for the selected day. First use staff who are spare in the same kitchen earlier in the day (start them later),
+   then spare staff in other outlets (kitchen hands and stewards move more easily than chefs), and only then add a short shift.</p>
+<div class="card">
+  <table id="recs"><thead><tr><th>When</th><th>Outlet</th><th class="num">Short by</th><th>Suggested fix</th></tr></thead><tbody></tbody></table>
+  <details><summary>Show the full data table for this day</summary><div id="fullTable"></div></details>
+</div>
+
+<h2>Use it with real data</h2>
+<ol class="steps">
+  <li><b>Covers by hour:</b> export from the outlet POS (or reservations system) as outlet, day, hour, covers.</li>
+  <li><b>Roster by hour:</b> export the BOH roster (chefs, kitchen hands, stewards) as outlet, day, hour, staff rostered.</li>
+  <li><b>Staffing standard:</b> agree with each head chef how many covers one BOH staff member can handle per hour
+      (here: 10 for fine dining, 20 to 30 for casual and buffet, 40 for banquets).</li>
+  <li><b>Events:</b> add expected covers for event days (Australian Open, AFL Grand Final, Melbourne Cup, big banquets) from the events calendar.</li>
+  <li>Save the two files into <code>data/</code> with the same columns and re-run <code>python src/build_dashboard.py</code>.</li>
+</ol>
+<details><summary>How the numbers are worked out</summary>
+  <p>Staff needed in an hour = covers ÷ the outlet's staffing standard, rounded up, with at least 1 person whenever the outlet is open.
+     Gap = staff needed − staff rostered. Staff-hours short = the sum of all positive gaps.
+     The sample roster uses the same 4-hour shift blocks every day, sized for the busiest hour of an average day, which is how a flat roster behaves. Busyness in chart 1 = covers ÷ the outlet's busiest hour across the week (including event days).</p>
+</details>
+
+<footer>Built by Dhruv Rawat · Python + Plotly · Sample data, not Crown figures.</footer>
+</div>
+</div>
+
+<script>
+const DATA = {"outlets":[{"name":"Conservatory","type":"Buffet","std":30},{"name":"Nobu","type":"Fine dining","std":10},{"name":"Koko","type":"Fine dining","std":10},{"name":"Ging Thai","type":"Casual","std":20},{"name":"88 Noodle Bar","type":"Casual","std":22},{"name":"Mr Hive","type":"Casual","std":18},{"name":"Fidels","type":"Casual","std":22},{"name":"The Pub","type":"Pub dining","std":25},{"name":"Room Service","type":"Hotel","std":12},{"name":"Banquets","type":"Events","std":40}],"rows":[["Conservatory","Mon",7,75,95,7],["Conservatory","Mon",8,142,168,7],["Conservatory","Mon",9,124,157,7],["Conservatory","Mon",10,57,80,7],["Conservatory","Mon",11,36,50,8],["Conservatory","Mon",12,129,168,8],["Conservatory","Mon",13,152,211,8],["Conservatory","Mon",14,72,96,8],["Conservatory","Mon",15,39,54,7],["Conservatory","Mon",16,39,49,7],["Conservatory","Mon",17,41,46,7],["Conservatory","Mon",18,147,174,7],["Conservatory","Mon",19,145,188,8],["Conservatory","Mon",20,119,168,8],["Conservatory","Mon",21,58,81,8],["Conservatory","Mon",22,0,0,0],["Conservatory","Mon",23,0,0,0],["Conservatory","Mon",24,0,0,0],["Conservatory","Tue",7,84,105,7],["Conservatory","Tue",8,150,180,7],["Conservatory","Tue",9,123,164,7],["Conservatory","Tue",10,68,85,7],["Conservatory","Tue",11,40,54,8],["Conservatory","Tue",12,147,187,8],["Conservatory","Tue",13,173,221,8],["Conservatory","Tue",14,79,109,8],["Conservatory","Tue",15,41,57,7],["Conservatory","Tue",16,43,52,7],["Conservatory","Tue",17,44,50,7],["Conservatory","Tue",18,147,201,7],["Conservatory","Tue",19,156,214,8],["Conservatory","Tue",20,122,176,8],["Conservatory","Tue",21,69,87,8],["Conservatory","Tue",22,0,0,0],["Conservatory","Tue",23,0,0,0],["Conservatory","Tue",24,0,0,0],["Conservatory","Wed",7,99,118,7],["Conservatory","Wed",8,174,222,7],["Conservatory","Wed",9,152,193,7],["Conservatory","Wed",10,79,104,7],["Conservatory","Wed",11,47,62,8],["Conservatory","Wed",12,156,226,8],["Conservatory","Wed",13,191,262,8],["Conservatory","Wed",14,98,117,8],["Conservatory","Wed",15,46,62,7],["Conservatory","Wed",16,43,60,7],["Conservatory","Wed",17,44,57,7],["Conservatory","Wed",18,156,228,7],["Conservatory","Wed",19,176,233,8],["Conservatory","Wed",20,147,206,8],["Conservatory","Wed",21,70,96,8],["Conservatory","Wed",22,0,0,0],["Conservatory","Wed",23,0,0,0],["Conservatory","Wed",24,0,0,0],["Conservatory","Thu",7,105,144,7],["Conservatory","Thu",8,198,259,7],["Conservatory","Thu",9,161,214,7],["Conservatory","Thu",10,82,115,7],["Conservatory","Thu",11,56,64,8],["Conservatory","Thu",12,178,234,8],["Conservatory","Thu",13,200,271,8],["Conservatory","Thu",14,106,131,8],["Conservatory","Thu",15,48,67,7],["Conservatory","Thu",16,51,69,7],["Conservatory","Thu",17,56,70,7],["Conservatory","Thu",18,189,249,7],["Conservatory","Thu",19,215,252,8],["Conservatory","Thu",20,178,227,8],["Conservatory","Thu",21,89,114,8],["Conservatory","Thu",22,0,0,0],["Conservatory","Thu",23,0,0,0],["Conservatory","Thu",24,0,0,0],["Conservatory","Fri",7,135,176,7],["Conservatory","Fri",8,232,329,7],["Conservatory","Fri",9,205,266,7],["Conservatory","Fri",10,105,135,7],["Conservatory","Fri",11,67,83,8],["Conservatory","Fri",12,228,304,8],["Conservatory","Fri",13,257,350,8],["Conservatory","Fri",14,127,189,8],["Conservatory","Fri",15,70,84,7],["Conservatory","Fri",16,66,87,7],["Conservatory","Fri",17,67,84,7],["Conservatory","Fri",18,261,347,7],["Conservatory","Fri",19,274,357,8],["Conservatory","Fri",20,205,268,8],["Conservatory","Fri",21,107,138,8],["Conservatory","Fri",22,0,0,0],["Conservatory","Fri",23,0,0,0],["Conservatory","Fri",24,0,0,0],["Conservatory","Sat",7,162,189,7],["Conservatory","Sat",8,256,386,7],["Conservatory","Sat",9,248,302,7],["Conservatory","Sat",10,124,148,7],["Conservatory","Sat",11,77,108,8],["Conservatory","Sat",12,293,372,8],["Conservatory","Sat",13,296,392,8],["Conservatory","Sat",14,146,209,8],["Conservatory","Sat",15,77,105,7],["Conservatory","Sat",16,75,96,7],["Conservatory","Sat",17,81,108,7],["Conservatory","Sat",18,293,378,7],["Conservatory","Sat",19,324,416,8],["Conservatory","Sat",20,236,321,8],["Conservatory","Sat",21,120,148,8],["Conservatory","Sat",22,0,0,0],["Conservatory","Sat",23,0,0,0],["Conservatory","Sat",24,0,0,0],["Conservatory","Sun",7,112,152,7],["Conservatory","Sun",8,209,292,7],["Conservatory","Sun",9,208,250,7],["Conservatory","Sun",10,104,136,7],["Conservatory","Sun",11,65,77,8],["Conservatory","Sun",12,208,271,8],["Conservatory","Sun",13,230,300,8],["Conservatory","Sun",14,123,167,8],["Conservatory","Sun",15,64,78,7],["Conservatory","Sun",16,62,82,7],["Conservatory","Sun",17,56,81,7],["Conservatory","Sun",18,232,296,7],["Conservatory","Sun",19,252,313,8],["Conservatory","Sun",20,184,263,8],["Conservatory","Sun",21,94,132,8],["Conservatory","Sun",22,0,0,0],["Conservatory","Sun",23,0,0,0],["Conservatory","Sun",24,0,0,0],["Nobu","Mon",7,0,0,0],["Nobu","Mon",8,0,0,0],["Nobu","Mon",9,0,0,0],["Nobu","Mon",10,0,0,0],["Nobu","Mon",11,0,0,0],["Nobu","Mon",12,34,39,6],["Nobu","Mon",13,37,51,6],["Nobu","Mon",14,20,22,6],["Nobu","Mon",15,15,19,7],["Nobu","Mon",16,17,21,7],["Nobu","Mon",17,15,21,7],["Nobu","Mon",18,47,57,7],["Nobu","Mon",19,61,79,9],["Nobu","Mon",20,56,69,9],["Nobu","Mon",21,41,48,9],["Nobu","Mon",22,19,25,9],["Nobu","Mon",23,0,0,0],["Nobu","Mon",24,0,0,0],["Nobu","Tue",7,0,0,0],["Nobu","Tue",8,0,0,0],["Nobu","Tue",9,0,0,0],["Nobu","Tue",10,0,0,0],["Nobu","Tue",11,0,0,0],["Nobu","Tue",12,33,45,6],["Nobu","Tue",13,43,48,6],["Nobu","Tue",14,19,24,6],["Nobu","Tue",15,16,21,7],["Nobu","Tue",16,16,21,7],["Nobu","Tue",17,16,22,7],["Nobu","Tue",18,46,59,7],["Nobu","Tue",19,68,90,9],["Nobu","Tue",20,63,86,9],["Nobu","Tue",21,41,51,9],["Nobu","Tue",22,20,23,9],["Nobu","Tue",23,0,0,0],["Nobu","Tue",24,0,0,0],["Nobu","Wed",7,0,0,0],["Nobu","Wed",8,0,0,0],["Nobu","Wed",9,0,0,0],["Nobu","Wed",10,0,0,0],["Nobu","Wed",11,0,0,0],["Nobu","Wed",12,38,45,6],["Nobu","Wed",13,42,60,6],["Nobu","Wed",14,22,29,6],["Nobu","Wed",15,20,24,7],["Nobu","Wed",16,19,24,7],["Nobu","Wed",17,19,25,7],["Nobu","Wed",18,50,68,7],["Nobu","Wed",19,73,92,9],["Nobu","Wed",20,76,91,9],["Nobu","Wed",21,46,60,9],["Nobu","Wed",22,24,28,9],["Nobu","Wed",23,0,0,0],["Nobu","Wed",24,0,0,0],["Nobu","Thu",7,0,0,0],["Nobu","Thu",8,0,0,0],["Nobu","Thu",9,0,0,0],["Nobu","Thu",10,0,0,0],["Nobu","Thu",11,0,0,0],["Nobu","Thu",12,44,53,6],["Nobu","Thu",13,51,66,6],["Nobu","Thu",14,25,32,6],["Nobu","Thu",15,21,29,7],["Nobu","Thu",16,22,28,7],["Nobu","Thu",17,23,26,7],["Nobu","Thu",18,60,80,7],["Nobu","Thu",19,90,101,9],["Nobu","Thu",20,76,101,9],["Nobu","Thu",21,48,61,9],["Nobu","Thu",22,24,33,9],["Nobu","Thu",23,0,0,0],["Nobu","Thu",24,0,0,0],["Nobu","Fri",7,0,0,0],["Nobu","Fri",8,0,0,0],["Nobu","Fri",9,0,0,0],["Nobu","Fri",10,0,0,0],["Nobu","Fri",11,0,0,0],["Nobu","Fri",12,59,75,6],["Nobu","Fri",13,64,87,6],["Nobu","Fri",14,35,40,6],["Nobu","Fri",15,30,38,7],["Nobu","Fri",16,27,38,7],["Nobu","Fri",17,28,35,7],["Nobu","Fri",18,85,104,7],["Nobu","Fri",19,106,139,9],["Nobu","Fri",20,107,130,9],["Nobu","Fri",21,64,82,9],["Nobu","Fri",22,35,39,9],["Nobu","Fri",23,0,0,0],["Nobu","Fri",24,0,0,0],["Nobu","Sat",7,0,0,0],["Nobu","Sat",8,0,0,0],["Nobu","Sat",9,0,0,0],["Nobu","Sat",10,0,0,0],["Nobu","Sat",11,0,0,0],["Nobu","Sat",12,64,78,6],["Nobu","Sat",13,70,92,6],["Nobu","Sat",14,39,47,6],["Nobu","Sat",15,29,42,7],["Nobu","Sat",16,33,42,7],["Nobu","Sat",17,30,38,7],["Nobu","Sat",18,82,115,7],["Nobu","Sat",19,121,148,9],["Nobu","Sat",20,118,159,9],["Nobu","Sat",21,79,91,9],["Nobu","Sat",22,36,50,9],["Nobu","Sat",23,0,0,0],["Nobu","Sat",24,0,0,0],["Nobu","Sun",7,0,0,0],["Nobu","Sun",8,0,0,0],["Nobu","Sun",9,0,0,0],["Nobu","Sun",10,0,0,0],["Nobu","Sun",11,0,0,0],["Nobu","Sun",12,50,64,6],["Nobu","Sun",13,55,69,6],["Nobu","Sun",14,31,37,6],["Nobu","Sun",15,23,33,7],["Nobu","Sun",16,25,32,7],["Nobu","Sun",17,23,33,7],["Nobu","Sun",18,64,92,7],["Nobu","Sun",19,98,121,9],["Nobu","Sun",20,95,126,9],["Nobu","Sun",21,57,70,9],["Nobu","Sun",22,30,36,9],["Nobu","Sun",23,0,0,0],["Nobu","Sun",24,0,0,0],["Koko","Mon",7,0,0,0],["Koko","Mon",8,0,0,0],["Koko","Mon",9,0,0,0],["Koko","Mon",10,0,0,0],["Koko","Mon",11,0,0,0],["Koko","Mon",12,16,19,3],["Koko","Mon",13,19,24,3],["Koko","Mon",14,8,10,3],["Koko","Mon",15,11,12,5],["Koko","Mon",16,11,12,5],["Koko","Mon",17,10,12,5],["Koko","Mon",18,28,33,5],["Koko","Mon",19,44,51,6],["Koko","Mon",20,32,40,6],["Koko","Mon",21,18,19,6],["Koko","Mon",22,0,0,0],["Koko","Mon",23,0,0,0],["Koko","Mon",24,0,0,0],["Koko","Tue",7,0,0,0],["Koko","Tue",8,0,0,0],["Koko","Tue",9,0,0,0],["Koko","Tue",10,0,0,0],["Koko","Tue",11,0,0,0],["Koko","Tue",12,19,21,3],["Koko","Tue",13,22,28,3],["Koko","Tue",14,9,11,3],["Koko","Tue",15,12,15,5],["Koko","Tue",16,11,14,5],["Koko","Tue",17,12,14,5],["Koko","Tue",18,31,37,5],["Koko","Tue",19,42,51,6],["Koko","Tue",20,34,45,6],["Koko","Tue",21,17,20,6],["Koko","Tue",22,0,0,0],["Koko","Tue",23,0,0,0],["Koko","Tue",24,0,0,0],["Koko","Wed",7,0,0,0],["Koko","Wed",8,0,0,0],["Koko","Wed",9,0,0,0],["Koko","Wed",10,0,0,0],["Koko","Wed",11,0,0,0],["Koko","Wed",12,19,26,3],["Koko","Wed",13,27,31,3],["Koko","Wed",14,10,12,3],["Koko","Wed",15,12,15,5],["Koko","Wed",16,12,15,5],["Koko","Wed",17,12,16,5],["Koko","Wed",18,38,43,5],["Koko","Wed",19,49,66,6],["Koko","Wed",20,40,48,6],["Koko","Wed",21,19,24,6],["Koko","Wed",22,0,0,0],["Koko","Wed",23,0,0,0],["Koko","Wed",24,0,0,0],["Koko","Thu",7,0,0,0],["Koko","Thu",8,0,0,0],["Koko","Thu",9,0,0,0],["Koko","Thu",10,0,0,0],["Koko","Thu",11,0,0,0],["Koko","Thu",12,23,27,3],["Koko","Thu",13,27,34,3],["Koko","Thu",14,10,13,3],["Koko","Thu",15,13,17,5],["Koko","Thu",16,13,16,5],["Koko","Thu",17,14,16,5],["Koko","Thu",18,40,48,5],["Koko","Thu",19,59,70,6],["Koko","Thu",20,47,58,6],["Koko","Thu",21,22,27,6],["Koko","Thu",22,0,0,0],["Koko","Thu",23,0,0,0],["Koko","Thu",24,0,0,0],["Koko","Fri",7,0,0,0],["Koko","Fri",8,0,0,0],["Koko","Fri",9,0,0,0],["Koko","Fri",10,0,0,0],["Koko","Fri",11,0,0,0],["Koko","Fri",12,32,34,3],["Koko","Fri",13,39,46,3],["Koko","Fri",14,14,19,3],["Koko","Fri",15,20,23,5],["Koko","Fri",16,19,24,5],["Koko","Fri",17,18,23,5],["Koko","Fri",18,53,66,5],["Koko","Fri",19,79,95,6],["Koko","Fri",20,61,77,6],["Koko","Fri",21,31,37,6],["Koko","Fri",22,0,0,0],["Koko","Fri",23,0,0,0],["Koko","Fri",24,0,0,0],["Koko","Sat",7,0,0,0],["Koko","Sat",8,0,0,0],["Koko","Sat",9,0,0,0],["Koko","Sat",10,0,0,0],["Koko","Sat",11,0,0,0],["Koko","Sat",12,32,37,3],["Koko","Sat",13,40,49,3],["Koko","Sat",14,16,21,3],["Koko","Sat",15,21,26,5],["Koko","Sat",16,21,26,5],["Koko","Sat",17,21,23,5],["Koko","Sat",18,62,73,5],["Koko","Sat",19,84,101,6],["Koko","Sat",20,69,75,6],["Koko","Sat",21,35,39,6],["Koko","Sat",22,0,0,0],["Koko","Sat",23,0,0,0],["Koko","Sat",24,0,0,0],["Koko","Sun",7,0,0,0],["Koko","Sun",8,0,0,0],["Koko","Sun",9,0,0,0],["Koko","Sun",10,0,0,0],["Koko","Sun",11,0,0,0],["Koko","Sun",12,25,30,3],["Koko","Sun",13,34,38,3],["Koko","Sun",14,14,17,3],["Koko","Sun",15,16,19,5],["Koko","Sun",16,16,20,5],["Koko","Sun",17,17,20,5],["Koko","Sun",18,47,52,5],["Koko","Sun",19,62,76,6],["Koko","Sun",20,55,61,6],["Koko","Sun",21,27,29,6],["Koko","Sun",22,0,0,0],["Koko","Sun",23,0,0,0],["Koko","Sun",24,0,0,0],["Ging Thai","Mon",7,0,0,0],["Ging Thai","Mon",8,0,0,0],["Ging Thai","Mon",9,0,0,0],["Ging Thai","Mon",10,0,0,0],["Ging Thai","Mon",11,13,18,4],["Ging Thai","Mon",12,40,55,4],["Ging Thai","Mon",13,46,58,4],["Ging Thai","Mon",14,22,30,4],["Ging Thai","Mon",15,14,18,4],["Ging Thai","Mon",16,15,18,4],["Ging Thai","Mon",17,30,40,4],["Ging Thai","Mon",18,47,68,4],["Ging Thai","Mon",19,59,81,4],["Ging Thai","Mon",20,44,58,4],["Ging Thai","Mon",21,27,40,4],["Ging Thai","Mon",22,16,23,4],["Ging Thai","Mon",23,0,0,0],["Ging Thai","Mon",24,0,0,0],["Ging Thai","Tue",7,0,0,0],["Ging Thai","Tue",8,0,0,0],["Ging Thai","Tue",9,0,0,0],["Ging Thai","Tue",10,0,0,0],["Ging Thai","Tue",11,14,20,4],["Ging Thai","Tue",12,45,53,4],["Ging Thai","Tue",13,50,65,4],["Ging Thai","Tue",14,25,33,4],["Ging Thai","Tue",15,14,22,4],["Ging Thai","Tue",16,15,19,4],["Ging Thai","Tue",17,28,40,4],["Ging Thai","Tue",18,54,71,4],["Ging Thai","Tue",19,57,79,4],["Ging Thai","Tue",20,47,68,4],["Ging Thai","Tue",21,28,42,4],["Ging Thai","Tue",22,19,23,4],["Ging Thai","Tue",23,0,0,0],["Ging Thai","Tue",24,0,0,0],["Ging Thai","Wed",7,0,0,0],["Ging Thai","Wed",8,0,0,0],["Ging Thai","Wed",9,0,0,0],["Ging Thai","Wed",10,0,0,0],["Ging Thai","Wed",11,18,24,4],["Ging Thai","Wed",12,51,62,4],["Ging Thai","Wed",13,53,72,4],["Ging Thai","Wed",14,29,37,4],["Ging Thai","Wed",15,17,23,4],["Ging Thai","Wed",16,16,21,4],["Ging Thai","Wed",17,32,48,4],["Ging Thai","Wed",18,59,88,4],["Ging Thai","Wed",19,65,88,4],["Ging Thai","Wed",20,54,70,4],["Ging Thai","Wed",21,33,49,4],["Ging Thai","Wed",22,22,29,4],["Ging Thai","Wed",23,0,0,0],["Ging Thai","Wed",24,0,0,0],["Ging Thai","Thu",7,0,0,0],["Ging Thai","Thu",8,0,0,0],["Ging Thai","Thu",9,0,0,0],["Ging Thai","Thu",10,0,0,0],["Ging Thai","Thu",11,19,27,4],["Ging Thai","Thu",12,57,72,4],["Ging Thai","Thu",13,63,76,4],["Ging Thai","Thu",14,32,41,4],["Ging Thai","Thu",15,20,26,4],["Ging Thai","Thu",16,18,24,4],["Ging Thai","Thu",17,41,48,4],["Ging Thai","Thu",18,68,90,4],["Ging Thai","Thu",19,74,107,4],["Ging Thai","Thu",20,65,79,4],["Ging Thai","Thu",21,39,50,4],["Ging Thai","Thu",22,23,30,4],["Ging Thai","Thu",23,0,0,0],["Ging Thai","Thu",24,0,0,0],["Ging Thai","Fri",7,0,0,0],["Ging Thai","Fri",8,0,0,0],["Ging Thai","Fri",9,0,0,0],["Ging Thai","Fri",10,0,0,0],["Ging Thai","Fri",11,24,32,4],["Ging Thai","Fri",12,67,101,4],["Ging Thai","Fri",13,80,103,4],["Ging Thai","Fri",14,43,58,4],["Ging Thai","Fri",15,25,32,4],["Ging Thai","Fri",16,24,32,4],["Ging Thai","Fri",17,49,63,4],["Ging Thai","Fri",18,86,117,4],["Ging Thai","Fri",19,101,143,4],["Ging Thai","Fri",20,83,106,4],["Ging Thai","Fri",21,49,68,4],["Ging Thai","Fri",22,29,39,4],["Ging Thai","Fri",23,0,0,0],["Ging Thai","Fri",24,0,0,0],["Ging Thai","Sat",7,0,0,0],["Ging Thai","Sat",8,0,0,0],["Ging Thai","Sat",9,0,0,0],["Ging Thai","Sat",10,0,0,0],["Ging Thai","Sat",11,26,36,4],["Ging Thai","Sat",12,84,100,4],["Ging Thai","Sat",13,90,123,4],["Ging Thai","Sat",14,47,58,4],["Ging Thai","Sat",15,27,36,4],["Ging Thai","Sat",16,28,37,4],["Ging Thai","Sat",17,60,80,4],["Ging Thai","Sat",18,107,126,4],["Ging Thai","Sat",19,104,156,4],["Ging Thai","Sat",20,95,120,4],["Ging Thai","Sat",21,57,70,4],["Ging Thai","Sat",22,33,48,4],["Ging Thai","Sat",23,0,0,0],["Ging Thai","Sat",24,0,0,0],["Ging Thai","Sun",7,0,0,0],["Ging Thai","Sun",8,0,0,0],["Ging Thai","Sun",9,0,0,0],["Ging Thai","Sun",10,0,0,0],["Ging Thai","Sun",11,23,31,4],["Ging Thai","Sun",12,66,80,4],["Ging Thai","Sun",13,66,90,4],["Ging Thai","Sun",14,35,49,4],["Ging Thai","Sun",15,24,31,4],["Ging Thai","Sun",16,23,31,4],["Ging Thai","Sun",17,44,60,4],["Ging Thai","Sun",18,73,112,4],["Ging Thai","Sun",19,84,127,4],["Ging Thai","Sun",20,72,92,4],["Ging Thai","Sun",21,41,57,4],["Ging Thai","Sun",22,27,37,4],["Ging Thai","Sun",23,0,0,0],["Ging Thai","Sun",24,0,0,0],["88 Noodle Bar","Mon",7,0,0,0],["88 Noodle Bar","Mon",8,0,0,0],["88 Noodle Bar","Mon",9,0,0,0],["88 Noodle Bar","Mon",10,0,0,0],["88 Noodle Bar","Mon",11,20,28,4],["88 Noodle Bar","Mon",12,51,74,4],["88 Noodle Bar","Mon",13,58,81,4],["88 Noodle Bar","Mon",14,34,45,4],["88 Noodle Bar","Mon",15,20,30,5],["88 Noodle Bar","Mon",16,23,31,5],["88 Noodle Bar","Mon",17,22,30,5],["88 Noodle Bar","Mon",18,64,93,5],["88 Noodle Bar","Mon",19,81,113,5],["88 Noodle Bar","Mon",20,65,90,5],["88 Noodle Bar","Mon",21,59,88,5],["88 Noodle Bar","Mon",22,66,94,5],["88 Noodle Bar","Mon",23,86,130,6],["88 Noodle Bar","Mon",24,56,79,6],["88 Noodle Bar","Tue",7,0,0,0],["88 Noodle Bar","Tue",8,0,0,0],["88 Noodle Bar","Tue",9,0,0,0],["88 Noodle Bar","Tue",10,0,0,0],["88 Noodle Bar","Tue",11,22,32,4],["88 Noodle Bar","Tue",12,56,75,4],["88 Noodle Bar","Tue",13,66,95,4],["88 Noodle Bar","Tue",14,36,50,4],["88 Noodle Bar","Tue",15,24,32,5],["88 Noodle Bar","Tue",16,24,31,5],["88 Noodle Bar","Tue",17,21,34,5],["88 Noodle Bar","Tue",18,70,112,5],["88 Noodle Bar","Tue",19,81,112,5],["88 Noodle Bar","Tue",20,69,103,5],["88 Noodle Bar","Tue",21,65,98,5],["88 Noodle Bar","Tue",22,68,103,5],["88 Noodle Bar","Tue",23,86,140,6],["88 Noodle Bar","Tue",24,59,85,6],["88 Noodle Bar","Wed",7,0,0,0],["88 Noodle Bar","Wed",8,0,0,0],["88 Noodle Bar","Wed",9,0,0,0],["88 Noodle Bar","Wed",10,0,0,0],["88 Noodle Bar","Wed",11,24,36,4],["88 Noodle Bar","Wed",12,65,94,4],["88 Noodle Bar","Wed",13,74,112,4],["88 Noodle Bar","Wed",14,44,58,4],["88 Noodle Bar","Wed",15,24,40,5],["88 Noodle Bar","Wed",16,27,34,5],["88 Noodle Bar","Wed",17,26,36,5],["88 Noodle Bar","Wed",18,80,115,5],["88 Noodle Bar","Wed",19,87,123,5],["88 Noodle Bar","Wed",20,79,116,5],["88 Noodle Bar","Wed",21,77,97,5],["88 Noodle Bar","Wed",22,88,113,5],["88 Noodle Bar","Wed",23,100,156,6],["88 Noodle Bar","Wed",24,75,102,6],["88 Noodle Bar","Thu",7,0,0,0],["88 Noodle Bar","Thu",8,0,0,0],["88 Noodle Bar","Thu",9,0,0,0],["88 Noodle Bar","Thu",10,0,0,0],["88 Noodle Bar","Thu",11,26,41,4],["88 Noodle Bar","Thu",12,67,106,4],["88 Noodle Bar","Thu",13,76,113,4],["88 Noodle Bar","Thu",14,48,61,4],["88 Noodle Bar","Thu",15,28,43,5],["88 Noodle Bar","Thu",16,30,38,5],["88 Noodle Bar","Thu",17,26,38,5],["88 Noodle Bar","Thu",18,97,127,5],["88 Noodle Bar","Thu",19,107,158,5],["88 Noodle Bar","Thu",20,89,127,5],["88 Noodle Bar","Thu",21,86,118,5],["88 Noodle Bar","Thu",22,88,137,5],["88 Noodle Bar","Thu",23,111,159,6],["88 Noodle Bar","Thu",24,73,120,6],["88 Noodle Bar","Fri",7,0,0,0],["88 Noodle Bar","Fri",8,0,0,0],["88 Noodle Bar","Fri",9,0,0,0],["88 Noodle Bar","Fri",10,0,0,0],["88 Noodle Bar","Fri",11,40,56,4],["88 Noodle Bar","Fri",12,96,121,4],["88 Noodle Bar","Fri",13,101,152,4],["88 Noodle Bar","Fri",14,64,93,4],["88 Noodle Bar","Fri",15,37,52,5],["88 Noodle Bar","Fri",16,37,54,5],["88 Noodle Bar","Fri",17,40,52,5],["88 Noodle Bar","Fri",18,126,181,5],["88 Noodle Bar","Fri",19,142,204,5],["88 Noodle Bar","Fri",20,122,169,5],["88 Noodle Bar","Fri",21,102,149,5],["88 Noodle Bar","Fri",22,125,162,5],["88 Noodle Bar","Fri",23,143,226,6],["88 Noodle Bar","Fri",24,101,142,6],["88 Noodle Bar","Sat",7,0,0,0],["88 Noodle Bar","Sat",8,0,0,0],["88 Noodle Bar","Sat",9,0,0,0],["88 Noodle Bar","Sat",10,0,0,0],["88 Noodle Bar","Sat",11,39,61,4],["88 Noodle Bar","Sat",12,98,157,4],["88 Noodle Bar","Sat",13,125,184,4],["88 Noodle Bar","Sat",14,65,91,4],["88 Noodle Bar","Sat",15,39,61,5],["88 Noodle Bar","Sat",16,43,60,5],["88 Noodle Bar","Sat",17,40,60,5],["88 Noodle Bar","Sat",18,137,200,5],["88 Noodle Bar","Sat",19,157,231,5],["88 Noodle Bar","Sat",20,138,183,5],["88 Noodle Bar","Sat",21,124,165,5],["88 Noodle Bar","Sat",22,136,191,5],["88 Noodle Bar","Sat",23,174,232,6],["88 Noodle Bar","Sat",24,113,164,6],["88 Noodle Bar","Sun",7,0,0,0],["88 Noodle Bar","Sun",8,0,0,0],["88 Noodle Bar","Sun",9,0,0,0],["88 Noodle Bar","Sun",10,0,0,0],["88 Noodle Bar","Sun",11,31,51,4],["88 Noodle Bar","Sun",12,80,112,4],["88 Noodle Bar","Sun",13,91,145,4],["88 Noodle Bar","Sun",14,53,73,4],["88 Noodle Bar","Sun",15,35,49,5],["88 Noodle Bar","Sun",16,36,45,5],["88 Noodle Bar","Sun",17,33,50,5],["88 Noodle Bar","Sun",18,111,163,5],["88 Noodle Bar","Sun",19,110,167,5],["88 Noodle Bar","Sun",20,99,146,5],["88 Noodle Bar","Sun",21,99,136,5],["88 Noodle Bar","Sun",22,113,150,5],["88 Noodle Bar","Sun",23,140,190,6],["88 Noodle Bar","Sun",24,89,140,6],["Mr Hive","Mon",7,0,0,0],["Mr Hive","Mon",8,0,0,0],["Mr Hive","Mon",9,0,0,0],["Mr Hive","Mon",10,0,0,0],["Mr Hive","Mon",11,0,0,0],["Mr Hive","Mon",12,26,30,3],["Mr Hive","Mon",13,30,39,3],["Mr Hive","Mon",14,12,16,3],["Mr Hive","Mon",15,12,15,4],["Mr Hive","Mon",16,12,16,4],["Mr Hive","Mon",17,25,30,4],["Mr Hive","Mon",18,41,56,4],["Mr Hive","Mon",19,50,60,4],["Mr Hive","Mon",20,38,49,4],["Mr Hive","Mon",21,26,32,4],["Mr Hive","Mon",22,11,15,4],["Mr Hive","Mon",23,0,0,0],["Mr Hive","Mon",24,0,0,0],["Mr Hive","Tue",7,0,0,0],["Mr Hive","Tue",8,0,0,0],["Mr Hive","Tue",9,0,0,0],["Mr Hive","Tue",10,0,0,0],["Mr Hive","Tue",11,0,0,0],["Mr Hive","Tue",12,26,34,3],["Mr Hive","Tue",13,32,38,3],["Mr Hive","Tue",14,12,18,3],["Mr Hive","Tue",15,13,16,4],["Mr Hive","Tue",16,13,18,4],["Mr Hive","Tue",17,25,34,4],["Mr Hive","Tue",18,46,61,4],["Mr Hive","Tue",19,56,74,4],["Mr Hive","Tue",20,41,52,4],["Mr Hive","Tue",21,27,33,4],["Mr Hive","Tue",22,12,18,4],["Mr Hive","Tue",23,0,0,0],["Mr Hive","Tue",24,0,0,0],["Mr Hive","Wed",7,0,0,0],["Mr Hive","Wed",8,0,0,0],["Mr Hive","Wed",9,0,0,0],["Mr Hive","Wed",10,0,0,0],["Mr Hive","Wed",11,0,0,0],["Mr Hive","Wed",12,29,41,3],["Mr Hive","Wed",13,35,49,3],["Mr Hive","Wed",14,15,18,3],["Mr Hive","Wed",15,14,19,4],["Mr Hive","Wed",16,15,21,4],["Mr Hive","Wed",17,28,39,4],["Mr Hive","Wed",18,52,70,4],["Mr Hive","Wed",19,56,75,4],["Mr Hive","Wed",20,48,66,4],["Mr Hive","Wed",21,28,39,4],["Mr Hive","Wed",22,16,21,4],["Mr Hive","Wed",23,0,0,0],["Mr Hive","Wed",24,0,0,0],["Mr Hive","Thu",7,0,0,0],["Mr Hive","Thu",8,0,0,0],["Mr Hive","Thu",9,0,0,0],["Mr Hive","Thu",10,0,0,0],["Mr Hive","Thu",11,0,0,0],["Mr Hive","Thu",12,32,41,3],["Mr Hive","Thu",13,43,56,3],["Mr Hive","Thu",14,17,20,3],["Mr Hive","Thu",15,18,21,4],["Mr Hive","Thu",16,18,22,4],["Mr Hive","Thu",17,35,41,4],["Mr Hive","Thu",18,63,74,4],["Mr Hive","Thu",19,65,91,4],["Mr Hive","Thu",20,56,66,4],["Mr Hive","Thu",21,32,43,4],["Mr Hive","Thu",22,17,21,4],["Mr Hive","Thu",23,0,0,0],["Mr Hive","Thu",24,0,0,0],["Mr Hive","Fri",7,0,0,0],["Mr Hive","Fri",8,0,0,0],["Mr Hive","Fri",9,0,0,0],["Mr Hive","Fri",10,0,0,0],["Mr Hive","Fri",11,0,0,0],["Mr Hive","Fri",12,41,55,3],["Mr Hive","Fri",13,54,73,3],["Mr Hive","Fri",14,20,29,3],["Mr Hive","Fri",15,23,26,4],["Mr Hive","Fri",16,23,27,4],["Mr Hive","Fri",17,44,57,4],["Mr Hive","Fri",18,80,99,4],["Mr Hive","Fri",19,86,115,4],["Mr Hive","Fri",20,69,93,4],["Mr Hive","Fri",21,43,56,4],["Mr Hive","Fri",22,20,29,4],["Mr Hive","Fri",23,0,0,0],["Mr Hive","Fri",24,0,0,0],["Mr Hive","Sat",7,0,0,0],["Mr Hive","Sat",8,0,0,0],["Mr Hive","Sat",9,0,0,0],["Mr Hive","Sat",10,0,0,0],["Mr Hive","Sat",11,0,0,0],["Mr Hive","Sat",12,49,61,3],["Mr Hive","Sat",13,61,80,3],["Mr Hive","Sat",14,24,30,3],["Mr Hive","Sat",15,24,30,4],["Mr Hive","Sat",16,23,31,4],["Mr Hive","Sat",17,46,63,4],["Mr Hive","Sat",18,88,106,4],["Mr Hive","Sat",19,100,119,4],["Mr Hive","Sat",20,81,106,4],["Mr Hive","Sat",21,49,59,4],["Mr Hive","Sat",22,25,31,4],["Mr Hive","Sat",23,0,0,0],["Mr Hive","Sat",24,0,0,0],["Mr Hive","Sun",7,0,0,0],["Mr Hive","Sun",8,0,0,0],["Mr Hive","Sun",9,0,0,0],["Mr Hive","Sun",10,0,0,0],["Mr Hive","Sun",11,0,0,0],["Mr Hive","Sun",12,41,47,3],["Mr Hive","Sun",13,49,65,3],["Mr Hive","Sun",14,20,26,3],["Mr Hive","Sun",15,18,27,4],["Mr Hive","Sun",16,19,27,4],["Mr Hive","Sun",17,41,47,4],["Mr Hive","Sun",18,72,96,4],["Mr Hive","Sun",19,72,98,4],["Mr Hive","Sun",20,64,76,4],["Mr Hive","Sun",21,41,48,4],["Mr Hive","Sun",22,20,24,4],["Mr Hive","Sun",23,0,0,0],["Mr Hive","Sun",24,0,0,0],["Fidels","Mon",7,0,0,0],["Fidels","Mon",8,0,0,0],["Fidels","Mon",9,0,0,0],["Fidels","Mon",10,0,0,0],["Fidels","Mon",11,18,32,4],["Fidels","Mon",12,40,69,4],["Fidels","Mon",13,49,81,4],["Fidels","Mon",14,16,28,4],["Fidels","Mon",15,17,32,4],["Fidels","Mon",16,18,32,4],["Fidels","Mon",17,17,31,4],["Fidels","Mon",18,53,96,4],["Fidels","Mon",19,72,116,5],["Fidels","Mon",20,67,108,5],["Fidels","Mon",21,50,88,5],["Fidels","Mon",22,33,64,5],["Fidels","Mon",23,21,35,2],["Fidels","Mon",24,0,0,0],["Fidels","Tue",7,0,0,0],["Fidels","Tue",8,0,0,0],["Fidels","Tue",9,0,0,0],["Fidels","Tue",10,0,0,0],["Fidels","Tue",11,20,31,4],["Fidels","Tue",12,49,77,4],["Fidels","Tue",13,51,93,4],["Fidels","Tue",14,19,30,4],["Fidels","Tue",15,19,30,4],["Fidels","Tue",16,20,31,4],["Fidels","Tue",17,19,34,4],["Fidels","Tue",18,61,105,4],["Fidels","Tue",19,73,117,5],["Fidels","Tue",20,62,108,5],["Fidels","Tue",21,53,88,5],["Fidels","Tue",22,38,68,5],["Fidels","Tue",23,21,37,2],["Fidels","Tue",24,0,0,0],["Fidels","Wed",7,0,0,0],["Fidels","Wed",8,0,0,0],["Fidels","Wed",9,0,0,0],["Fidels","Wed",10,0,0,0],["Fidels","Wed",11,22,33,4],["Fidels","Wed",12,47,85,4],["Fidels","Wed",13,56,99,4],["Fidels","Wed",14,20,37,4],["Fidels","Wed",15,22,34,4],["Fidels","Wed",16,22,36,4],["Fidels","Wed",17,20,39,4],["Fidels","Wed",18,65,109,4],["Fidels","Wed",19,80,148,5],["Fidels","Wed",20,81,136,5],["Fidels","Wed",21,59,97,5],["Fidels","Wed",22,39,74,5],["Fidels","Wed",23,26,42,2],["Fidels","Wed",24,0,0,0],["Fidels","Thu",7,0,0,0],["Fidels","Thu",8,0,0,0],["Fidels","Thu",9,0,0,0],["Fidels","Thu",10,0,0,0],["Fidels","Thu",11,24,40,4],["Fidels","Thu",12,61,101,4],["Fidels","Thu",13,64,120,4],["Fidels","Thu",14,22,41,4],["Fidels","Thu",15,23,39,4],["Fidels","Thu",16,22,42,4],["Fidels","Thu",17,22,41,4],["Fidels","Thu",18,81,122,4],["Fidels","Thu",19,90,164,5],["Fidels","Thu",20,86,149,5],["Fidels","Thu",21,70,107,5],["Fidels","Thu",22,46,78,5],["Fidels","Thu",23,26,51,2],["Fidels","Thu",24,0,0,0],["Fidels","Fri",7,0,0,0],["Fidels","Fri",8,0,0,0],["Fidels","Fri",9,0,0,0],["Fidels","Fri",10,0,0,0],["Fidels","Fri",11,33,55,4],["Fidels","Fri",12,69,135,4],["Fidels","Fri",13,91,148,4],["Fidels","Fri",14,32,53,4],["Fidels","Fri",15,30,50,4],["Fidels","Fri",16,30,49,4],["Fidels","Fri",17,30,55,4],["Fidels","Fri",18,103,179,4],["Fidels","Fri",19,129,205,5],["Fidels","Fri",20,113,189,5],["Fidels","Fri",21,92,149,5],["Fidels","Fri",22,60,109,5],["Fidels","Fri",23,40,61,2],["Fidels","Fri",24,0,0,0],["Fidels","Sat",7,0,0,0],["Fidels","Sat",8,0,0,0],["Fidels","Sat",9,0,0,0],["Fidels","Sat",10,0,0,0],["Fidels","Sat",11,37,55,4],["Fidels","Sat",12,81,137,4],["Fidels","Sat",13,102,178,4],["Fidels","Sat",14,36,58,4],["Fidels","Sat",15,37,58,4],["Fidels","Sat",16,34,63,4],["Fidels","Sat",17,36,61,4],["Fidels","Sat",18,115,205,4],["Fidels","Sat",19,139,251,5],["Fidels","Sat",20,130,226,5],["Fidels","Sat",21,97,173,5],["Fidels","Sat",22,71,115,5],["Fidels","Sat",23,40,73,2],["Fidels","Sat",24,0,0,0],["Fidels","Sun",7,0,0,0],["Fidels","Sun",8,0,0,0],["Fidels","Sun",9,0,0,0],["Fidels","Sun",10,0,0,0],["Fidels","Sun",11,26,50,4],["Fidels","Sun",12,62,104,4],["Fidels","Sun",13,72,140,4],["Fidels","Sun",14,27,44,4],["Fidels","Sun",15,25,43,4],["Fidels","Sun",16,28,48,4],["Fidels","Sun",17,28,49,4],["Fidels","Sun",18,82,152,4],["Fidels","Sun",19,108,197,5],["Fidels","Sun",20,104,179,5],["Fidels","Sun",21,72,139,5],["Fidels","Sun",22,59,100,5],["Fidels","Sun",23,31,53,2],["Fidels","Sun",24,0,0,0],["The Pub","Mon",7,0,0,0],["The Pub","Mon",8,0,0,0],["The Pub","Mon",9,0,0,0],["The Pub","Mon",10,0,0,0],["The Pub","Mon",11,18,32,4],["The Pub","Mon",12,57,102,4],["The Pub","Mon",13,63,117,4],["The Pub","Mon",14,39,67,4],["The Pub","Mon",15,18,32,4],["The Pub","Mon",16,20,33,4],["The Pub","Mon",17,45,82,4],["The Pub","Mon",18,64,120,4],["The Pub","Mon",19,74,143,5],["The Pub","Mon",20,68,121,5],["The Pub","Mon",21,66,111,5],["The Pub","Mon",22,57,99,5],["The Pub","Mon",23,36,68,3],["The Pub","Mon",24,23,43,3],["The Pub","Tue",7,0,0,0],["The Pub","Tue",8,0,0,0],["The Pub","Tue",9,0,0,0],["The Pub","Tue",10,0,0,0],["The Pub","Tue",11,20,38,4],["The Pub","Tue",12,58,99,4],["The Pub","Tue",13,70,111,4],["The Pub","Tue",14,43,70,4],["The Pub","Tue",15,19,35,4],["The Pub","Tue",16,21,40,4],["The Pub","Tue",17,46,89,4],["The Pub","Tue",18,74,140,4],["The Pub","Tue",19,78,148,5],["The Pub","Tue",20,72,141,5],["The Pub","Tue",21,63,127,5],["The Pub","Tue",22,56,99,5],["The Pub","Tue",23,43,74,3],["The Pub","Tue",24,23,46,3],["The Pub","Wed",7,0,0,0],["The Pub","Wed",8,0,0,0],["The Pub","Wed",9,0,0,0],["The Pub","Wed",10,0,0,0],["The Pub","Wed",11,22,44,4],["The Pub","Wed",12,68,123,4],["The Pub","Wed",13,76,132,4],["The Pub","Wed",14,46,83,4],["The Pub","Wed",15,25,39,4],["The Pub","Wed",16,25,39,4],["The Pub","Wed",17,53,97,4],["The Pub","Wed",18,90,151,4],["The Pub","Wed",19,92,179,5],["The Pub","Wed",20,81,151,5],["The Pub","Wed",21,75,140,5],["The Pub","Wed",22,68,121,5],["The Pub","Wed",23,46,82,3],["The Pub","Wed",24,27,53,3],["The Pub","Thu",7,0,0,0],["The Pub","Thu",8,0,0,0],["The Pub","Thu",9,0,0,0],["The Pub","Thu",10,0,0,0],["The Pub","Thu",11,27,49,4],["The Pub","Thu",12,69,130,4],["The Pub","Thu",13,87,152,4],["The Pub","Thu",14,49,93,4],["The Pub","Thu",15,28,45,4],["The Pub","Thu",16,25,46,4],["The Pub","Thu",17,65,119,4],["The Pub","Thu",18,89,160,4],["The Pub","Thu",19,100,183,5],["The Pub","Thu",20,94,160,5],["The Pub","Thu",21,81,143,5],["The Pub","Thu",22,79,136,5],["The Pub","Thu",23,49,101,3],["The Pub","Thu",24,29,55,3],["The Pub","Fri",7,0,0,0],["The Pub","Fri",8,0,0,0],["The Pub","Fri",9,0,0,0],["The Pub","Fri",10,0,0,0],["The Pub","Fri",11,37,65,4],["The Pub","Fri",12,100,171,4],["The Pub","Fri",13,105,202,4],["The Pub","Fri",14,64,118,4],["The Pub","Fri",15,34,57,4],["The Pub","Fri",16,34,65,4],["The Pub","Fri",17,85,149,4],["The Pub","Fri",18,126,221,4],["The Pub","Fri",19,130,252,5],["The Pub","Fri",20,122,231,5],["The Pub","Fri",21,117,196,5],["The Pub","Fri",22,97,180,5],["The Pub","Fri",23,68,118,3],["The Pub","Fri",24,43,79,3],["The Pub","Sat",7,0,0,0],["The Pub","Sat",8,0,0,0],["The Pub","Sat",9,0,0,0],["The Pub","Sat",10,0,0,0],["The Pub","Sat",11,40,72,4],["The Pub","Sat",12,114,200,4],["The Pub","Sat",13,126,220,4],["The Pub","Sat",14,75,141,4],["The Pub","Sat",15,36,68,4],["The Pub","Sat",16,40,72,4],["The Pub","Sat",17,94,160,4],["The Pub","Sat",18,137,248,4],["The Pub","Sat",19,157,273,5],["The Pub","Sat",20,142,267,5],["The Pub","Sat",21,117,227,5],["The Pub","Sat",22,113,191,5],["The Pub","Sat",23,77,149,3],["The Pub","Sat",24,43,84,3],["The Pub","Sun",7,0,0,0],["The Pub","Sun",8,0,0,0],["The Pub","Sun",9,0,0,0],["The Pub","Sun",10,0,0,0],["The Pub","Sun",11,29,57,4],["The Pub","Sun",12,91,153,4],["The Pub","Sun",13,91,176,4],["The Pub","Sun",14,61,113,4],["The Pub","Sun",15,30,56,4],["The Pub","Sun",16,32,55,4],["The Pub","Sun",17,72,140,4],["The Pub","Sun",18,104,202,4],["The Pub","Sun",19,119,227,5],["The Pub","Sun",20,102,211,5],["The Pub","Sun",21,95,162,5],["The Pub","Sun",22,82,150,5],["The Pub","Sun",23,56,107,3],["The Pub","Sun",24,36,67,3],["Room Service","Mon",7,22,30,4],["Room Service","Mon",8,30,46,4],["Room Service","Mon",9,24,31,4],["Room Service","Mon",10,8,12,4],["Room Service","Mon",11,8,11,2],["Room Service","Mon",12,12,18,2],["Room Service","Mon",13,13,18,2],["Room Service","Mon",14,8,11,2],["Room Service","Mon",15,8,12,2],["Room Service","Mon",16,8,11,2],["Room Service","Mon",17,8,12,2],["Room Service","Mon",18,16,21,2],["Room Service","Mon",19,22,29,4],["Room Service","Mon",20,27,34,4],["Room Service","Mon",21,30,38,4],["Room Service","Mon",22,25,34,4],["Room Service","Mon",23,19,25,3],["Room Service","Mon",24,12,18,3],["Room Service","Tue",7,23,32,4],["Room Service","Tue",8,33,47,4],["Room Service","Tue",9,23,34,4],["Room Service","Tue",10,9,12,4],["Room Service","Tue",11,9,12,2],["Room Service","Tue",12,13,20,2],["Room Service","Tue",13,14,20,2],["Room Service","Tue",14,8,12,2],["Room Service","Tue",15,9,11,2],["Room Service","Tue",16,8,13,2],["Room Service","Tue",17,9,11,2],["Room Service","Tue",18,16,22,2],["Room Service","Tue",19,23,35,4],["Room Service","Tue",20,26,36,4],["Room Service","Tue",21,32,45,4],["Room Service","Tue",22,26,40,4],["Room Service","Tue",23,21,30,3],["Room Service","Tue",24,14,20,3],["Room Service","Wed",7,28,40,4],["Room Service","Wed",8,36,55,4],["Room Service","Wed",9,27,39,4],["Room Service","Wed",10,9,14,4],["Room Service","Wed",11,10,13,2],["Room Service","Wed",12,15,20,2],["Room Service","Wed",13,15,20,2],["Room Service","Wed",14,10,13,2],["Room Service","Wed",15,10,13,2],["Room Service","Wed",16,10,14,2],["Room Service","Wed",17,9,14,2],["Room Service","Wed",18,19,27,2],["Room Service","Wed",19,27,40,4],["Room Service","Wed",20,30,42,4],["Room Service","Wed",21,37,45,4],["Room Service","Wed",22,31,44,4],["Room Service","Wed",23,21,33,3],["Room Service","Wed",24,16,23,3],["Room Service","Thu",7,29,45,4],["Room Service","Thu",8,43,60,4],["Room Service","Thu",9,32,39,4],["Room Service","Thu",10,11,15,4],["Room Service","Thu",11,10,16,2],["Room Service","Thu",12,17,24,2],["Room Service","Thu",13,17,25,2],["Room Service","Thu",14,10,15,2],["Room Service","Thu",15,11,15,2],["Room Service","Thu",16,11,14,2],["Room Service","Thu",17,11,15,2],["Room Service","Thu",18,21,29,2],["Room Service","Thu",19,30,45,4],["Room Service","Thu",20,35,50,4],["Room Service","Thu",21,37,52,4],["Room Service","Thu",22,33,49,4],["Room Service","Thu",23,26,38,3],["Room Service","Thu",24,16,25,3],["Room Service","Fri",7,42,56,4],["Room Service","Fri",8,52,76,4],["Room Service","Fri",9,36,52,4],["Room Service","Fri",10,15,20,4],["Room Service","Fri",11,14,21,2],["Room Service","Fri",12,24,32,2],["Room Service","Fri",13,23,32,2],["Room Service","Fri",14,15,20,2],["Room Service","Fri",15,14,19,2],["Room Service","Fri",16,14,20,2],["Room Service","Fri",17,15,18,2],["Room Service","Fri",18,27,36,2],["Room Service","Fri",19,41,59,4],["Room Service","Fri",20,46,62,4],["Room Service","Fri",21,53,74,4],["Room Service","Fri",22,45,61,4],["Room Service","Fri",23,33,47,3],["Room Service","Fri",24,22,31,3],["Room Service","Sat",7,45,66,4],["Room Service","Sat",8,59,89,4],["Room Service","Sat",9,41,58,4],["Room Service","Sat",10,17,22,4],["Room Service","Sat",11,17,22,2],["Room Service","Sat",12,23,35,2],["Room Service","Sat",13,26,38,2],["Room Service","Sat",14,17,22,2],["Room Service","Sat",15,16,21,2],["Room Service","Sat",16,16,21,2],["Room Service","Sat",17,15,20,2],["Room Service","Sat",18,29,45,2],["Room Service","Sat",19,41,66,4],["Room Service","Sat",20,47,75,4],["Room Service","Sat",21,53,73,4],["Room Service","Sat",22,52,68,4],["Room Service","Sat",23,39,50,3],["Room Service","Sat",24,23,37,3],["Room Service","Sun",7,36,51,4],["Room Service","Sun",8,51,65,4],["Room Service","Sun",9,35,50,4],["Room Service","Sun",10,12,19,4],["Room Service","Sun",11,12,19,2],["Room Service","Sun",12,20,26,2],["Room Service","Sun",13,18,28,2],["Room Service","Sun",14,13,16,2],["Room Service","Sun",15,12,18,2],["Room Service","Sun",16,12,18,2],["Room Service","Sun",17,12,16,2],["Room Service","Sun",18,24,35,2],["Room Service","Sun",19,34,50,4],["Room Service","Sun",20,37,58,4],["Room Service","Sun",21,44,64,4],["Room Service","Sun",22,40,55,4],["Room Service","Sun",23,29,43,3],["Room Service","Sun",24,21,29,3],["Banquets","Mon",7,24,35,3],["Banquets","Mon",8,33,58,3],["Banquets","Mon",9,31,47,3],["Banquets","Mon",10,29,46,3],["Banquets","Mon",11,32,47,4],["Banquets","Mon",12,61,87,4],["Banquets","Mon",13,59,96,4],["Banquets","Mon",14,29,46,4],["Banquets","Mon",15,30,48,5],["Banquets","Mon",16,31,43,5],["Banquets","Mon",17,28,43,5],["Banquets","Mon",18,71,109,5],["Banquets","Mon",19,126,191,7],["Banquets","Mon",20,111,190,7],["Banquets","Mon",21,76,114,7],["Banquets","Mon",22,36,52,7],["Banquets","Mon",23,32,47,2],["Banquets","Mon",24,0,0,0],["Banquets","Tue",7,25,38,3],["Banquets","Tue",8,35,50,3],["Banquets","Tue",9,30,47,3],["Banquets","Tue",10,29,47,3],["Banquets","Tue",11,32,43,4],["Banquets","Tue",12,61,93,4],["Banquets","Tue",13,60,86,4],["Banquets","Tue",14,29,47,4],["Banquets","Tue",15,31,45,5],["Banquets","Tue",16,28,47,5],["Banquets","Tue",17,31,43,5],["Banquets","Tue",18,73,115,5],["Banquets","Tue",19,127,181,7],["Banquets","Tue",20,120,183,7],["Banquets","Tue",21,68,103,7],["Banquets","Tue",22,34,56,7],["Banquets","Tue",23,29,45,2],["Banquets","Tue",24,0,0,0],["Banquets","Wed",7,39,60,3],["Banquets","Wed",8,57,83,3],["Banquets","Wed",9,54,73,3],["Banquets","Wed",10,47,77,3],["Banquets","Wed",11,52,71,4],["Banquets","Wed",12,102,146,4],["Banquets","Wed",13,100,138,4],["Banquets","Wed",14,46,81,4],["Banquets","Wed",15,53,75,5],["Banquets","Wed",16,51,72,5],["Banquets","Wed",17,52,74,5],["Banquets","Wed",18,129,188,5],["Banquets","Wed",19,210,322,7],["Banquets","Wed",20,192,278,7],["Banquets","Wed",21,114,171,7],["Banquets","Wed",22,56,84,7],["Banquets","Wed",23,50,79,2],["Banquets","Wed",24,0,0,0],["Banquets","Thu",7,79,129,3],["Banquets","Thu",8,128,167,3],["Banquets","Thu",9,102,148,3],["Banquets","Thu",10,94,161,3],["Banquets","Thu",11,96,152,4],["Banquets","Thu",12,205,322,4],["Banquets","Thu",13,205,295,4],["Banquets","Thu",14,99,142,4],["Banquets","Thu",15,107,162,5],["Banquets","Thu",16,96,139,5],["Banquets","Thu",17,96,146,5],["Banquets","Thu",18,255,383,5],["Banquets","Thu",19,422,557,7],["Banquets","Thu",20,418,620,7],["Banquets","Thu",21,246,388,7],["Banquets","Thu",22,111,170,7],["Banquets","Thu",23,104,161,2],["Banquets","Thu",24,0,0,0],["Banquets","Fri",7,90,128,3],["Banquets","Fri",8,134,206,3],["Banquets","Fri",9,103,160,3],["Banquets","Fri",10,106,155,3],["Banquets","Fri",11,110,156,4],["Banquets","Fri",12,211,311,4],["Banquets","Fri",13,226,304,4],["Banquets","Fri",14,114,157,4],["Banquets","Fri",15,102,176,5],["Banquets","Fri",16,105,176,5],["Banquets","Fri",17,116,175,5],["Banquets","Fri",18,249,393,5],["Banquets","Fri",19,412,705,7],["Banquets","Fri",20,464,674,7],["Banquets","Fri",21,262,386,7],["Banquets","Fri",22,139,197,7],["Banquets","Fri",23,112,156,2],["Banquets","Fri",24,0,0,0],["Banquets","Sat",7,92,134,3],["Banquets","Sat",8,149,218,3],["Banquets","Sat",9,113,191,3],["Banquets","Sat",10,116,177,3],["Banquets","Sat",11,113,173,4],["Banquets","Sat",12,253,350,4],["Banquets","Sat",13,227,359,4],["Banquets","Sat",14,117,192,4],["Banquets","Sat",15,113,194,5],["Banquets","Sat",16,111,191,5],["Banquets","Sat",17,123,172,5],["Banquets","Sat",18,287,417,5],["Banquets","Sat",19,461,686,7],["Banquets","Sat",20,470,777,7],["Banquets","Sat",21,311,461,7],["Banquets","Sat",22,135,209,7],["Banquets","Sat",23,128,167,2],["Banquets","Sat",24,0,0,0],["Banquets","Sun",7,33,46,3],["Banquets","Sun",8,52,66,3],["Banquets","Sun",9,42,58,3],["Banquets","Sun",10,38,55,3],["Banquets","Sun",11,42,60,4],["Banquets","Sun",12,76,119,4],["Banquets","Sun",13,85,115,4],["Banquets","Sun",14,40,57,4],["Banquets","Sun",15,38,63,5],["Banquets","Sun",16,41,57,5],["Banquets","Sun",17,37,56,5],["Banquets","Sun",18,98,144,5],["Banquets","Sun",19,154,229,7],["Banquets","Sun",20,163,248,7],["Banquets","Sun",21,101,146,7],["Banquets","Sun",22,46,67,7],["Banquets","Sun",23,41,59,2],["Banquets","Sun",24,0,0,0]]};
+const DAYS = ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"];
+const DAYNAME = {Mon:"Monday",Tue:"Tuesday",Wed:"Wednesday",Thu:"Thursday",Fri:"Friday",Sat:"Saturday",Sun:"Sunday"};
+const HOURS = [...new Set(DATA.rows.map(r => r[2]))].sort((a,b)=>a-b);
+const OUTLETS = DATA.outlets.map(o => o.name);
+const STD = Object.fromEntries(DATA.outlets.map(o => [o.name, o.std]));
+const PEAK = {}; DATA.rows.forEach(([o, d, h, c, ce]) => { PEAK[o] = Math.max(PEAK[o] || 1, c, ce); });
+const css = n => getComputedStyle(document.querySelector('.viz-root')).getPropertyValue(n).trim();
+const C = {ink: css('--text-primary'), ink2: css('--text-secondary'), muted: css('--muted'), grid: css('--grid'),
+  axis: css('--axis'), surf: css('--surface-1'), short: css('--short'), over: css('--over'), need: css('--need'), mid: css('--mid')};
+const hl = h => { const x = h % 24; return x === 0 ? "12am" : x < 12 ? x + "am" : x === 12 ? "12pm" : (x - 12) + "pm"; };
+const span = (a, b) => hl(a) + "–" + hl(b + 1);
+const state = {day: "Sat", event: false};
+
+const idx = {};
+DATA.rows.forEach(([o, d, h, c, ce, r]) => { idx[o + "|" + d + "|" + h] = {c, ce, r}; });
+function cell(o, d, h, ev) {
+  const x = idx[o + "|" + d + "|" + h]; const cov = ev ? x.ce : x.c;
+  const need = cov === 0 ? 0 : Math.max(1, Math.ceil(cov / STD[o]));
+  return {cov, need, ros: x.r, gap: need - x.r};
+}
+function dayTotals(d, ev) {
+  let short = 0, over = 0, ok = 0, open = 0;
+  OUTLETS.forEach(o => HOURS.forEach(h => { const c = cell(o, d, h, ev);
+    if (c.need === 0 && c.ros === 0) return; open++;
+    if (c.gap > 0) short += c.gap; else if (c.gap < 0) over -= c.gap;
+    if (Math.abs(c.gap) <= 1) ok++; }));
+  return {short, over, ok, open};
+}
+
+const baseLayout = (extra) => Object.assign({
+  paper_bgcolor: C.surf, plot_bgcolor: C.surf, font: {color: C.ink2, size: 12, family: "system-ui, Segoe UI, sans-serif"},
+  margin: {l: 110, r: 16, t: 8, b: 40}, hoverlabel: {bgcolor: "#000", bordercolor: C.axis, font: {color: C.ink}},
+  xaxis: {gridcolor: C.grid, linecolor: C.axis, tickfont: {color: C.muted}, zeroline: false},
+  yaxis: {gridcolor: C.grid, linecolor: C.axis, tickfont: {color: C.ink2}, zeroline: false},
+}, extra);
+const cfg = {displayModeBar: false, responsive: true};
+
+function render() {
+  const d = state.day, ev = state.event, X = HOURS.map(hl);
+  const cells = OUTLETS.map(o => HOURS.map(h => cell(o, d, h, ev)));
+  const t = dayTotals(d, ev);
+
+  // busiest outlet-hour
+  let best = {cov: -1};
+  OUTLETS.forEach((o, i) => HOURS.forEach((h, j) => { if (cells[i][j].cov > best.cov) best = {cov: cells[i][j].cov, o, h}; }));
+  // worst gap
+  let worst = {gap: 0};
+  OUTLETS.forEach((o, i) => HOURS.forEach((h, j) => { if (cells[i][j].gap > worst.gap) worst = {gap: cells[i][j].gap, o, h}; }));
+  // resort peak hour
+  const totNeed = HOURS.map((h, j) => OUTLETS.reduce((s, o, i) => s + cells[i][j].need, 0));
+  const totRos = HOURS.map((h, j) => OUTLETS.reduce((s, o, i) => s + cells[i][j].ros, 0));
+  const pk = totNeed.indexOf(Math.max(...totNeed));
+
+  document.getElementById("tiles").innerHTML = [
+    ["Staff-hours short", t.short, "hours where kitchens need more people"],
+    ["Staff-hours spare", t.over, "hours with more people than needed"],
+    ["Hours staffed about right", Math.round(100 * t.ok / t.open) + "%", "within 1 person of what is needed"],
+    ["Busiest spot", best.o, best.cov + " covers at " + hl(best.h)],
+  ].map(([l, v, s]) => `<div class="tile"><div class="label">${l}</div><div class="value">${v}</div><div class="sub">${s}</div></div>`).join("");
+
+  const week = DAYS.map(x => dayTotals(x, ev));
+  const worstDay = DAYS[week.map(w => w.short).indexOf(Math.max(...week.map(w => w.short)))];
+  const lightDay = DAYS[week.map(w => w.over).indexOf(Math.max(...week.map(w => w.over)))];
+  document.getElementById("takeaways").innerHTML = [
+    `On <b>${DAYNAME[d]}${ev ? " (event day)" : ""}</b>, the whole resort's kitchens need the most people at <b>${hl(HOURS[pk])}</b>: ${totNeed[pk]} needed vs ${totRos[pk]} rostered.`,
+    worst.gap > 0 ? `The biggest gap is <b>${worst.o} at ${hl(worst.h)}</b>, short by <b>${worst.gap}</b> ${worst.gap > 1 ? "people" : "person"}.` : `No outlet is short-staffed on this day.`,
+    `Across the week, <b>${DAYNAME[worstDay]}</b> is the most short-staffed day and <b>${DAYNAME[lightDay]}</b> has the most spare staff, so hours can move from early week to the weekend without adding cost.`,
+    ev ? `On a big event day the gaps grow sharply, especially in casual dining and pubs, so event days need their own roster.` : `Switch to "Big event day" to see how much worse it gets during the Australian Open, AFL finals or Melbourne Cup.`,
+  ].map(x => `<li>${x}</li>`).join("");
+
+  // 1. covers heatmap (sequential blue, dark -> light)
+  Plotly.react("heatCovers", [{
+    type: "heatmap", x: X, y: OUTLETS, z: cells.map((r, i) => r.map(c => c.cov === 0 ? null : Math.round(100 * c.cov / PEAK[OUTLETS[i]]))),
+    zmin: 0, zmax: 100, colorscale: [[0, "#0d366b"], [0.35, "#256abf"], [0.7, "#6da7ec"], [1, "#cde2fb"]], xgap: 2, ygap: 2,
+    customdata: cells.map(r => r.map(c => c.cov)),
+    colorbar: {title: {text: "% of its<br>busiest hour", font: {color: C.ink2, size: 11}}, ticksuffix: "%", tickfont: {color: C.muted}, outlinewidth: 0, thickness: 10},
+    hovertemplate: "<b>%{y}</b> · %{x}<br>%{customdata} covers (%{z}% of its busiest hour this week)<extra></extra>", hoverongaps: false,
+  }], baseLayout({yaxis: {autorange: "reversed", tickfont: {color: C.ink2}}, xaxis: {tickfont: {color: C.muted}, side: "bottom"}}), cfg);
+
+  // 2. gap heatmap (diverging: blue spare, grey right, red short)
+  const G = cells.map(r => r.map(c => (c.need === 0 && c.ros === 0) ? null : c.gap));
+  const lim = Math.max(3, ...G.flat().filter(v => v !== null).map(Math.abs));
+  Plotly.react("heatGap", [{
+    type: "heatmap", x: X, y: OUTLETS, z: G, zmin: -lim, zmax: lim, xgap: 2, ygap: 2,
+    colorscale: [[0, "#2a78d6"], [0.5 - 0.5 / lim, "#24466f"], [0.5 - 0.5 / lim + 1e-6, C.mid], [0.5 + 0.5 / lim - 1e-6, C.mid], [0.5 + 0.5 / lim, "#8a3a3a"], [1, "#e66767"]],
+    text: G.map(r => r.map(v => v > 0 ? "+" + v : "")), texttemplate: "%{text}", textfont: {color: C.ink, size: 11},
+    customdata: cells.map(r => r.map(c => [c.cov, c.need, c.ros])),
+    hovertemplate: "<b>%{y}</b> · %{x}<br>%{customdata[0]} covers<br>Needed %{customdata[1]} · Rostered %{customdata[2]}<extra></extra>",
+    hoverongaps: false, showscale: false,
+  }], baseLayout({yaxis: {autorange: "reversed", tickfont: {color: C.ink2}}, xaxis: {tickfont: {color: C.muted}}}), cfg);
+
+  // line: needed vs rostered, one axis (both are staff counts)
+  Plotly.react("lineDay", [
+    {type: "scatter", mode: "lines", name: "Needed", x: X, y: totNeed, line: {color: C.need, width: 2, shape: "spline"},
+     hovertemplate: "%{x}: %{y} needed<extra></extra>"},
+    {type: "scatter", mode: "lines", name: "Rostered", x: X, y: totRos, line: {color: C.over, width: 2, shape: "hv"},
+     hovertemplate: "%{x}: %{y} rostered<extra></extra>"},
+  ], baseLayout({margin: {l: 40, r: 10, t: 8, b: 40}, hovermode: "x unified", showlegend: true, xaxis: {tickfont: {color: C.muted}, tickangle: 0, dtick: 3, linecolor: C.axis, gridcolor: C.grid},
+    legend: {orientation: "h", y: 1.12, x: 0, font: {color: C.ink2}},
+    yaxis: {title: {text: "BOH staff", font: {color: C.muted}}, gridcolor: C.grid, tickfont: {color: C.muted}, rangemode: "tozero"}}), cfg);
+
+  // bar: week short vs spare
+  Plotly.react("barWeek", [
+    {type: "bar", name: "Short", x: DAYS, y: week.map(w => w.short), marker: {color: C.short, line: {color: C.surf, width: 2}},
+     hovertemplate: "%{x}: %{y} staff-hours short<extra></extra>"},
+    {type: "bar", name: "Spare", x: DAYS, y: week.map(w => w.over), marker: {color: C.over, line: {color: C.surf, width: 2}},
+     hovertemplate: "%{x}: %{y} staff-hours spare<extra></extra>"},
+  ], baseLayout({margin: {l: 40, r: 10, t: 8, b: 40}, barmode: "group", bargap: 0.35, showlegend: true,
+    legend: {orientation: "h", y: 1.12, x: 0, font: {color: C.ink2}},
+    xaxis: {tickfont: {color: C.ink2}, linecolor: C.axis},
+    yaxis: {title: {text: "Staff-hours", font: {color: C.muted}}, gridcolor: C.grid, tickfont: {color: C.muted}}}), cfg);
+  // highlight selected day by outline
+  Plotly.relayout("barWeek", {shapes: [{type: "rect", xref: "x", yref: "paper", x0: DAYS.indexOf(d) - 0.45, x1: DAYS.indexOf(d) + 0.45, y0: 0, y1: 1,
+    line: {color: "#fab219", width: 1, dash: "dot"}, fillcolor: "rgba(0,0,0,0)"}]});
+
+  // recommendations: contiguous short runs per outlet
+  const runs = [];
+  OUTLETS.forEach((o, i) => {
+    let s = null;
+    HOURS.forEach((h, j) => {
+      const g = cells[i][j].gap;
+      if (g > 0 && s === null) s = j;
+      if ((g <= 0 || j === HOURS.length - 1) && s !== null) {
+        const e = g > 0 ? j : j - 1;
+        const seg = cells[i].slice(s, e + 1);
+        runs.push({o, s, e, max: Math.max(...seg.map(c => c.gap)), sum: seg.reduce((a, c) => a + c.gap, 0)});
+        s = null;
+      }
+    });
+  });
+  runs.sort((a, b) => b.sum - a.sum);
+  const rows = runs.slice(0, 8).map(r => {
+    const donors = OUTLETS.filter((o, i) => o !== r.o && cells[i].slice(r.s, r.e + 1).every(c => c.gap < 0 && c.ros > 0))
+      .map(o => ({o, spare: Math.min(...cells[OUTLETS.indexOf(o)].slice(r.s, r.e + 1).map(c => -c.gap))}))
+      .sort((a, b) => b.spare - a.spare);
+    // same outlet: a quiet spell earlier in the day whose spare hours can start later instead
+    const row = cells[OUTLETS.indexOf(r.o)]; let quiet = null, q = null;
+    for (let j = 0; j <= r.s; j++) {
+      const sp = j < r.s && row[j].gap < 0 && row[j].ros > 0;
+      if (sp && q === null) q = {s: j, min: -row[j].gap};
+      else if (sp) q.min = Math.min(q.min, -row[j].gap);
+      if ((!sp || j === r.s) && q !== null) { q.e = j - 1; if (!quiet || q.min * (q.e - q.s + 1) > quiet.min * (quiet.e - quiet.s + 1)) quiet = q; q = null; }
+    }
+    let fix, left = r.max; const parts = [];
+    if (quiet) { const mv = Math.min(quiet.min, left); left -= mv;
+      parts.push(`Start ${mv} later: they are spare here ${span(HOURS[quiet.s], HOURS[quiet.e])}`); }
+    if (left > 0 && donors.length) { const mv = Math.min(donors[0].spare, left); left -= mv;
+      parts.push(`move ${mv} across from ${donors[0].o}`); }
+    if (left > 0) parts.push(`add ${left} on a ${r.e - r.s + 1}-hour short shift`);
+    fix = parts.join("; "); fix = fix.charAt(0).toUpperCase() + fix.slice(1);
+    return `<tr><td>${DAYNAME[d].slice(0,3)} ${span(HOURS[r.s], HOURS[r.e])}</td><td>${r.o}</td><td class="num"><span class="tag">+${r.max}</span></td><td>${fix}</td></tr>`;
+  });
+  document.querySelector("#recs tbody").innerHTML = rows.join("") || `<tr><td colspan="4">No short-staffed hours on this day.</td></tr>`;
+
+  // full table (accessibility / data view)
+  let tb = `<table><thead><tr><th>Outlet</th><th>Hour</th><th class="num">Covers</th><th class="num">Needed</th><th class="num">Rostered</th><th class="num">Gap</th></tr></thead><tbody>`;
+  OUTLETS.forEach((o, i) => HOURS.forEach((h, j) => { const c = cells[i][j]; if (c.need || c.ros)
+    tb += `<tr><td>${o}</td><td>${hl(h)}</td><td class="num">${c.cov}</td><td class="num">${c.need}</td><td class="num">${c.ros}</td><td class="num">${c.gap > 0 ? "+" + c.gap : c.gap}</td></tr>`; }));
+  document.getElementById("fullTable").innerHTML = tb + "</tbody></table>";
+}
+
+const sel = document.getElementById("day");
+sel.innerHTML = DAYS.map(x => `<option value="${x}" ${x === state.day ? "selected" : ""}>${DAYNAME[x]}</option>`).join("");
+sel.onchange = () => { state.day = sel.value; render(); };
+document.querySelectorAll("#evt button").forEach(b => b.onclick = () => {
+  state.event = b.dataset.v === "1";
+  document.querySelectorAll("#evt button").forEach(x => x.setAttribute("aria-pressed", x === b));
+  render();
+});
+render();
+</script>
+</body>
+</html>

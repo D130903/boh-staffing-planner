@@ -1,0 +1,1261 @@
+outlet,day,hour,boh_staff_rostered
+Conservatory,Mon,7,7
+Conservatory,Mon,8,7
+Conservatory,Mon,9,7
+Conservatory,Mon,10,7
+Conservatory,Mon,11,8
+Conservatory,Mon,12,8
+Conservatory,Mon,13,8
+Conservatory,Mon,14,8
+Conservatory,Mon,15,7
+Conservatory,Mon,16,7
+Conservatory,Mon,17,7
+Conservatory,Mon,18,7
+Conservatory,Mon,19,8
+Conservatory,Mon,20,8
+Conservatory,Mon,21,8
+Conservatory,Mon,22,0
+Conservatory,Mon,23,0
+Conservatory,Mon,24,0
+Conservatory,Tue,7,7
+Conservatory,Tue,8,7
+Conservatory,Tue,9,7
+Conservatory,Tue,10,7
+Conservatory,Tue,11,8
+Conservatory,Tue,12,8
+Conservatory,Tue,13,8
+Conservatory,Tue,14,8
+Conservatory,Tue,15,7
+Conservatory,Tue,16,7
+Conservatory,Tue,17,7
+Conservatory,Tue,18,7
+Conservatory,Tue,19,8
+Conservatory,Tue,20,8
+Conservatory,Tue,21,8
+Conservatory,Tue,22,0
+Conservatory,Tue,23,0
+Conservatory,Tue,24,0
+Conservatory,Wed,7,7
+Conservatory,Wed,8,7
+Conservatory,Wed,9,7
+Conservatory,Wed,10,7
+Conservatory,Wed,11,8
+Conservatory,Wed,12,8
+Conservatory,Wed,13,8
+Conservatory,Wed,14,8
+Conservatory,Wed,15,7
+Conservatory,Wed,16,7
+Conservatory,Wed,17,7
+Conservatory,Wed,18,7
+Conservatory,Wed,19,8
+Conservatory,Wed,20,8
+Conservatory,Wed,21,8
+Conservatory,Wed,22,0
+Conservatory,Wed,23,0
+Conservatory,Wed,24,0
+Conservatory,Thu,7,7
+Conservatory,Thu,8,7
+Conservatory,Thu,9,7
+Conservatory,Thu,10,7
+Conservatory,Thu,11,8
+Conservatory,Thu,12,8
+Conservatory,Thu,13,8
+Conservatory,Thu,14,8
+Conservatory,Thu,15,7
+Conservatory,Thu,16,7
+Conservatory,Thu,17,7
+Conservatory,Thu,18,7
+Conservatory,Thu,19,8
+Conservatory,Thu,20,8
+Conservatory,Thu,21,8
+Conservatory,Thu,22,0
+Conservatory,Thu,23,0
+Conservatory,Thu,24,0
+Conservatory,Fri,7,7
+Conservatory,Fri,8,7
+Conservatory,Fri,9,7
+Conservatory,Fri,10,7
+Conservatory,Fri,11,8
+Conservatory,Fri,12,8
+Conservatory,Fri,13,8
+Conservatory,Fri,14,8
+Conservatory,Fri,15,7
+Conservatory,Fri,16,7
+Conservatory,Fri,17,7
+Conservatory,Fri,18,7
+Conservatory,Fri,19,8
+Conservatory,Fri,20,8
+Conservatory,Fri,21,8
+Conservatory,Fri,22,0
+Conservatory,Fri,23,0
+Conservatory,Fri,24,0
+Conservatory,Sat,7,7
+Conservatory,Sat,8,7
+Conservatory,Sat,9,7
+Conservatory,Sat,10,7
+Conservatory,Sat,11,8
+Conservatory,Sat,12,8
+Conservatory,Sat,13,8
+Conservatory,Sat,14,8
+Conservatory,Sat,15,7
+Conservatory,Sat,16,7
+Conservatory,Sat,17,7
+Conservatory,Sat,18,7
+Conservatory,Sat,19,8
+Conservatory,Sat,20,8
+Conservatory,Sat,21,8
+Conservatory,Sat,22,0
+Conservatory,Sat,23,0
+Conservatory,Sat,24,0
+Conservatory,Sun,7,7
+Conservatory,Sun,8,7
+Conservatory,Sun,9,7
+Conservatory,Sun,10,7
+Conservatory,Sun,11,8
+Conservatory,Sun,12,8
+Conservatory,Sun,13,8
+Conservatory,Sun,14,8
+Conservatory,Sun,15,7
+Conservatory,Sun,16,7
+Conservatory,Sun,17,7
+Conservatory,Sun,18,7
+Conservatory,Sun,19,8
+Conservatory,Sun,20,8
+Conservatory,Sun,21,8
+Conservatory,Sun,22,0
+Conservatory,Sun,23,0
+Conservatory,Sun,24,0
+Nobu,Mon,7,0
+Nobu,Mon,8,0
+Nobu,Mon,9,0
+Nobu,Mon,10,0
+Nobu,Mon,11,0
+Nobu,Mon,12,6
+Nobu,Mon,13,6
+Nobu,Mon,14,6
+Nobu,Mon,15,7
+Nobu,Mon,16,7
+Nobu,Mon,17,7
+Nobu,Mon,18,7
+Nobu,Mon,19,9
+Nobu,Mon,20,9
+Nobu,Mon,21,9
+Nobu,Mon,22,9
+Nobu,Mon,23,0
+Nobu,Mon,24,0
+Nobu,Tue,7,0
+Nobu,Tue,8,0
+Nobu,Tue,9,0
+Nobu,Tue,10,0
+Nobu,Tue,11,0
+Nobu,Tue,12,6
+Nobu,Tue,13,6
+Nobu,Tue,14,6
+Nobu,Tue,15,7
+Nobu,Tue,16,7
+Nobu,Tue,17,7
+Nobu,Tue,18,7
+Nobu,Tue,19,9
+Nobu,Tue,20,9
+Nobu,Tue,21,9
+Nobu,Tue,22,9
+Nobu,Tue,23,0
+Nobu,Tue,24,0
+Nobu,Wed,7,0
+Nobu,Wed,8,0
+Nobu,Wed,9,0
+Nobu,Wed,10,0
+Nobu,Wed,11,0
+Nobu,Wed,12,6
+Nobu,Wed,13,6
+Nobu,Wed,14,6
+Nobu,Wed,15,7
+Nobu,Wed,16,7
+Nobu,Wed,17,7
+Nobu,Wed,18,7
+Nobu,Wed,19,9
+Nobu,Wed,20,9
+Nobu,Wed,21,9
+Nobu,Wed,22,9
+Nobu,Wed,23,0
+Nobu,Wed,24,0
+Nobu,Thu,7,0
+Nobu,Thu,8,0
+Nobu,Thu,9,0
+Nobu,Thu,10,0
+Nobu,Thu,11,0
+Nobu,Thu,12,6
+Nobu,Thu,13,6
+Nobu,Thu,14,6
+Nobu,Thu,15,7
+Nobu,Thu,16,7
+Nobu,Thu,17,7
+Nobu,Thu,18,7
+Nobu,Thu,19,9
+Nobu,Thu,20,9
+Nobu,Thu,21,9
+Nobu,Thu,22,9
+Nobu,Thu,23,0
+Nobu,Thu,24,0
+Nobu,Fri,7,0
+Nobu,Fri,8,0
+Nobu,Fri,9,0
+Nobu,Fri,10,0
+Nobu,Fri,11,0
+Nobu,Fri,12,6
+Nobu,Fri,13,6
+Nobu,Fri,14,6
+Nobu,Fri,15,7
+Nobu,Fri,16,7
+Nobu,Fri,17,7
+Nobu,Fri,18,7
+Nobu,Fri,19,9
+Nobu,Fri,20,9
+Nobu,Fri,21,9
+Nobu,Fri,22,9
+Nobu,Fri,23,0
+Nobu,Fri,24,0
+Nobu,Sat,7,0
+Nobu,Sat,8,0
+Nobu,Sat,9,0
+Nobu,Sat,10,0
+Nobu,Sat,11,0
+Nobu,Sat,12,6
+Nobu,Sat,13,6
+Nobu,Sat,14,6
+Nobu,Sat,15,7
+Nobu,Sat,16,7
+Nobu,Sat,17,7
+Nobu,Sat,18,7
+Nobu,Sat,19,9
+Nobu,Sat,20,9
+Nobu,Sat,21,9
+Nobu,Sat,22,9
+Nobu,Sat,23,0
+Nobu,Sat,24,0
+Nobu,Sun,7,0
+Nobu,Sun,8,0
+Nobu,Sun,9,0
+Nobu,Sun,10,0
+Nobu,Sun,11,0
+Nobu,Sun,12,6
+Nobu,Sun,13,6
+Nobu,Sun,14,6
+Nobu,Sun,15,7
+Nobu,Sun,16,7
+Nobu,Sun,17,7
+Nobu,Sun,18,7
+Nobu,Sun,19,9
+Nobu,Sun,20,9
+Nobu,Sun,21,9
+Nobu,Sun,22,9
+Nobu,Sun,23,0
+Nobu,Sun,24,0
+Koko,Mon,7,0
+Koko,Mon,8,0
+Koko,Mon,9,0
+Koko,Mon,10,0
+Koko,Mon,11,0
+Koko,Mon,12,3
+Koko,Mon,13,3
+Koko,Mon,14,3
+Koko,Mon,15,5
+Koko,Mon,16,5
+Koko,Mon,17,5
+Koko,Mon,18,5
+Koko,Mon,19,6
+Koko,Mon,20,6
+Koko,Mon,21,6
+Koko,Mon,22,0
+Koko,Mon,23,0
+Koko,Mon,24,0
+Koko,Tue,7,0
+Koko,Tue,8,0
+Koko,Tue,9,0
+Koko,Tue,10,0
+Koko,Tue,11,0
+Koko,Tue,12,3
+Koko,Tue,13,3
+Koko,Tue,14,3
+Koko,Tue,15,5
+Koko,Tue,16,5
+Koko,Tue,17,5
+Koko,Tue,18,5
+Koko,Tue,19,6
+Koko,Tue,20,6
+Koko,Tue,21,6
+Koko,Tue,22,0
+Koko,Tue,23,0
+Koko,Tue,24,0
+Koko,Wed,7,0
+Koko,Wed,8,0
+Koko,Wed,9,0
+Koko,Wed,10,0
+Koko,Wed,11,0
+Koko,Wed,12,3
+Koko,Wed,13,3
+Koko,Wed,14,3
+Koko,Wed,15,5
+Koko,Wed,16,5
+Koko,Wed,17,5
+Koko,Wed,18,5
+Koko,Wed,19,6
+Koko,Wed,20,6
+Koko,Wed,21,6
+Koko,Wed,22,0
+Koko,Wed,23,0
+Koko,Wed,24,0
+Koko,Thu,7,0
+Koko,Thu,8,0
+Koko,Thu,9,0
+Koko,Thu,10,0
+Koko,Thu,11,0
+Koko,Thu,12,3
+Koko,Thu,13,3
+Koko,Thu,14,3
+Koko,Thu,15,5
+Koko,Thu,16,5
+Koko,Thu,17,5
+Koko,Thu,18,5
+Koko,Thu,19,6
+Koko,Thu,20,6
+Koko,Thu,21,6
+Koko,Thu,22,0
+Koko,Thu,23,0
+Koko,Thu,24,0
+Koko,Fri,7,0
+Koko,Fri,8,0
+Koko,Fri,9,0
+Koko,Fri,10,0
+Koko,Fri,11,0
+Koko,Fri,12,3
+Koko,Fri,13,3
+Koko,Fri,14,3
+Koko,Fri,15,5
+Koko,Fri,16,5
+Koko,Fri,17,5
+Koko,Fri,18,5
+Koko,Fri,19,6
+Koko,Fri,20,6
+Koko,Fri,21,6
+Koko,Fri,22,0
+Koko,Fri,23,0
+Koko,Fri,24,0
+Koko,Sat,7,0
+Koko,Sat,8,0
+Koko,Sat,9,0
+Koko,Sat,10,0
+Koko,Sat,11,0
+Koko,Sat,12,3
+Koko,Sat,13,3
+Koko,Sat,14,3
+Koko,Sat,15,5
+Koko,Sat,16,5
+Koko,Sat,17,5
+Koko,Sat,18,5
+Koko,Sat,19,6
+Koko,Sat,20,6
+Koko,Sat,21,6
+Koko,Sat,22,0
+Koko,Sat,23,0
+Koko,Sat,24,0
+Koko,Sun,7,0
+Koko,Sun,8,0
+Koko,Sun,9,0
+Koko,Sun,10,0
+Koko,Sun,11,0
+Koko,Sun,12,3
+Koko,Sun,13,3
+Koko,Sun,14,3
+Koko,Sun,15,5
+Koko,Sun,16,5
+Koko,Sun,17,5
+Koko,Sun,18,5
+Koko,Sun,19,6
+Koko,Sun,20,6
+Koko,Sun,21,6
+Koko,Sun,22,0
+Koko,Sun,23,0
+Koko,Sun,24,0
+Ging Thai,Mon,7,0
+Ging Thai,Mon,8,0
+Ging Thai,Mon,9,0
+Ging Thai,Mon,10,0
+Ging Thai,Mon,11,4
+Ging Thai,Mon,12,4
+Ging Thai,Mon,13,4
+Ging Thai,Mon,14,4
+Ging Thai,Mon,15,4
+Ging Thai,Mon,16,4
+Ging Thai,Mon,17,4
+Ging Thai,Mon,18,4
+Ging Thai,Mon,19,4
+Ging Thai,Mon,20,4
+Ging Thai,Mon,21,4
+Ging Thai,Mon,22,4
+Ging Thai,Mon,23,0
+Ging Thai,Mon,24,0
+Ging Thai,Tue,7,0
+Ging Thai,Tue,8,0
+Ging Thai,Tue,9,0
+Ging Thai,Tue,10,0
+Ging Thai,Tue,11,4
+Ging Thai,Tue,12,4
+Ging Thai,Tue,13,4
+Ging Thai,Tue,14,4
+Ging Thai,Tue,15,4
+Ging Thai,Tue,16,4
+Ging Thai,Tue,17,4
+Ging Thai,Tue,18,4
+Ging Thai,Tue,19,4
+Ging Thai,Tue,20,4
+Ging Thai,Tue,21,4
+Ging Thai,Tue,22,4
+Ging Thai,Tue,23,0
+Ging Thai,Tue,24,0
+Ging Thai,Wed,7,0
+Ging Thai,Wed,8,0
+Ging Thai,Wed,9,0
+Ging Thai,Wed,10,0
+Ging Thai,Wed,11,4
+Ging Thai,Wed,12,4
+Ging Thai,Wed,13,4
+Ging Thai,Wed,14,4
+Ging Thai,Wed,15,4
+Ging Thai,Wed,16,4
+Ging Thai,Wed,17,4
+Ging Thai,Wed,18,4
+Ging Thai,Wed,19,4
+Ging Thai,Wed,20,4
+Ging Thai,Wed,21,4
+Ging Thai,Wed,22,4
+Ging Thai,Wed,23,0
+Ging Thai,Wed,24,0
+Ging Thai,Thu,7,0
+Ging Thai,Thu,8,0
+Ging Thai,Thu,9,0
+Ging Thai,Thu,10,0
+Ging Thai,Thu,11,4
+Ging Thai,Thu,12,4
+Ging Thai,Thu,13,4
+Ging Thai,Thu,14,4
+Ging Thai,Thu,15,4
+Ging Thai,Thu,16,4
+Ging Thai,Thu,17,4
+Ging Thai,Thu,18,4
+Ging Thai,Thu,19,4
+Ging Thai,Thu,20,4
+Ging Thai,Thu,21,4
+Ging Thai,Thu,22,4
+Ging Thai,Thu,23,0
+Ging Thai,Thu,24,0
+Ging Thai,Fri,7,0
+Ging Thai,Fri,8,0
+Ging Thai,Fri,9,0
+Ging Thai,Fri,10,0
+Ging Thai,Fri,11,4
+Ging Thai,Fri,12,4
+Ging Thai,Fri,13,4
+Ging Thai,Fri,14,4
+Ging Thai,Fri,15,4
+Ging Thai,Fri,16,4
+Ging Thai,Fri,17,4
+Ging Thai,Fri,18,4
+Ging Thai,Fri,19,4
+Ging Thai,Fri,20,4
+Ging Thai,Fri,21,4
+Ging Thai,Fri,22,4
+Ging Thai,Fri,23,0
+Ging Thai,Fri,24,0
+Ging Thai,Sat,7,0
+Ging Thai,Sat,8,0
+Ging Thai,Sat,9,0
+Ging Thai,Sat,10,0
+Ging Thai,Sat,11,4
+Ging Thai,Sat,12,4
+Ging Thai,Sat,13,4
+Ging Thai,Sat,14,4
+Ging Thai,Sat,15,4
+Ging Thai,Sat,16,4
+Ging Thai,Sat,17,4
+Ging Thai,Sat,18,4
+Ging Thai,Sat,19,4
+Ging Thai,Sat,20,4
+Ging Thai,Sat,21,4
+Ging Thai,Sat,22,4
+Ging Thai,Sat,23,0
+Ging Thai,Sat,24,0
+Ging Thai,Sun,7,0
+Ging Thai,Sun,8,0
+Ging Thai,Sun,9,0
+Ging Thai,Sun,10,0
+Ging Thai,Sun,11,4
+Ging Thai,Sun,12,4
+Ging Thai,Sun,13,4
+Ging Thai,Sun,14,4
+Ging Thai,Sun,15,4
+Ging Thai,Sun,16,4
+Ging Thai,Sun,17,4
+Ging Thai,Sun,18,4
+Ging Thai,Sun,19,4
+Ging Thai,Sun,20,4
+Ging Thai,Sun,21,4
+Ging Thai,Sun,22,4
+Ging Thai,Sun,23,0
+Ging Thai,Sun,24,0
+88 Noodle Bar,Mon,7,0
+88 Noodle Bar,Mon,8,0
+88 Noodle Bar,Mon,9,0
+88 Noodle Bar,Mon,10,0
+88 Noodle Bar,Mon,11,4
+88 Noodle Bar,Mon,12,4
+88 Noodle Bar,Mon,13,4
+88 Noodle Bar,Mon,14,4
+88 Noodle Bar,Mon,15,5
+88 Noodle Bar,Mon,16,5
+88 Noodle Bar,Mon,17,5
+88 Noodle Bar,Mon,18,5
+88 Noodle Bar,Mon,19,5
+88 Noodle Bar,Mon,20,5
+88 Noodle Bar,Mon,21,5
+88 Noodle Bar,Mon,22,5
+88 Noodle Bar,Mon,23,6
+88 Noodle Bar,Mon,24,6
+88 Noodle Bar,Tue,7,0
+88 Noodle Bar,Tue,8,0
+88 Noodle Bar,Tue,9,0
+88 Noodle Bar,Tue,10,0
+88 Noodle Bar,Tue,11,4
+88 Noodle Bar,Tue,12,4
+88 Noodle Bar,Tue,13,4
+88 Noodle Bar,Tue,14,4
+88 Noodle Bar,Tue,15,5
+88 Noodle Bar,Tue,16,5
+88 Noodle Bar,Tue,17,5
+88 Noodle Bar,Tue,18,5
+88 Noodle Bar,Tue,19,5
+88 Noodle Bar,Tue,20,5
+88 Noodle Bar,Tue,21,5
+88 Noodle Bar,Tue,22,5
+88 Noodle Bar,Tue,23,6
+88 Noodle Bar,Tue,24,6
+88 Noodle Bar,Wed,7,0
+88 Noodle Bar,Wed,8,0
+88 Noodle Bar,Wed,9,0
+88 Noodle Bar,Wed,10,0
+88 Noodle Bar,Wed,11,4
+88 Noodle Bar,Wed,12,4
+88 Noodle Bar,Wed,13,4
+88 Noodle Bar,Wed,14,4
+88 Noodle Bar,Wed,15,5
+88 Noodle Bar,Wed,16,5
+88 Noodle Bar,Wed,17,5
+88 Noodle Bar,Wed,18,5
+88 Noodle Bar,Wed,19,5
+88 Noodle Bar,Wed,20,5
+88 Noodle Bar,Wed,21,5
+88 Noodle Bar,Wed,22,5
+88 Noodle Bar,Wed,23,6
+88 Noodle Bar,Wed,24,6
+88 Noodle Bar,Thu,7,0
+88 Noodle Bar,Thu,8,0
+88 Noodle Bar,Thu,9,0
+88 Noodle Bar,Thu,10,0
+88 Noodle Bar,Thu,11,4
+88 Noodle Bar,Thu,12,4
+88 Noodle Bar,Thu,13,4
+88 Noodle Bar,Thu,14,4
+88 Noodle Bar,Thu,15,5
+88 Noodle Bar,Thu,16,5
+88 Noodle Bar,Thu,17,5
+88 Noodle Bar,Thu,18,5
+88 Noodle Bar,Thu,19,5
+88 Noodle Bar,Thu,20,5
+88 Noodle Bar,Thu,21,5
+88 Noodle Bar,Thu,22,5
+88 Noodle Bar,Thu,23,6
+88 Noodle Bar,Thu,24,6
+88 Noodle Bar,Fri,7,0
+88 Noodle Bar,Fri,8,0
+88 Noodle Bar,Fri,9,0
+88 Noodle Bar,Fri,10,0
+88 Noodle Bar,Fri,11,4
+88 Noodle Bar,Fri,12,4
+88 Noodle Bar,Fri,13,4
+88 Noodle Bar,Fri,14,4
+88 Noodle Bar,Fri,15,5
+88 Noodle Bar,Fri,16,5
+88 Noodle Bar,Fri,17,5
+88 Noodle Bar,Fri,18,5
+88 Noodle Bar,Fri,19,5
+88 Noodle Bar,Fri,20,5
+88 Noodle Bar,Fri,21,5
+88 Noodle Bar,Fri,22,5
+88 Noodle Bar,Fri,23,6
+88 Noodle Bar,Fri,24,6
+88 Noodle Bar,Sat,7,0
+88 Noodle Bar,Sat,8,0
+88 Noodle Bar,Sat,9,0
+88 Noodle Bar,Sat,10,0
+88 Noodle Bar,Sat,11,4
+88 Noodle Bar,Sat,12,4
+88 Noodle Bar,Sat,13,4
+88 Noodle Bar,Sat,14,4
+88 Noodle Bar,Sat,15,5
+88 Noodle Bar,Sat,16,5
+88 Noodle Bar,Sat,17,5
+88 Noodle Bar,Sat,18,5
+88 Noodle Bar,Sat,19,5
+88 Noodle Bar,Sat,20,5
+88 Noodle Bar,Sat,21,5
+88 Noodle Bar,Sat,22,5
+88 Noodle Bar,Sat,23,6
+88 Noodle Bar,Sat,24,6
+88 Noodle Bar,Sun,7,0
+88 Noodle Bar,Sun,8,0
+88 Noodle Bar,Sun,9,0
+88 Noodle Bar,Sun,10,0
+88 Noodle Bar,Sun,11,4
+88 Noodle Bar,Sun,12,4
+88 Noodle Bar,Sun,13,4
+88 Noodle Bar,Sun,14,4
+88 Noodle Bar,Sun,15,5
+88 Noodle Bar,Sun,16,5
+88 Noodle Bar,Sun,17,5
+88 Noodle Bar,Sun,18,5
+88 Noodle Bar,Sun,19,5
+88 Noodle Bar,Sun,20,5
+88 Noodle Bar,Sun,21,5
+88 Noodle Bar,Sun,22,5
+88 Noodle Bar,Sun,23,6
+88 Noodle Bar,Sun,24,6
+Mr Hive,Mon,7,0
+Mr Hive,Mon,8,0
+Mr Hive,Mon,9,0
+Mr Hive,Mon,10,0
+Mr Hive,Mon,11,0
+Mr Hive,Mon,12,3
+Mr Hive,Mon,13,3
+Mr Hive,Mon,14,3
+Mr Hive,Mon,15,4
+Mr Hive,Mon,16,4
+Mr Hive,Mon,17,4
+Mr Hive,Mon,18,4
+Mr Hive,Mon,19,4
+Mr Hive,Mon,20,4
+Mr Hive,Mon,21,4
+Mr Hive,Mon,22,4
+Mr Hive,Mon,23,0
+Mr Hive,Mon,24,0
+Mr Hive,Tue,7,0
+Mr Hive,Tue,8,0
+Mr Hive,Tue,9,0
+Mr Hive,Tue,10,0
+Mr Hive,Tue,11,0
+Mr Hive,Tue,12,3
+Mr Hive,Tue,13,3
+Mr Hive,Tue,14,3
+Mr Hive,Tue,15,4
+Mr Hive,Tue,16,4
+Mr Hive,Tue,17,4
+Mr Hive,Tue,18,4
+Mr Hive,Tue,19,4
+Mr Hive,Tue,20,4
+Mr Hive,Tue,21,4
+Mr Hive,Tue,22,4
+Mr Hive,Tue,23,0
+Mr Hive,Tue,24,0
+Mr Hive,Wed,7,0
+Mr Hive,Wed,8,0
+Mr Hive,Wed,9,0
+Mr Hive,Wed,10,0
+Mr Hive,Wed,11,0
+Mr Hive,Wed,12,3
+Mr Hive,Wed,13,3
+Mr Hive,Wed,14,3
+Mr Hive,Wed,15,4
+Mr Hive,Wed,16,4
+Mr Hive,Wed,17,4
+Mr Hive,Wed,18,4
+Mr Hive,Wed,19,4
+Mr Hive,Wed,20,4
+Mr Hive,Wed,21,4
+Mr Hive,Wed,22,4
+Mr Hive,Wed,23,0
+Mr Hive,Wed,24,0
+Mr Hive,Thu,7,0
+Mr Hive,Thu,8,0
+Mr Hive,Thu,9,0
+Mr Hive,Thu,10,0
+Mr Hive,Thu,11,0
+Mr Hive,Thu,12,3
+Mr Hive,Thu,13,3
+Mr Hive,Thu,14,3
+Mr Hive,Thu,15,4
+Mr Hive,Thu,16,4
+Mr Hive,Thu,17,4
+Mr Hive,Thu,18,4
+Mr Hive,Thu,19,4
+Mr Hive,Thu,20,4
+Mr Hive,Thu,21,4
+Mr Hive,Thu,22,4
+Mr Hive,Thu,23,0
+Mr Hive,Thu,24,0
+Mr Hive,Fri,7,0
+Mr Hive,Fri,8,0
+Mr Hive,Fri,9,0
+Mr Hive,Fri,10,0
+Mr Hive,Fri,11,0
+Mr Hive,Fri,12,3
+Mr Hive,Fri,13,3
+Mr Hive,Fri,14,3
+Mr Hive,Fri,15,4
+Mr Hive,Fri,16,4
+Mr Hive,Fri,17,4
+Mr Hive,Fri,18,4
+Mr Hive,Fri,19,4
+Mr Hive,Fri,20,4
+Mr Hive,Fri,21,4
+Mr Hive,Fri,22,4
+Mr Hive,Fri,23,0
+Mr Hive,Fri,24,0
+Mr Hive,Sat,7,0
+Mr Hive,Sat,8,0
+Mr Hive,Sat,9,0
+Mr Hive,Sat,10,0
+Mr Hive,Sat,11,0
+Mr Hive,Sat,12,3
+Mr Hive,Sat,13,3
+Mr Hive,Sat,14,3
+Mr Hive,Sat,15,4
+Mr Hive,Sat,16,4
+Mr Hive,Sat,17,4
+Mr Hive,Sat,18,4
+Mr Hive,Sat,19,4
+Mr Hive,Sat,20,4
+Mr Hive,Sat,21,4
+Mr Hive,Sat,22,4
+Mr Hive,Sat,23,0
+Mr Hive,Sat,24,0
+Mr Hive,Sun,7,0
+Mr Hive,Sun,8,0
+Mr Hive,Sun,9,0
+Mr Hive,Sun,10,0
+Mr Hive,Sun,11,0
+Mr Hive,Sun,12,3
+Mr Hive,Sun,13,3
+Mr Hive,Sun,14,3
+Mr Hive,Sun,15,4
+Mr Hive,Sun,16,4
+Mr Hive,Sun,17,4
+Mr Hive,Sun,18,4
+Mr Hive,Sun,19,4
+Mr Hive,Sun,20,4
+Mr Hive,Sun,21,4
+Mr Hive,Sun,22,4
+Mr Hive,Sun,23,0
+Mr Hive,Sun,24,0
+Fidels,Mon,7,0
+Fidels,Mon,8,0
+Fidels,Mon,9,0
+Fidels,Mon,10,0
+Fidels,Mon,11,4
+Fidels,Mon,12,4
+Fidels,Mon,13,4
+Fidels,Mon,14,4
+Fidels,Mon,15,4
+Fidels,Mon,16,4
+Fidels,Mon,17,4
+Fidels,Mon,18,4
+Fidels,Mon,19,5
+Fidels,Mon,20,5
+Fidels,Mon,21,5
+Fidels,Mon,22,5
+Fidels,Mon,23,2
+Fidels,Mon,24,0
+Fidels,Tue,7,0
+Fidels,Tue,8,0
+Fidels,Tue,9,0
+Fidels,Tue,10,0
+Fidels,Tue,11,4
+Fidels,Tue,12,4
+Fidels,Tue,13,4
+Fidels,Tue,14,4
+Fidels,Tue,15,4
+Fidels,Tue,16,4
+Fidels,Tue,17,4
+Fidels,Tue,18,4
+Fidels,Tue,19,5
+Fidels,Tue,20,5
+Fidels,Tue,21,5
+Fidels,Tue,22,5
+Fidels,Tue,23,2
+Fidels,Tue,24,0
+Fidels,Wed,7,0
+Fidels,Wed,8,0
+Fidels,Wed,9,0
+Fidels,Wed,10,0
+Fidels,Wed,11,4
+Fidels,Wed,12,4
+Fidels,Wed,13,4
+Fidels,Wed,14,4
+Fidels,Wed,15,4
+Fidels,Wed,16,4
+Fidels,Wed,17,4
+Fidels,Wed,18,4
+Fidels,Wed,19,5
+Fidels,Wed,20,5
+Fidels,Wed,21,5
+Fidels,Wed,22,5
+Fidels,Wed,23,2
+Fidels,Wed,24,0
+Fidels,Thu,7,0
+Fidels,Thu,8,0
+Fidels,Thu,9,0
+Fidels,Thu,10,0
+Fidels,Thu,11,4
+Fidels,Thu,12,4
+Fidels,Thu,13,4
+Fidels,Thu,14,4
+Fidels,Thu,15,4
+Fidels,Thu,16,4
+Fidels,Thu,17,4
+Fidels,Thu,18,4
+Fidels,Thu,19,5
+Fidels,Thu,20,5
+Fidels,Thu,21,5
+Fidels,Thu,22,5
+Fidels,Thu,23,2
+Fidels,Thu,24,0
+Fidels,Fri,7,0
+Fidels,Fri,8,0
+Fidels,Fri,9,0
+Fidels,Fri,10,0
+Fidels,Fri,11,4
+Fidels,Fri,12,4
+Fidels,Fri,13,4
+Fidels,Fri,14,4
+Fidels,Fri,15,4
+Fidels,Fri,16,4
+Fidels,Fri,17,4
+Fidels,Fri,18,4
+Fidels,Fri,19,5
+Fidels,Fri,20,5
+Fidels,Fri,21,5
+Fidels,Fri,22,5
+Fidels,Fri,23,2
+Fidels,Fri,24,0
+Fidels,Sat,7,0
+Fidels,Sat,8,0
+Fidels,Sat,9,0
+Fidels,Sat,10,0
+Fidels,Sat,11,4
+Fidels,Sat,12,4
+Fidels,Sat,13,4
+Fidels,Sat,14,4
+Fidels,Sat,15,4
+Fidels,Sat,16,4
+Fidels,Sat,17,4
+Fidels,Sat,18,4
+Fidels,Sat,19,5
+Fidels,Sat,20,5
+Fidels,Sat,21,5
+Fidels,Sat,22,5
+Fidels,Sat,23,2
+Fidels,Sat,24,0
+Fidels,Sun,7,0
+Fidels,Sun,8,0
+Fidels,Sun,9,0
+Fidels,Sun,10,0
+Fidels,Sun,11,4
+Fidels,Sun,12,4
+Fidels,Sun,13,4
+Fidels,Sun,14,4
+Fidels,Sun,15,4
+Fidels,Sun,16,4
+Fidels,Sun,17,4
+Fidels,Sun,18,4
+Fidels,Sun,19,5
+Fidels,Sun,20,5
+Fidels,Sun,21,5
+Fidels,Sun,22,5
+Fidels,Sun,23,2
+Fidels,Sun,24,0
+The Pub,Mon,7,0
+The Pub,Mon,8,0
+The Pub,Mon,9,0
+The Pub,Mon,10,0
+The Pub,Mon,11,4
+The Pub,Mon,12,4
+The Pub,Mon,13,4
+The Pub,Mon,14,4
+The Pub,Mon,15,4
+The Pub,Mon,16,4
+The Pub,Mon,17,4
+The Pub,Mon,18,4
+The Pub,Mon,19,5
+The Pub,Mon,20,5
+The Pub,Mon,21,5
+The Pub,Mon,22,5
+The Pub,Mon,23,3
+The Pub,Mon,24,3
+The Pub,Tue,7,0
+The Pub,Tue,8,0
+The Pub,Tue,9,0
+The Pub,Tue,10,0
+The Pub,Tue,11,4
+The Pub,Tue,12,4
+The Pub,Tue,13,4
+The Pub,Tue,14,4
+The Pub,Tue,15,4
+The Pub,Tue,16,4
+The Pub,Tue,17,4
+The Pub,Tue,18,4
+The Pub,Tue,19,5
+The Pub,Tue,20,5
+The Pub,Tue,21,5
+The Pub,Tue,22,5
+The Pub,Tue,23,3
+The Pub,Tue,24,3
+The Pub,Wed,7,0
+The Pub,Wed,8,0
+The Pub,Wed,9,0
+The Pub,Wed,10,0
+The Pub,Wed,11,4
+The Pub,Wed,12,4
+The Pub,Wed,13,4
+The Pub,Wed,14,4
+The Pub,Wed,15,4
+The Pub,Wed,16,4
+The Pub,Wed,17,4
+The Pub,Wed,18,4
+The Pub,Wed,19,5
+The Pub,Wed,20,5
+The Pub,Wed,21,5
+The Pub,Wed,22,5
+The Pub,Wed,23,3
+The Pub,Wed,24,3
+The Pub,Thu,7,0
+The Pub,Thu,8,0
+The Pub,Thu,9,0
+The Pub,Thu,10,0
+The Pub,Thu,11,4
+The Pub,Thu,12,4
+The Pub,Thu,13,4
+The Pub,Thu,14,4
+The Pub,Thu,15,4
+The Pub,Thu,16,4
+The Pub,Thu,17,4
+The Pub,Thu,18,4
+The Pub,Thu,19,5
+The Pub,Thu,20,5
+The Pub,Thu,21,5
+The Pub,Thu,22,5
+The Pub,Thu,23,3
+The Pub,Thu,24,3
+The Pub,Fri,7,0
+The Pub,Fri,8,0
+The Pub,Fri,9,0
+The Pub,Fri,10,0
+The Pub,Fri,11,4
+The Pub,Fri,12,4
+The Pub,Fri,13,4
+The Pub,Fri,14,4
+The Pub,Fri,15,4
+The Pub,Fri,16,4
+The Pub,Fri,17,4
+The Pub,Fri,18,4
+The Pub,Fri,19,5
+The Pub,Fri,20,5
+The Pub,Fri,21,5
+The Pub,Fri,22,5
+The Pub,Fri,23,3
+The Pub,Fri,24,3
+The Pub,Sat,7,0
+The Pub,Sat,8,0
+The Pub,Sat,9,0
+The Pub,Sat,10,0
+The Pub,Sat,11,4
+The Pub,Sat,12,4
+The Pub,Sat,13,4
+The Pub,Sat,14,4
+The Pub,Sat,15,4
+The Pub,Sat,16,4
+The Pub,Sat,17,4
+The Pub,Sat,18,4
+The Pub,Sat,19,5
+The Pub,Sat,20,5
+The Pub,Sat,21,5
+The Pub,Sat,22,5
+The Pub,Sat,23,3
+The Pub,Sat,24,3
+The Pub,Sun,7,0
+The Pub,Sun,8,0
+The Pub,Sun,9,0
+The Pub,Sun,10,0
+The Pub,Sun,11,4
+The Pub,Sun,12,4
+The Pub,Sun,13,4
+The Pub,Sun,14,4
+The Pub,Sun,15,4
+The Pub,Sun,16,4
+The Pub,Sun,17,4
+The Pub,Sun,18,4
+The Pub,Sun,19,5
+The Pub,Sun,20,5
+The Pub,Sun,21,5
+The Pub,Sun,22,5
+The Pub,Sun,23,3
+The Pub,Sun,24,3
+Room Service,Mon,7,4
+Room Service,Mon,8,4
+Room Service,Mon,9,4
+Room Service,Mon,10,4
+Room Service,Mon,11,2
+Room Service,Mon,12,2
+Room Service,Mon,13,2
+Room Service,Mon,14,2
+Room Service,Mon,15,2
+Room Service,Mon,16,2
+Room Service,Mon,17,2
+Room Service,Mon,18,2
+Room Service,Mon,19,4
+Room Service,Mon,20,4
+Room Service,Mon,21,4
+Room Service,Mon,22,4
+Room Service,Mon,23,3
+Room Service,Mon,24,3
+Room Service,Tue,7,4
+Room Service,Tue,8,4
+Room Service,Tue,9,4
+Room Service,Tue,10,4
+Room Service,Tue,11,2
+Room Service,Tue,12,2
+Room Service,Tue,13,2
+Room Service,Tue,14,2
+Room Service,Tue,15,2
+Room Service,Tue,16,2
+Room Service,Tue,17,2
+Room Service,Tue,18,2
+Room Service,Tue,19,4
+Room Service,Tue,20,4
+Room Service,Tue,21,4
+Room Service,Tue,22,4
+Room Service,Tue,23,3
+Room Service,Tue,24,3
+Room Service,Wed,7,4
+Room Service,Wed,8,4
+Room Service,Wed,9,4
+Room Service,Wed,10,4
+Room Service,Wed,11,2
+Room Service,Wed,12,2
+Room Service,Wed,13,2
+Room Service,Wed,14,2
+Room Service,Wed,15,2
+Room Service,Wed,16,2
+Room Service,Wed,17,2
+Room Service,Wed,18,2
+Room Service,Wed,19,4
+Room Service,Wed,20,4
+Room Service,Wed,21,4
+Room Service,Wed,22,4
+Room Service,Wed,23,3
+Room Service,Wed,24,3
+Room Service,Thu,7,4
+Room Service,Thu,8,4
+Room Service,Thu,9,4
+Room Service,Thu,10,4
+Room Service,Thu,11,2
+Room Service,Thu,12,2
+Room Service,Thu,13,2
+Room Service,Thu,14,2
+Room Service,Thu,15,2
+Room Service,Thu,16,2
+Room Service,Thu,17,2
+Room Service,Thu,18,2
+Room Service,Thu,19,4
+Room Service,Thu,20,4
+Room Service,Thu,21,4
+Room Service,Thu,22,4
+Room Service,Thu,23,3
+Room Service,Thu,24,3
+Room Service,Fri,7,4
+Room Service,Fri,8,4
+Room Service,Fri,9,4
+Room Service,Fri,10,4
+Room Service,Fri,11,2
+Room Service,Fri,12,2
+Room Service,Fri,13,2
+Room Service,Fri,14,2
+Room Service,Fri,15,2
+Room Service,Fri,16,2
+Room Service,Fri,17,2
+Room Service,Fri,18,2
+Room Service,Fri,19,4
+Room Service,Fri,20,4
+Room Service,Fri,21,4
+Room Service,Fri,22,4
+Room Service,Fri,23,3
+Room Service,Fri,24,3
+Room Service,Sat,7,4
+Room Service,Sat,8,4
+Room Service,Sat,9,4
+Room Service,Sat,10,4
+Room Service,Sat,11,2
+Room Service,Sat,12,2
+Room Service,Sat,13,2
+Room Service,Sat,14,2
+Room Service,Sat,15,2
+Room Service,Sat,16,2
+Room Service,Sat,17,2
+Room Service,Sat,18,2
+Room Service,Sat,19,4
+Room Service,Sat,20,4
+Room Service,Sat,21,4
+Room Service,Sat,22,4
+Room Service,Sat,23,3
+Room Service,Sat,24,3
+Room Service,Sun,7,4
+Room Service,Sun,8,4
+Room Service,Sun,9,4
+Room Service,Sun,10,4
+Room Service,Sun,11,2
+Room Service,Sun,12,2
+Room Service,Sun,13,2
+Room Service,Sun,14,2
+Room Service,Sun,15,2
+Room Service,Sun,16,2
+Room Service,Sun,17,2
+Room Service,Sun,18,2
+Room Service,Sun,19,4
+Room Service,Sun,20,4
+Room Service,Sun,21,4
+Room Service,Sun,22,4
+Room Service,Sun,23,3
+Room Service,Sun,24,3
+Banquets,Mon,7,3
+Banquets,Mon,8,3
+Banquets,Mon,9,3
+Banquets,Mon,10,3
+Banquets,Mon,11,4
+Banquets,Mon,12,4
+Banquets,Mon,13,4
+Banquets,Mon,14,4
+Banquets,Mon,15,5
+Banquets,Mon,16,5
+Banquets,Mon,17,5
+Banquets,Mon,18,5
+Banquets,Mon,19,7
+Banquets,Mon,20,7
+Banquets,Mon,21,7
+Banquets,Mon,22,7
+Banquets,Mon,23,2
+Banquets,Mon,24,0
+Banquets,Tue,7,3
+Banquets,Tue,8,3
+Banquets,Tue,9,3
+Banquets,Tue,10,3
+Banquets,Tue,11,4
+Banquets,Tue,12,4
+Banquets,Tue,13,4
+Banquets,Tue,14,4
+Banquets,Tue,15,5
+Banquets,Tue,16,5
+Banquets,Tue,17,5
+Banquets,Tue,18,5
+Banquets,Tue,19,7
+Banquets,Tue,20,7
+Banquets,Tue,21,7
+Banquets,Tue,22,7
+Banquets,Tue,23,2
+Banquets,Tue,24,0
+Banquets,Wed,7,3
+Banquets,Wed,8,3
+Banquets,Wed,9,3
+Banquets,Wed,10,3
+Banquets,Wed,11,4
+Banquets,Wed,12,4
+Banquets,Wed,13,4
+Banquets,Wed,14,4
+Banquets,Wed,15,5
+Banquets,Wed,16,5
+Banquets,Wed,17,5
+Banquets,Wed,18,5
+Banquets,Wed,19,7
+Banquets,Wed,20,7
+Banquets,Wed,21,7
+Banquets,Wed,22,7
+Banquets,Wed,23,2
+Banquets,Wed,24,0
+Banquets,Thu,7,3
+Banquets,Thu,8,3
+Banquets,Thu,9,3
+Banquets,Thu,10,3
+Banquets,Thu,11,4
+Banquets,Thu,12,4
+Banquets,Thu,13,4
+Banquets,Thu,14,4
+Banquets,Thu,15,5
+Banquets,Thu,16,5
+Banquets,Thu,17,5
+Banquets,Thu,18,5
+Banquets,Thu,19,7
+Banquets,Thu,20,7
+Banquets,Thu,21,7
+Banquets,Thu,22,7
+Banquets,Thu,23,2
+Banquets,Thu,24,0
+Banquets,Fri,7,3
+Banquets,Fri,8,3
+Banquets,Fri,9,3
+Banquets,Fri,10,3
+Banquets,Fri,11,4
+Banquets,Fri,12,4
+Banquets,Fri,13,4
+Banquets,Fri,14,4
+Banquets,Fri,15,5
+Banquets,Fri,16,5
+Banquets,Fri,17,5
+Banquets,Fri,18,5
+Banquets,Fri,19,7
+Banquets,Fri,20,7
+Banquets,Fri,21,7
+Banquets,Fri,22,7
+Banquets,Fri,23,2
+Banquets,Fri,24,0
+Banquets,Sat,7,3
+Banquets,Sat,8,3
+Banquets,Sat,9,3
+Banquets,Sat,10,3
+Banquets,Sat,11,4
+Banquets,Sat,12,4
+Banquets,Sat,13,4
+Banquets,Sat,14,4
+Banquets,Sat,15,5
+Banquets,Sat,16,5
+Banquets,Sat,17,5
+Banquets,Sat,18,5
+Banquets,Sat,19,7
+Banquets,Sat,20,7
+Banquets,Sat,21,7
+Banquets,Sat,22,7
+Banquets,Sat,23,2
+Banquets,Sat,24,0
+Banquets,Sun,7,3
+Banquets,Sun,8,3
+Banquets,Sun,9,3
+Banquets,Sun,10,3
+Banquets,Sun,11,4
+Banquets,Sun,12,4
+Banquets,Sun,13,4
+Banquets,Sun,14,4
+Banquets,Sun,15,5
+Banquets,Sun,16,5
+Banquets,Sun,17,5
+Banquets,Sun,18,5
+Banquets,Sun,19,7
+Banquets,Sun,20,7
+Banquets,Sun,21,7
+Banquets,Sun,22,7
+Banquets,Sun,23,2
+Banquets,Sun,24,0

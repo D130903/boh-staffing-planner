@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Back-of-House Staffing Planner - Crown Melbourne outlets (sample data)</title>
+<script src="https://cdn.plot.ly/plotly-2.35.2.min.js" charset="utf-8"></script>
+<style>
+  /* Always dark: black page, gold accent. Short = red, over = blue (diverging pair, grey midpoint).
+     Series colours validated for colour-blind separation and contrast on the #141414 card surface. */
+  .viz-root {
+    color-scheme: dark;
+    --page: #000000; --surface-1: #141414;
+    --text-primary: #f0efec; --text-secondary: #c3c2b7; --muted: #8d8b85;
+    --grid: #262624; --axis: #3a3a37; --border: rgba(255,255,255,0.09);
+    --short: #e66767; --over: #3987e5; --need: #c98500; --mid: #383835;
+    --accent: #fab219;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; }
+  .viz-root { background: var(--page); color: var(--text-primary); min-height: 100vh;
+    font: 15px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 32px 24px 64px; }
+  header h1 { font-size: 30px; margin: 0 0 6px; letter-spacing: -0.01em; }
+  header h1 span { color: var(--accent); }
+  header { border-bottom: 1px solid var(--border); padding-bottom: 18px; }
+  header p { margin: 0; color: var(--text-secondary); }
+  .banner { margin-top: 14px; padding: 10px 14px; border: 1px dashed var(--accent); border-radius: 10px;
+    color: var(--text-secondary); font-size: 13px; }
+  .banner b { color: var(--accent); }
+  .filters { display: flex; gap: 18px; align-items: center; margin: 24px 0 16px; flex-wrap: wrap; }
+  .filters label { color: var(--text-secondary); font-size: 13px; display: flex; gap: 8px; align-items: center; }
+  select { font: inherit; color: var(--text-primary); background: var(--surface-1);
+    border: 1px solid var(--border); border-radius: 8px; padding: 6px 10px; }
+  .seg { display: inline-flex; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+  .seg button { font: inherit; font-size: 13px; color: var(--text-secondary); background: var(--surface-1);
+    border: 0; padding: 6px 12px; cursor: pointer; }
+  .seg button[aria-pressed="true"] { background: var(--accent); color: #000; font-weight: 600; }
+  .takeaways { margin-top: 20px; background: var(--surface-1); border: 1px solid var(--border);
+    border-left: 3px solid var(--accent); border-radius: 12px; padding: 16px 20px 6px; }
+  .takeaways h3 { margin: 0 0 6px; font-size: 16px; color: var(--accent); }
+  .takeaways ol { margin: 0; padding-left: 20px; }
+  .takeaways li { margin-bottom: 8px; color: var(--text-secondary); }
+  .takeaways b { color: var(--text-primary); }
+  .how { margin: 0 0 8px; font-size: 12.5px; color: var(--accent); }
+  .tiles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+  .tile, .card { background: var(--surface-1); border: 1px solid var(--border); border-radius: 12px; }
+  .tile { padding: 16px 18px; border-top: 2px solid var(--accent); }
+  .tile .label { color: var(--text-secondary); font-size: 13px; }
+  .tile .value { font-size: 30px; font-weight: 600; margin-top: 2px; }
+  .tile .sub { color: var(--muted); font-size: 12px; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 12px; }
+  .card { padding: 18px 18px 8px; margin-top: 12px; }
+  .grid2 .card { margin-top: 0; }
+  .card h3 { margin: 0; font-size: 16px; }
+  .card .note { margin: 2px 0 6px; color: var(--text-secondary); font-size: 13px; }
+  .key { display: flex; gap: 16px; font-size: 12.5px; color: var(--text-secondary); margin: 2px 0 6px; flex-wrap: wrap; }
+  .key i { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 6px; vertical-align: -1px; }
+  h2 { font-size: 20px; margin: 40px 0 4px; padding-left: 10px; border-left: 3px solid var(--accent); }
+  h2 + p { margin: 0 0 4px; color: var(--text-secondary); }
+  details { margin: 4px 0 10px; font-size: 13px; color: var(--text-secondary); }
+  summary { cursor: pointer; }
+  table { border-collapse: collapse; width: 100%; font-size: 13px; margin-top: 6px; }
+  th, td { text-align: left; padding: 7px 8px; border-bottom: 1px solid var(--grid); }
+  th { color: var(--text-secondary); font-weight: 600; }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+  td .tag { font-size: 12px; padding: 1px 8px; border-radius: 99px; border: 1px solid var(--short); color: var(--text-primary); }
+  .steps { padding-left: 20px; color: var(--text-secondary); }
+  .steps b { color: var(--text-primary); }
+  footer { margin-top: 40px; color: var(--muted); font-size: 12px; }
+  @media (max-width: 860px) { .tiles { grid-template-columns: 1fr 1fr; } .grid2 { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div class="viz-root">
+<div class="wrap">
+<header>
+  <h1>Back-of-House <span>Staffing Planner</span></h1>
+  <p>Which Crown Melbourne outlets get busy, at what time, and where the kitchen and stewarding roster falls short,
+     so shifts can be rostered to match demand instead of the same pattern every day.</p>
+  <div class="banner"><b>Sample data.</b> Outlet names are real Crown venues, but covers, staffing standards and the
+     roster are modelled for demonstration. Swap in real POS covers and roster exports to use it for real
+     (see "Use it with real data" at the bottom).</div>
+</header>
+
+<div class="filters" role="group" aria-label="Filters">
+  <label>Day <select id="day"></select></label>
+  <label>Demand
+    <span class="seg" id="evt">
+      <button type="button" data-v="0" aria-pressed="true">Normal day</button>
+      <button type="button" data-v="1" aria-pressed="false">Big event day</button>
+    </span>
+  </label>
+</div>
+
+<div class="tiles" id="tiles"></div>
+
+<div class="takeaways">
+  <h3>What this shows, in plain English</h3>
+  <ol id="takeaways"></ol>
+</div>
+
+<h2>1. When is each outlet busy?</h2>
+<p>How busy each outlet is, hour by hour, compared with its own busiest hour of the week. Brighter = busier. This is what the roster should follow.</p>
+<div class="card">
+  <p class="how">How to read: each row is an outlet, each column an hour. Hover a square for the exact numbers.</p>
+  <div id="heatCovers" style="height:420px"></div>
+</div>
+
+<h2>2. Where are we short-staffed?</h2>
+<p>Kitchen and stewarding staff needed (from covers) minus staff rostered, for every outlet and hour.</p>
+<div class="card">
+  <p class="how">How to read: red squares need more staff (the number is how many), blue squares have spare staff, grey is right.</p>
+  <div class="key"><span><i style="background:var(--short)"></i>Short-staffed</span>
+    <span><i style="background:var(--mid)"></i>About right</span>
+    <span><i style="background:var(--over)"></i>Spare staff</span></div>
+  <div id="heatGap" style="height:420px"></div>
+</div>
+
+<div class="grid2">
+  <div class="card">
+    <h3>Across all outlets: staff needed vs rostered</h3>
+    <p class="note">Gold = staff the covers call for. Blue = staff on the roster. Where gold is above blue, kitchens run short.</p>
+    <div id="lineDay" style="height:300px"></div>
+  </div>
+  <div class="card">
+    <h3>Every day of the week</h3>
+    <p class="note">Staff-hours short (red) and spare (blue). The same roster every day leaves weekends short and early week heavy.</p>
+    <div id="barWeek" style="height:300px"></div>
+  </div>
+</div>
+
+<h2>3. Roster changes to make</h2>
+<p>The biggest gaps for the selected day. First use staff who are spare in the same kitchen earlier in the day (start them later),
+   then spare staff in other outlets (kitchen hands and stewards move more easily than chefs), and only then add a short shift.</p>
+<div class="card">
+  <table id="recs"><thead><tr><th>When</th><th>Outlet</th><th class="num">Short by</th><th>Suggested fix</th></tr></thead><tbody></tbody></table>
+  <details><summary>Show the full data table for this day</summary><div id="fullTable"></div></details>
+</div>
+
+<h2>Use it with real data</h2>
+<ol class="steps">
+  <li><b>Covers by hour:</b> export from the outlet POS (or reservations system) as outlet, day, hour, covers.</li>
+  <li><b>Roster by hour:</b> export the BOH roster (chefs, kitchen hands, stewards) as outlet, day, hour, staff rostered.</li>
+  <li><b>Staffing standard:</b> agree with each head chef how many covers one BOH staff member can handle per hour
+      (here: 10 for fine dining, 20 to 30 for casual and buffet, 40 for banquets).</li>
+  <li><b>Events:</b> add expected covers for event days (Australian Open, AFL Grand Final, Melbourne Cup, big banquets) from the events calendar.</li>
+  <li>Save the two files into <code>data/</code> with the same columns and re-run <code>python src/build_dashboard.py</code>.</li>
+</ol>
+<details><summary>How the numbers are worked out</summary>
+  <p>Staff needed in an hour = covers ÷ the outlet's staffing standard, rounded up, with at least 1 person whenever the outlet is open.
+     Gap = staff needed − staff rostered. Staff-hours short = the sum of all positive gaps.
+     The sample roster uses the same 4-hour shift blocks every day, sized for the busiest hour of an average day, which is how a flat roster behaves. Busyness in chart 1 = covers ÷ the outlet's busiest hour across the week (including event days).</p>
+</details>
+
+<footer>Built by Dhruv Rawat · Python + Plotly · Sample data, not Crown figures.</footer>
+</div>
+</div>
+
+<script>
+const DATA = /*__DATA__*/null;
+const DAYS = ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"];
+const DAYNAME = {Mon:"Monday",Tue:"Tuesday",Wed:"Wednesday",Thu:"Thursday",Fri:"Friday",Sat:"Saturday",Sun:"Sunday"};
+const HOURS = [...new Set(DATA.rows.map(r => r[2]))].sort((a,b)=>a-b);
+const OUTLETS = DATA.outlets.map(o => o.name);
+const STD = Object.fromEntries(DATA.outlets.map(o => [o.name, o.std]));
+const PEAK = {}; DATA.rows.forEach(([o, d, h, c, ce]) => { PEAK[o] = Math.max(PEAK[o] || 1, c, ce); });
+const css = n => getComputedStyle(document.querySelector('.viz-root')).getPropertyValue(n).trim();
+const C = {ink: css('--text-primary'), ink2: css('--text-secondary'), muted: css('--muted'), grid: css('--grid'),
+  axis: css('--axis'), surf: css('--surface-1'), short: css('--short'), over: css('--over'), need: css('--need'), mid: css('--mid')};
+const hl = h => { const x = h % 24; return x === 0 ? "12am" : x < 12 ? x + "am" : x === 12 ? "12pm" : (x - 12) + "pm"; };
+const span = (a, b) => hl(a) + "–" + hl(b + 1);
+const state = {day: "Sat", event: false};
+
+const idx = {};
+DATA.rows.forEach(([o, d, h, c, ce, r]) => { idx[o + "|" + d + "|" + h] = {c, ce, r}; });
+function cell(o, d, h, ev) {
+  const x = idx[o + "|" + d + "|" + h]; const cov = ev ? x.ce : x.c;
+  const need = cov === 0 ? 0 : Math.max(1, Math.ceil(cov / STD[o]));
+  return {cov, need, ros: x.r, gap: need - x.r};
+}
+function dayTotals(d, ev) {
+  let short = 0, over = 0, ok = 0, open = 0;
+  OUTLETS.forEach(o => HOURS.forEach(h => { const c = cell(o, d, h, ev);
+    if (c.need === 0 && c.ros === 0) return; open++;
+    if (c.gap > 0) short += c.gap; else if (c.gap < 0) over -= c.gap;
+    if (Math.abs(c.gap) <= 1) ok++; }));
+  return {short, over, ok, open};
+}
+
+const baseLayout = (extra) => Object.assign({
+  paper_bgcolor: C.surf, plot_bgcolor: C.surf, font: {color: C.ink2, size: 12, family: "system-ui, Segoe UI, sans-serif"},
+  margin: {l: 110, r: 16, t: 8, b: 40}, hoverlabel: {bgcolor: "#000", bordercolor: C.axis, font: {color: C.ink}},
+  xaxis: {gridcolor: C.grid, linecolor: C.axis, tickfont: {color: C.muted}, zeroline: false},
+  yaxis: {gridcolor: C.grid, linecolor: C.axis, tickfont: {color: C.ink2}, zeroline: false},
+}, extra);
+const cfg = {displayModeBar: false, responsive: true};
+
+function render() {
+  const d = state.day, ev = state.event, X = HOURS.map(hl);
+  const cells = OUTLETS.map(o => HOURS.map(h => cell(o, d, h, ev)));
+  const t = dayTotals(d, ev);
+
+  // busiest outlet-hour
+  let best = {cov: -1};
+  OUTLETS.forEach((o, i) => HOURS.forEach((h, j) => { if (cells[i][j].cov > best.cov) best = {cov: cells[i][j].cov, o, h}; }));
+  // worst gap
+  let worst = {gap: 0};
+  OUTLETS.forEach((o, i) => HOURS.forEach((h, j) => { if (cells[i][j].gap > worst.gap) worst = {gap: cells[i][j].gap, o, h}; }));
+  // resort peak hour
+  const totNeed = HOURS.map((h, j) => OUTLETS.reduce((s, o, i) => s + cells[i][j].need, 0));
+  const totRos = HOURS.map((h, j) => OUTLETS.reduce((s, o, i) => s + cells[i][j].ros, 0));
+  const pk = totNeed.indexOf(Math.max(...totNeed));
+
+  document.getElementById("tiles").innerHTML = [
+    ["Staff-hours short", t.short, "hours where kitchens need more people"],
+    ["Staff-hours spare", t.over, "hours with more people than needed"],
+    ["Hours staffed about right", Math.round(100 * t.ok / t.open) + "%", "within 1 person of what is needed"],
+    ["Busiest spot", best.o, best.cov + " covers at " + hl(best.h)],
+  ].map(([l, v, s]) => `<div class="tile"><div class="label">${l}</div><div class="value">${v}</div><div class="sub">${s}</div></div>`).join("");
+
+  const week = DAYS.map(x => dayTotals(x, ev));
+  const worstDay = DAYS[week.map(w => w.short).indexOf(Math.max(...week.map(w => w.short)))];
+  const lightDay = DAYS[week.map(w => w.over).indexOf(Math.max(...week.map(w => w.over)))];
+  document.getElementById("takeaways").innerHTML = [
+    `On <b>${DAYNAME[d]}${ev ? " (event day)" : ""}</b>, the whole resort's kitchens need the most people at <b>${hl(HOURS[pk])}</b>: ${totNeed[pk]} needed vs ${totRos[pk]} rostered.`,
+    worst.gap > 0 ? `The biggest gap is <b>${worst.o} at ${hl(worst.h)}</b>, short by <b>${worst.gap}</b> ${worst.gap > 1 ? "people" : "person"}.` : `No outlet is short-staffed on this day.`,
+    `Across the week, <b>${DAYNAME[worstDay]}</b> is the most short-staffed day and <b>${DAYNAME[lightDay]}</b> has the most spare staff, so hours can move from early week to the weekend without adding cost.`,
+    ev ? `On a big event day the gaps grow sharply, especially in casual dining and pubs, so event days need their own roster.` : `Switch to "Big event day" to see how much worse it gets during the Australian Open, AFL finals or Melbourne Cup.`,
+  ].map(x => `<li>${x}</li>`).join("");
+
+  // 1. covers heatmap (sequential blue, dark -> light)
+  Plotly.react("heatCovers", [{
+    type: "heatmap", x: X, y: OUTLETS, z: cells.map((r, i) => r.map(c => c.cov === 0 ? null : Math.round(100 * c.cov / PEAK[OUTLETS[i]]))),
+    zmin: 0, zmax: 100, colorscale: [[0, "#0d366b"], [0.35, "#256abf"], [0.7, "#6da7ec"], [1, "#cde2fb"]], xgap: 2, ygap: 2,
+    customdata: cells.map(r => r.map(c => c.cov)),
+    colorbar: {title: {text: "% of its<br>busiest hour", font: {color: C.ink2, size: 11}}, ticksuffix: "%", tickfont: {color: C.muted}, outlinewidth: 0, thickness: 10},
+    hovertemplate: "<b>%{y}</b> · %{x}<br>%{customdata} covers (%{z}% of its busiest hour this week)<extra></extra>", hoverongaps: false,
+  }], baseLayout({yaxis: {autorange: "reversed", tickfont: {color: C.ink2}}, xaxis: {tickfont: {color: C.muted}, side: "bottom"}}), cfg);
+
+  // 2. gap heatmap (diverging: blue spare, grey right, red short)
+  const G = cells.map(r => r.map(c => (c.need === 0 && c.ros === 0) ? null : c.gap));
+  const lim = Math.max(3, ...G.flat().filter(v => v !== null).map(Math.abs));
+  Plotly.react("heatGap", [{
+    type: "heatmap", x: X, y: OUTLETS, z: G, zmin: -lim, zmax: lim, xgap: 2, ygap: 2,
+    colorscale: [[0, "#2a78d6"], [0.5 - 0.5 / lim, "#24466f"], [0.5 - 0.5 / lim + 1e-6, C.mid], [0.5 + 0.5 / lim - 1e-6, C.mid], [0.5 + 0.5 / lim, "#8a3a3a"], [1, "#e66767"]],
+    text: G.map(r => r.map(v => v > 0 ? "+" + v : "")), texttemplate: "%{text}", textfont: {color: C.ink, size: 11},
+    customdata: cells.map(r => r.map(c => [c.cov, c.need, c.ros])),
+    hovertemplate: "<b>%{y}</b> · %{x}<br>%{customdata[0]} covers<br>Needed %{customdata[1]} · Rostered %{customdata[2]}<extra></extra>",
+    hoverongaps: false, showscale: false,
+  }], baseLayout({yaxis: {autorange: "reversed", tickfont: {color: C.ink2}}, xaxis: {tickfont: {color: C.muted}}}), cfg);
+
+  // line: needed vs rostered, one axis (both are staff counts)
+  Plotly.react("lineDay", [
+    {type: "scatter", mode: "lines", name: "Needed", x: X, y: totNeed, line: {color: C.need, width: 2, shape: "spline"},
+     hovertemplate: "%{x}: %{y} needed<extra></extra>"},
+    {type: "scatter", mode: "lines", name: "Rostered", x: X, y: totRos, line: {color: C.over, width: 2, shape: "hv"},
+     hovertemplate: "%{x}: %{y} rostered<extra></extra>"},
+  ], baseLayout({margin: {l: 40, r: 10, t: 8, b: 40}, hovermode: "x unified", showlegend: true, xaxis: {tickfont: {color: C.muted}, tickangle: 0, dtick: 3, linecolor: C.axis, gridcolor: C.grid},
+    legend: {orientation: "h", y: 1.12, x: 0, font: {color: C.ink2}},
+    yaxis: {title: {text: "BOH staff", font: {color: C.muted}}, gridcolor: C.grid, tickfont: {color: C.muted}, rangemode: "tozero"}}), cfg);
+
+  // bar: week short vs spare
+  Plotly.react("barWeek", [
+    {type: "bar", name: "Short", x: DAYS, y: week.map(w => w.short), marker: {color: C.short, line: {color: C.surf, width: 2}},
+     hovertemplate: "%{x}: %{y} staff-hours short<extra></extra>"},
+    {type: "bar", name: "Spare", x: DAYS, y: week.map(w => w.over), marker: {color: C.over, line: {color: C.surf, width: 2}},
+     hovertemplate: "%{x}: %{y} staff-hours spare<extra></extra>"},
+  ], baseLayout({margin: {l: 40, r: 10, t: 8, b: 40}, barmode: "group", bargap: 0.35, showlegend: true,
+    legend: {orientation: "h", y: 1.12, x: 0, font: {color: C.ink2}},
+    xaxis: {tickfont: {color: C.ink2}, linecolor: C.axis},
+    yaxis: {title: {text: "Staff-hours", font: {color: C.muted}}, gridcolor: C.grid, tickfont: {color: C.muted}}}), cfg);
+  // highlight selected day by outline
+  Plotly.relayout("barWeek", {shapes: [{type: "rect", xref: "x", yref: "paper", x0: DAYS.indexOf(d) - 0.45, x1: DAYS.indexOf(d) + 0.45, y0: 0, y1: 1,
+    line: {color: "#fab219", width: 1, dash: "dot"}, fillcolor: "rgba(0,0,0,0)"}]});
+
+  // recommendations: contiguous short runs per outlet
+  const runs = [];
+  OUTLETS.forEach((o, i) => {
+    let s = null;
+    HOURS.forEach((h, j) => {
+      const g = cells[i][j].gap;
+      if (g > 0 && s === null) s = j;
+      if ((g <= 0 || j === HOURS.length - 1) && s !== null) {
+        const e = g > 0 ? j : j - 1;
+        const seg = cells[i].slice(s, e + 1);
+        runs.push({o, s, e, max: Math.max(...seg.map(c => c.gap)), sum: seg.reduce((a, c) => a + c.gap, 0)});
+        s = null;
+      }
+    });
+  });
+  runs.sort((a, b) => b.sum - a.sum);
+  const rows = runs.slice(0, 8).map(r => {
+    const donors = OUTLETS.filter((o, i) => o !== r.o && cells[i].slice(r.s, r.e + 1).every(c => c.gap < 0 && c.ros > 0))
+      .map(o => ({o, spare: Math.min(...cells[OUTLETS.indexOf(o)].slice(r.s, r.e + 1).map(c => -c.gap))}))
+      .sort((a, b) => b.spare - a.spare);
+    // same outlet: a quiet spell earlier in the day whose spare hours can start later instead
+    const row = cells[OUTLETS.indexOf(r.o)]; let quiet = null, q = null;
+    for (let j = 0; j <= r.s; j++) {
+      const sp = j < r.s && row[j].gap < 0 && row[j].ros > 0;
+      if (sp && q === null) q = {s: j, min: -row[j].gap};
+      else if (sp) q.min = Math.min(q.min, -row[j].gap);
+      if ((!sp || j === r.s) && q !== null) { q.e = j - 1; if (!quiet || q.min * (q.e - q.s + 1) > quiet.min * (quiet.e - quiet.s + 1)) quiet = q; q = null; }
+    }
+    let fix, left = r.max; const parts = [];
+    if (quiet) { const mv = Math.min(quiet.min, left); left -= mv;
+      parts.push(`Start ${mv} later: they are spare here ${span(HOURS[quiet.s], HOURS[quiet.e])}`); }
+    if (left > 0 && donors.length) { const mv = Math.min(donors[0].spare, left); left -= mv;
+      parts.push(`move ${mv} across from ${donors[0].o}`); }
+    if (left > 0) parts.push(`add ${left} on a ${r.e - r.s + 1}-hour short shift`);
+    fix = parts.join("; "); fix = fix.charAt(0).toUpperCase() + fix.slice(1);
+    return `<tr><td>${DAYNAME[d].slice(0,3)} ${span(HOURS[r.s], HOURS[r.e])}</td><td>${r.o}</td><td class="num"><span class="tag">+${r.max}</span></td><td>${fix}</td></tr>`;
+  });
+  document.querySelector("#recs tbody").innerHTML = rows.join("") || `<tr><td colspan="4">No short-staffed hours on this day.</td></tr>`;
+
+  // full table (accessibility / data view)
+  let tb = `<table><thead><tr><th>Outlet</th><th>Hour</th><th class="num">Covers</th><th class="num">Needed</th><th class="num">Rostered</th><th class="num">Gap</th></tr></thead><tbody>`;
+  OUTLETS.forEach((o, i) => HOURS.forEach((h, j) => { const c = cells[i][j]; if (c.need || c.ros)
+    tb += `<tr><td>${o}</td><td>${hl(h)}</td><td class="num">${c.cov}</td><td class="num">${c.need}</td><td class="num">${c.ros}</td><td class="num">${c.gap > 0 ? "+" + c.gap : c.gap}</td></tr>`; }));
+  document.getElementById("fullTable").innerHTML = tb + "</tbody></table>";
+}
+
+const sel = document.getElementById("day");
+sel.innerHTML = DAYS.map(x => `<option value="${x}" ${x === state.day ? "selected" : ""}>${DAYNAME[x]}</option>`).join("");
+sel.onchange = () => { state.day = sel.value; render(); };
+document.querySelectorAll("#evt button").forEach(b => b.onclick = () => {
+  state.event = b.dataset.v === "1";
+  document.querySelectorAll("#evt button").forEach(x => x.setAttribute("aria-pressed", x === b));
+  render();
+});
+render();
+</script>
+</body>
+</html>

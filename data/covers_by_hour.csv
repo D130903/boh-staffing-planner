@@ -1,0 +1,1261 @@
+outlet,type,day,hour,covers,covers_event_day,covers_per_staff_standard
+Conservatory,Buffet,Mon,7,75,95,30
+Conservatory,Buffet,Mon,8,142,168,30
+Conservatory,Buffet,Mon,9,124,157,30
+Conservatory,Buffet,Mon,10,57,80,30
+Conservatory,Buffet,Mon,11,36,50,30
+Conservatory,Buffet,Mon,12,129,168,30
+Conservatory,Buffet,Mon,13,152,211,30
+Conservatory,Buffet,Mon,14,72,96,30
+Conservatory,Buffet,Mon,15,39,54,30
+Conservatory,Buffet,Mon,16,39,49,30
+Conservatory,Buffet,Mon,17,41,46,30
+Conservatory,Buffet,Mon,18,147,174,30
+Conservatory,Buffet,Mon,19,145,188,30
+Conservatory,Buffet,Mon,20,119,168,30
+Conservatory,Buffet,Mon,21,58,81,30
+Conservatory,Buffet,Mon,22,0,0,30
+Conservatory,Buffet,Mon,23,0,0,30
+Conservatory,Buffet,Mon,24,0,0,30
+Conservatory,Buffet,Tue,7,84,105,30
+Conservatory,Buffet,Tue,8,150,180,30
+Conservatory,Buffet,Tue,9,123,164,30
+Conservatory,Buffet,Tue,10,68,85,30
+Conservatory,Buffet,Tue,11,40,54,30
+Conservatory,Buffet,Tue,12,147,187,30
+Conservatory,Buffet,Tue,13,173,221,30
+Conservatory,Buffet,Tue,14,79,109,30
+Conservatory,Buffet,Tue,15,41,57,30
+Conservatory,Buffet,Tue,16,43,52,30
+Conservatory,Buffet,Tue,17,44,50,30
+Conservatory,Buffet,Tue,18,147,201,30
+Conservatory,Buffet,Tue,19,156,214,30
+Conservatory,Buffet,Tue,20,122,176,30
+Conservatory,Buffet,Tue,21,69,87,30
+Conservatory,Buffet,Tue,22,0,0,30
+Conservatory,Buffet,Tue,23,0,0,30
+Conservatory,Buffet,Tue,24,0,0,30
+Conservatory,Buffet,Wed,7,99,118,30
+Conservatory,Buffet,Wed,8,174,222,30
+Conservatory,Buffet,Wed,9,152,193,30
+Conservatory,Buffet,Wed,10,79,104,30
+Conservatory,Buffet,Wed,11,47,62,30
+Conservatory,Buffet,Wed,12,156,226,30
+Conservatory,Buffet,Wed,13,191,262,30
+Conservatory,Buffet,Wed,14,98,117,30
+Conservatory,Buffet,Wed,15,46,62,30
+Conservatory,Buffet,Wed,16,43,60,30
+Conservatory,Buffet,Wed,17,44,57,30
+Conservatory,Buffet,Wed,18,156,228,30
+Conservatory,Buffet,Wed,19,176,233,30
+Conservatory,Buffet,Wed,20,147,206,30
+Conservatory,Buffet,Wed,21,70,96,30
+Conservatory,Buffet,Wed,22,0,0,30
+Conservatory,Buffet,Wed,23,0,0,30
+Conservatory,Buffet,Wed,24,0,0,30
+Conservatory,Buffet,Thu,7,105,144,30
+Conservatory,Buffet,Thu,8,198,259,30
+Conservatory,Buffet,Thu,9,161,214,30
+Conservatory,Buffet,Thu,10,82,115,30
+Conservatory,Buffet,Thu,11,56,64,30
+Conservatory,Buffet,Thu,12,178,234,30
+Conservatory,Buffet,Thu,13,200,271,30
+Conservatory,Buffet,Thu,14,106,131,30
+Conservatory,Buffet,Thu,15,48,67,30
+Conservatory,Buffet,Thu,16,51,69,30
+Conservatory,Buffet,Thu,17,56,70,30
+Conservatory,Buffet,Thu,18,189,249,30
+Conservatory,Buffet,Thu,19,215,252,30
+Conservatory,Buffet,Thu,20,178,227,30
+Conservatory,Buffet,Thu,21,89,114,30
+Conservatory,Buffet,Thu,22,0,0,30
+Conservatory,Buffet,Thu,23,0,0,30
+Conservatory,Buffet,Thu,24,0,0,30
+Conservatory,Buffet,Fri,7,135,176,30
+Conservatory,Buffet,Fri,8,232,329,30
+Conservatory,Buffet,Fri,9,205,266,30
+Conservatory,Buffet,Fri,10,105,135,30
+Conservatory,Buffet,Fri,11,67,83,30
+Conservatory,Buffet,Fri,12,228,304,30
+Conservatory,Buffet,Fri,13,257,350,30
+Conservatory,Buffet,Fri,14,127,189,30
+Conservatory,Buffet,Fri,15,70,84,30
+Conservatory,Buffet,Fri,16,66,87,30
+Conservatory,Buffet,Fri,17,67,84,30
+Conservatory,Buffet,Fri,18,261,347,30
+Conservatory,Buffet,Fri,19,274,357,30
+Conservatory,Buffet,Fri,20,205,268,30
+Conservatory,Buffet,Fri,21,107,138,30
+Conservatory,Buffet,Fri,22,0,0,30
+Conservatory,Buffet,Fri,23,0,0,30
+Conservatory,Buffet,Fri,24,0,0,30
+Conservatory,Buffet,Sat,7,162,189,30
+Conservatory,Buffet,Sat,8,256,386,30
+Conservatory,Buffet,Sat,9,248,302,30
+Conservatory,Buffet,Sat,10,124,148,30
+Conservatory,Buffet,Sat,11,77,108,30
+Conservatory,Buffet,Sat,12,293,372,30
+Conservatory,Buffet,Sat,13,296,392,30
+Conservatory,Buffet,Sat,14,146,209,30
+Conservatory,Buffet,Sat,15,77,105,30
+Conservatory,Buffet,Sat,16,75,96,30
+Conservatory,Buffet,Sat,17,81,108,30
+Conservatory,Buffet,Sat,18,293,378,30
+Conservatory,Buffet,Sat,19,324,416,30
+Conservatory,Buffet,Sat,20,236,321,30
+Conservatory,Buffet,Sat,21,120,148,30
+Conservatory,Buffet,Sat,22,0,0,30
+Conservatory,Buffet,Sat,23,0,0,30
+Conservatory,Buffet,Sat,24,0,0,30
+Conservatory,Buffet,Sun,7,112,152,30
+Conservatory,Buffet,Sun,8,209,292,30
+Conservatory,Buffet,Sun,9,208,250,30
+Conservatory,Buffet,Sun,10,104,136,30
+Conservatory,Buffet,Sun,11,65,77,30
+Conservatory,Buffet,Sun,12,208,271,30
+Conservatory,Buffet,Sun,13,230,300,30
+Conservatory,Buffet,Sun,14,123,167,30
+Conservatory,Buffet,Sun,15,64,78,30
+Conservatory,Buffet,Sun,16,62,82,30
+Conservatory,Buffet,Sun,17,56,81,30
+Conservatory,Buffet,Sun,18,232,296,30
+Conservatory,Buffet,Sun,19,252,313,30
+Conservatory,Buffet,Sun,20,184,263,30
+Conservatory,Buffet,Sun,21,94,132,30
+Conservatory,Buffet,Sun,22,0,0,30
+Conservatory,Buffet,Sun,23,0,0,30
+Conservatory,Buffet,Sun,24,0,0,30
+Nobu,Fine dining,Mon,7,0,0,10
+Nobu,Fine dining,Mon,8,0,0,10
+Nobu,Fine dining,Mon,9,0,0,10
+Nobu,Fine dining,Mon,10,0,0,10
+Nobu,Fine dining,Mon,11,0,0,10
+Nobu,Fine dining,Mon,12,34,39,10
+Nobu,Fine dining,Mon,13,37,51,10
+Nobu,Fine dining,Mon,14,20,22,10
+Nobu,Fine dining,Mon,15,15,19,10
+Nobu,Fine dining,Mon,16,17,21,10
+Nobu,Fine dining,Mon,17,15,21,10
+Nobu,Fine dining,Mon,18,47,57,10
+Nobu,Fine dining,Mon,19,61,79,10
+Nobu,Fine dining,Mon,20,56,69,10
+Nobu,Fine dining,Mon,21,41,48,10
+Nobu,Fine dining,Mon,22,19,25,10
+Nobu,Fine dining,Mon,23,0,0,10
+Nobu,Fine dining,Mon,24,0,0,10
+Nobu,Fine dining,Tue,7,0,0,10
+Nobu,Fine dining,Tue,8,0,0,10
+Nobu,Fine dining,Tue,9,0,0,10
+Nobu,Fine dining,Tue,10,0,0,10
+Nobu,Fine dining,Tue,11,0,0,10
+Nobu,Fine dining,Tue,12,33,45,10
+Nobu,Fine dining,Tue,13,43,48,10
+Nobu,Fine dining,Tue,14,19,24,10
+Nobu,Fine dining,Tue,15,16,21,10
+Nobu,Fine dining,Tue,16,16,21,10
+Nobu,Fine dining,Tue,17,16,22,10
+Nobu,Fine dining,Tue,18,46,59,10
+Nobu,Fine dining,Tue,19,68,90,10
+Nobu,Fine dining,Tue,20,63,86,10
+Nobu,Fine dining,Tue,21,41,51,10
+Nobu,Fine dining,Tue,22,20,23,10
+Nobu,Fine dining,Tue,23,0,0,10
+Nobu,Fine dining,Tue,24,0,0,10
+Nobu,Fine dining,Wed,7,0,0,10
+Nobu,Fine dining,Wed,8,0,0,10
+Nobu,Fine dining,Wed,9,0,0,10
+Nobu,Fine dining,Wed,10,0,0,10
+Nobu,Fine dining,Wed,11,0,0,10
+Nobu,Fine dining,Wed,12,38,45,10
+Nobu,Fine dining,Wed,13,42,60,10
+Nobu,Fine dining,Wed,14,22,29,10
+Nobu,Fine dining,Wed,15,20,24,10
+Nobu,Fine dining,Wed,16,19,24,10
+Nobu,Fine dining,Wed,17,19,25,10
+Nobu,Fine dining,Wed,18,50,68,10
+Nobu,Fine dining,Wed,19,73,92,10
+Nobu,Fine dining,Wed,20,76,91,10
+Nobu,Fine dining,Wed,21,46,60,10
+Nobu,Fine dining,Wed,22,24,28,10
+Nobu,Fine dining,Wed,23,0,0,10
+Nobu,Fine dining,Wed,24,0,0,10
+Nobu,Fine dining,Thu,7,0,0,10
+Nobu,Fine dining,Thu,8,0,0,10
+Nobu,Fine dining,Thu,9,0,0,10
+Nobu,Fine dining,Thu,10,0,0,10
+Nobu,Fine dining,Thu,11,0,0,10
+Nobu,Fine dining,Thu,12,44,53,10
+Nobu,Fine dining,Thu,13,51,66,10
+Nobu,Fine dining,Thu,14,25,32,10
+Nobu,Fine dining,Thu,15,21,29,10
+Nobu,Fine dining,Thu,16,22,28,10
+Nobu,Fine dining,Thu,17,23,26,10
+Nobu,Fine dining,Thu,18,60,80,10
+Nobu,Fine dining,Thu,19,90,101,10
+Nobu,Fine dining,Thu,20,76,101,10
+Nobu,Fine dining,Thu,21,48,61,10
+Nobu,Fine dining,Thu,22,24,33,10
+Nobu,Fine dining,Thu,23,0,0,10
+Nobu,Fine dining,Thu,24,0,0,10
+Nobu,Fine dining,Fri,7,0,0,10
+Nobu,Fine dining,Fri,8,0,0,10
+Nobu,Fine dining,Fri,9,0,0,10
+Nobu,Fine dining,Fri,10,0,0,10
+Nobu,Fine dining,Fri,11,0,0,10
+Nobu,Fine dining,Fri,12,59,75,10
+Nobu,Fine dining,Fri,13,64,87,10
+Nobu,Fine dining,Fri,14,35,40,10
+Nobu,Fine dining,Fri,15,30,38,10
+Nobu,Fine dining,Fri,16,27,38,10
+Nobu,Fine dining,Fri,17,28,35,10
+Nobu,Fine dining,Fri,18,85,104,10
+Nobu,Fine dining,Fri,19,106,139,10
+Nobu,Fine dining,Fri,20,107,130,10
+Nobu,Fine dining,Fri,21,64,82,10
+Nobu,Fine dining,Fri,22,35,39,10
+Nobu,Fine dining,Fri,23,0,0,10
+Nobu,Fine dining,Fri,24,0,0,10
+Nobu,Fine dining,Sat,7,0,0,10
+Nobu,Fine dining,Sat,8,0,0,10
+Nobu,Fine dining,Sat,9,0,0,10
+Nobu,Fine dining,Sat,10,0,0,10
+Nobu,Fine dining,Sat,11,0,0,10
+Nobu,Fine dining,Sat,12,64,78,10
+Nobu,Fine dining,Sat,13,70,92,10
+Nobu,Fine dining,Sat,14,39,47,10
+Nobu,Fine dining,Sat,15,29,42,10
+Nobu,Fine dining,Sat,16,33,42,10
+Nobu,Fine dining,Sat,17,30,38,10
+Nobu,Fine dining,Sat,18,82,115,10
+Nobu,Fine dining,Sat,19,121,148,10
+Nobu,Fine dining,Sat,20,118,159,10
+Nobu,Fine dining,Sat,21,79,91,10
+Nobu,Fine dining,Sat,22,36,50,10
+Nobu,Fine dining,Sat,23,0,0,10
+Nobu,Fine dining,Sat,24,0,0,10
+Nobu,Fine dining,Sun,7,0,0,10
+Nobu,Fine dining,Sun,8,0,0,10
+Nobu,Fine dining,Sun,9,0,0,10
+Nobu,Fine dining,Sun,10,0,0,10
+Nobu,Fine dining,Sun,11,0,0,10
+Nobu,Fine dining,Sun,12,50,64,10
+Nobu,Fine dining,Sun,13,55,69,10
+Nobu,Fine dining,Sun,14,31,37,10
+Nobu,Fine dining,Sun,15,23,33,10
+Nobu,Fine dining,Sun,16,25,32,10
+Nobu,Fine dining,Sun,17,23,33,10
+Nobu,Fine dining,Sun,18,64,92,10
+Nobu,Fine dining,Sun,19,98,121,10
+Nobu,Fine dining,Sun,20,95,126,10
+Nobu,Fine dining,Sun,21,57,70,10
+Nobu,Fine dining,Sun,22,30,36,10
+Nobu,Fine dining,Sun,23,0,0,10
+Nobu,Fine dining,Sun,24,0,0,10
+Koko,Fine dining,Mon,7,0,0,10
+Koko,Fine dining,Mon,8,0,0,10
+Koko,Fine dining,Mon,9,0,0,10
+Koko,Fine dining,Mon,10,0,0,10
+Koko,Fine dining,Mon,11,0,0,10
+Koko,Fine dining,Mon,12,16,19,10
+Koko,Fine dining,Mon,13,19,24,10
+Koko,Fine dining,Mon,14,8,10,10
+Koko,Fine dining,Mon,15,11,12,10
+Koko,Fine dining,Mon,16,11,12,10
+Koko,Fine dining,Mon,17,10,12,10
+Koko,Fine dining,Mon,18,28,33,10
+Koko,Fine dining,Mon,19,44,51,10
+Koko,Fine dining,Mon,20,32,40,10
+Koko,Fine dining,Mon,21,18,19,10
+Koko,Fine dining,Mon,22,0,0,10
+Koko,Fine dining,Mon,23,0,0,10
+Koko,Fine dining,Mon,24,0,0,10
+Koko,Fine dining,Tue,7,0,0,10
+Koko,Fine dining,Tue,8,0,0,10
+Koko,Fine dining,Tue,9,0,0,10
+Koko,Fine dining,Tue,10,0,0,10
+Koko,Fine dining,Tue,11,0,0,10
+Koko,Fine dining,Tue,12,19,21,10
+Koko,Fine dining,Tue,13,22,28,10
+Koko,Fine dining,Tue,14,9,11,10
+Koko,Fine dining,Tue,15,12,15,10
+Koko,Fine dining,Tue,16,11,14,10
+Koko,Fine dining,Tue,17,12,14,10
+Koko,Fine dining,Tue,18,31,37,10
+Koko,Fine dining,Tue,19,42,51,10
+Koko,Fine dining,Tue,20,34,45,10
+Koko,Fine dining,Tue,21,17,20,10
+Koko,Fine dining,Tue,22,0,0,10
+Koko,Fine dining,Tue,23,0,0,10
+Koko,Fine dining,Tue,24,0,0,10
+Koko,Fine dining,Wed,7,0,0,10
+Koko,Fine dining,Wed,8,0,0,10
+Koko,Fine dining,Wed,9,0,0,10
+Koko,Fine dining,Wed,10,0,0,10
+Koko,Fine dining,Wed,11,0,0,10
+Koko,Fine dining,Wed,12,19,26,10
+Koko,Fine dining,Wed,13,27,31,10
+Koko,Fine dining,Wed,14,10,12,10
+Koko,Fine dining,Wed,15,12,15,10
+Koko,Fine dining,Wed,16,12,15,10
+Koko,Fine dining,Wed,17,12,16,10
+Koko,Fine dining,Wed,18,38,43,10
+Koko,Fine dining,Wed,19,49,66,10
+Koko,Fine dining,Wed,20,40,48,10
+Koko,Fine dining,Wed,21,19,24,10
+Koko,Fine dining,Wed,22,0,0,10
+Koko,Fine dining,Wed,23,0,0,10
+Koko,Fine dining,Wed,24,0,0,10
+Koko,Fine dining,Thu,7,0,0,10
+Koko,Fine dining,Thu,8,0,0,10
+Koko,Fine dining,Thu,9,0,0,10
+Koko,Fine dining,Thu,10,0,0,10
+Koko,Fine dining,Thu,11,0,0,10
+Koko,Fine dining,Thu,12,23,27,10
+Koko,Fine dining,Thu,13,27,34,10
+Koko,Fine dining,Thu,14,10,13,10
+Koko,Fine dining,Thu,15,13,17,10
+Koko,Fine dining,Thu,16,13,16,10
+Koko,Fine dining,Thu,17,14,16,10
+Koko,Fine dining,Thu,18,40,48,10
+Koko,Fine dining,Thu,19,59,70,10
+Koko,Fine dining,Thu,20,47,58,10
+Koko,Fine dining,Thu,21,22,27,10
+Koko,Fine dining,Thu,22,0,0,10
+Koko,Fine dining,Thu,23,0,0,10
+Koko,Fine dining,Thu,24,0,0,10
+Koko,Fine dining,Fri,7,0,0,10
+Koko,Fine dining,Fri,8,0,0,10
+Koko,Fine dining,Fri,9,0,0,10
+Koko,Fine dining,Fri,10,0,0,10
+Koko,Fine dining,Fri,11,0,0,10
+Koko,Fine dining,Fri,12,32,34,10
+Koko,Fine dining,Fri,13,39,46,10
+Koko,Fine dining,Fri,14,14,19,10
+Koko,Fine dining,Fri,15,20,23,10
+Koko,Fine dining,Fri,16,19,24,10
+Koko,Fine dining,Fri,17,18,23,10
+Koko,Fine dining,Fri,18,53,66,10
+Koko,Fine dining,Fri,19,79,95,10
+Koko,Fine dining,Fri,20,61,77,10
+Koko,Fine dining,Fri,21,31,37,10
+Koko,Fine dining,Fri,22,0,0,10
+Koko,Fine dining,Fri,23,0,0,10
+Koko,Fine dining,Fri,24,0,0,10
+Koko,Fine dining,Sat,7,0,0,10
+Koko,Fine dining,Sat,8,0,0,10
+Koko,Fine dining,Sat,9,0,0,10
+Koko,Fine dining,Sat,10,0,0,10
+Koko,Fine dining,Sat,11,0,0,10
+Koko,Fine dining,Sat,12,32,37,10
+Koko,Fine dining,Sat,13,40,49,10
+Koko,Fine dining,Sat,14,16,21,10
+Koko,Fine dining,Sat,15,21,26,10
+Koko,Fine dining,Sat,16,21,26,10
+Koko,Fine dining,Sat,17,21,23,10
+Koko,Fine dining,Sat,18,62,73,10
+Koko,Fine dining,Sat,19,84,101,10
+Koko,Fine dining,Sat,20,69,75,10
+Koko,Fine dining,Sat,21,35,39,10
+Koko,Fine dining,Sat,22,0,0,10
+Koko,Fine dining,Sat,23,0,0,10
+Koko,Fine dining,Sat,24,0,0,10
+Koko,Fine dining,Sun,7,0,0,10
+Koko,Fine dining,Sun,8,0,0,10
+Koko,Fine dining,Sun,9,0,0,10
+Koko,Fine dining,Sun,10,0,0,10
+Koko,Fine dining,Sun,11,0,0,10
+Koko,Fine dining,Sun,12,25,30,10
+Koko,Fine dining,Sun,13,34,38,10
+Koko,Fine dining,Sun,14,14,17,10
+Koko,Fine dining,Sun,15,16,19,10
+Koko,Fine dining,Sun,16,16,20,10
+Koko,Fine dining,Sun,17,17,20,10
+Koko,Fine dining,Sun,18,47,52,10
+Koko,Fine dining,Sun,19,62,76,10
+Koko,Fine dining,Sun,20,55,61,10
+Koko,Fine dining,Sun,21,27,29,10
+Koko,Fine dining,Sun,22,0,0,10
+Koko,Fine dining,Sun,23,0,0,10
+Koko,Fine dining,Sun,24,0,0,10
+Ging Thai,Casual,Mon,7,0,0,20
+Ging Thai,Casual,Mon,8,0,0,20
+Ging Thai,Casual,Mon,9,0,0,20
+Ging Thai,Casual,Mon,10,0,0,20
+Ging Thai,Casual,Mon,11,13,18,20
+Ging Thai,Casual,Mon,12,40,55,20
+Ging Thai,Casual,Mon,13,46,58,20
+Ging Thai,Casual,Mon,14,22,30,20
+Ging Thai,Casual,Mon,15,14,18,20
+Ging Thai,Casual,Mon,16,15,18,20
+Ging Thai,Casual,Mon,17,30,40,20
+Ging Thai,Casual,Mon,18,47,68,20
+Ging Thai,Casual,Mon,19,59,81,20
+Ging Thai,Casual,Mon,20,44,58,20
+Ging Thai,Casual,Mon,21,27,40,20
+Ging Thai,Casual,Mon,22,16,23,20
+Ging Thai,Casual,Mon,23,0,0,20
+Ging Thai,Casual,Mon,24,0,0,20
+Ging Thai,Casual,Tue,7,0,0,20
+Ging Thai,Casual,Tue,8,0,0,20
+Ging Thai,Casual,Tue,9,0,0,20
+Ging Thai,Casual,Tue,10,0,0,20
+Ging Thai,Casual,Tue,11,14,20,20
+Ging Thai,Casual,Tue,12,45,53,20
+Ging Thai,Casual,Tue,13,50,65,20
+Ging Thai,Casual,Tue,14,25,33,20
+Ging Thai,Casual,Tue,15,14,22,20
+Ging Thai,Casual,Tue,16,15,19,20
+Ging Thai,Casual,Tue,17,28,40,20
+Ging Thai,Casual,Tue,18,54,71,20
+Ging Thai,Casual,Tue,19,57,79,20
+Ging Thai,Casual,Tue,20,47,68,20
+Ging Thai,Casual,Tue,21,28,42,20
+Ging Thai,Casual,Tue,22,19,23,20
+Ging Thai,Casual,Tue,23,0,0,20
+Ging Thai,Casual,Tue,24,0,0,20
+Ging Thai,Casual,Wed,7,0,0,20
+Ging Thai,Casual,Wed,8,0,0,20
+Ging Thai,Casual,Wed,9,0,0,20
+Ging Thai,Casual,Wed,10,0,0,20
+Ging Thai,Casual,Wed,11,18,24,20
+Ging Thai,Casual,Wed,12,51,62,20
+Ging Thai,Casual,Wed,13,53,72,20
+Ging Thai,Casual,Wed,14,29,37,20
+Ging Thai,Casual,Wed,15,17,23,20
+Ging Thai,Casual,Wed,16,16,21,20
+Ging Thai,Casual,Wed,17,32,48,20
+Ging Thai,Casual,Wed,18,59,88,20
+Ging Thai,Casual,Wed,19,65,88,20
+Ging Thai,Casual,Wed,20,54,70,20
+Ging Thai,Casual,Wed,21,33,49,20
+Ging Thai,Casual,Wed,22,22,29,20
+Ging Thai,Casual,Wed,23,0,0,20
+Ging Thai,Casual,Wed,24,0,0,20
+Ging Thai,Casual,Thu,7,0,0,20
+Ging Thai,Casual,Thu,8,0,0,20
+Ging Thai,Casual,Thu,9,0,0,20
+Ging Thai,Casual,Thu,10,0,0,20
+Ging Thai,Casual,Thu,11,19,27,20
+Ging Thai,Casual,Thu,12,57,72,20
+Ging Thai,Casual,Thu,13,63,76,20
+Ging Thai,Casual,Thu,14,32,41,20
+Ging Thai,Casual,Thu,15,20,26,20
+Ging Thai,Casual,Thu,16,18,24,20
+Ging Thai,Casual,Thu,17,41,48,20
+Ging Thai,Casual,Thu,18,68,90,20
+Ging Thai,Casual,Thu,19,74,107,20
+Ging Thai,Casual,Thu,20,65,79,20
+Ging Thai,Casual,Thu,21,39,50,20
+Ging Thai,Casual,Thu,22,23,30,20
+Ging Thai,Casual,Thu,23,0,0,20
+Ging Thai,Casual,Thu,24,0,0,20
+Ging Thai,Casual,Fri,7,0,0,20
+Ging Thai,Casual,Fri,8,0,0,20
+Ging Thai,Casual,Fri,9,0,0,20
+Ging Thai,Casual,Fri,10,0,0,20
+Ging Thai,Casual,Fri,11,24,32,20
+Ging Thai,Casual,Fri,12,67,101,20
+Ging Thai,Casual,Fri,13,80,103,20
+Ging Thai,Casual,Fri,14,43,58,20
+Ging Thai,Casual,Fri,15,25,32,20
+Ging Thai,Casual,Fri,16,24,32,20
+Ging Thai,Casual,Fri,17,49,63,20
+Ging Thai,Casual,Fri,18,86,117,20
+Ging Thai,Casual,Fri,19,101,143,20
+Ging Thai,Casual,Fri,20,83,106,20
+Ging Thai,Casual,Fri,21,49,68,20
+Ging Thai,Casual,Fri,22,29,39,20
+Ging Thai,Casual,Fri,23,0,0,20
+Ging Thai,Casual,Fri,24,0,0,20
+Ging Thai,Casual,Sat,7,0,0,20
+Ging Thai,Casual,Sat,8,0,0,20
+Ging Thai,Casual,Sat,9,0,0,20
+Ging Thai,Casual,Sat,10,0,0,20
+Ging Thai,Casual,Sat,11,26,36,20
+Ging Thai,Casual,Sat,12,84,100,20
+Ging Thai,Casual,Sat,13,90,123,20
+Ging Thai,Casual,Sat,14,47,58,20
+Ging Thai,Casual,Sat,15,27,36,20
+Ging Thai,Casual,Sat,16,28,37,20
+Ging Thai,Casual,Sat,17,60,80,20
+Ging Thai,Casual,Sat,18,107,126,20
+Ging Thai,Casual,Sat,19,104,156,20
+Ging Thai,Casual,Sat,20,95,120,20
+Ging Thai,Casual,Sat,21,57,70,20
+Ging Thai,Casual,Sat,22,33,48,20
+Ging Thai,Casual,Sat,23,0,0,20
+Ging Thai,Casual,Sat,24,0,0,20
+Ging Thai,Casual,Sun,7,0,0,20
+Ging Thai,Casual,Sun,8,0,0,20
+Ging Thai,Casual,Sun,9,0,0,20
+Ging Thai,Casual,Sun,10,0,0,20
+Ging Thai,Casual,Sun,11,23,31,20
+Ging Thai,Casual,Sun,12,66,80,20
+Ging Thai,Casual,Sun,13,66,90,20
+Ging Thai,Casual,Sun,14,35,49,20
+Ging Thai,Casual,Sun,15,24,31,20
+Ging Thai,Casual,Sun,16,23,31,20
+Ging Thai,Casual,Sun,17,44,60,20
+Ging Thai,Casual,Sun,18,73,112,20
+Ging Thai,Casual,Sun,19,84,127,20
+Ging Thai,Casual,Sun,20,72,92,20
+Ging Thai,Casual,Sun,21,41,57,20
+Ging Thai,Casual,Sun,22,27,37,20
+Ging Thai,Casual,Sun,23,0,0,20
+Ging Thai,Casual,Sun,24,0,0,20
+88 Noodle Bar,Casual,Mon,7,0,0,22
+88 Noodle Bar,Casual,Mon,8,0,0,22
+88 Noodle Bar,Casual,Mon,9,0,0,22
+88 Noodle Bar,Casual,Mon,10,0,0,22
+88 Noodle Bar,Casual,Mon,11,20,28,22
+88 Noodle Bar,Casual,Mon,12,51,74,22
+88 Noodle Bar,Casual,Mon,13,58,81,22
+88 Noodle Bar,Casual,Mon,14,34,45,22
+88 Noodle Bar,Casual,Mon,15,20,30,22
+88 Noodle Bar,Casual,Mon,16,23,31,22
+88 Noodle Bar,Casual,Mon,17,22,30,22
+88 Noodle Bar,Casual,Mon,18,64,93,22
+88 Noodle Bar,Casual,Mon,19,81,113,22
+88 Noodle Bar,Casual,Mon,20,65,90,22
+88 Noodle Bar,Casual,Mon,21,59,88,22
+88 Noodle Bar,Casual,Mon,22,66,94,22
+88 Noodle Bar,Casual,Mon,23,86,130,22
+88 Noodle Bar,Casual,Mon,24,56,79,22
+88 Noodle Bar,Casual,Tue,7,0,0,22
+88 Noodle Bar,Casual,Tue,8,0,0,22
+88 Noodle Bar,Casual,Tue,9,0,0,22
+88 Noodle Bar,Casual,Tue,10,0,0,22
+88 Noodle Bar,Casual,Tue,11,22,32,22
+88 Noodle Bar,Casual,Tue,12,56,75,22
+88 Noodle Bar,Casual,Tue,13,66,95,22
+88 Noodle Bar,Casual,Tue,14,36,50,22
+88 Noodle Bar,Casual,Tue,15,24,32,22
+88 Noodle Bar,Casual,Tue,16,24,31,22
+88 Noodle Bar,Casual,Tue,17,21,34,22
+88 Noodle Bar,Casual,Tue,18,70,112,22
+88 Noodle Bar,Casual,Tue,19,81,112,22
+88 Noodle Bar,Casual,Tue,20,69,103,22
+88 Noodle Bar,Casual,Tue,21,65,98,22
+88 Noodle Bar,Casual,Tue,22,68,103,22
+88 Noodle Bar,Casual,Tue,23,86,140,22
+88 Noodle Bar,Casual,Tue,24,59,85,22
+88 Noodle Bar,Casual,Wed,7,0,0,22
+88 Noodle Bar,Casual,Wed,8,0,0,22
+88 Noodle Bar,Casual,Wed,9,0,0,22
+88 Noodle Bar,Casual,Wed,10,0,0,22
+88 Noodle Bar,Casual,Wed,11,24,36,22
+88 Noodle Bar,Casual,Wed,12,65,94,22
+88 Noodle Bar,Casual,Wed,13,74,112,22
+88 Noodle Bar,Casual,Wed,14,44,58,22
+88 Noodle Bar,Casual,Wed,15,24,40,22
+88 Noodle Bar,Casual,Wed,16,27,34,22
+88 Noodle Bar,Casual,Wed,17,26,36,22
+88 Noodle Bar,Casual,Wed,18,80,115,22
+88 Noodle Bar,Casual,Wed,19,87,123,22
+88 Noodle Bar,Casual,Wed,20,79,116,22
+88 Noodle Bar,Casual,Wed,21,77,97,22
+88 Noodle Bar,Casual,Wed,22,88,113,22
+88 Noodle Bar,Casual,Wed,23,100,156,22
+88 Noodle Bar,Casual,Wed,24,75,102,22
+88 Noodle Bar,Casual,Thu,7,0,0,22
+88 Noodle Bar,Casual,Thu,8,0,0,22
+88 Noodle Bar,Casual,Thu,9,0,0,22
+88 Noodle Bar,Casual,Thu,10,0,0,22
+88 Noodle Bar,Casual,Thu,11,26,41,22
+88 Noodle Bar,Casual,Thu,12,67,106,22
+88 Noodle Bar,Casual,Thu,13,76,113,22
+88 Noodle Bar,Casual,Thu,14,48,61,22
+88 Noodle Bar,Casual,Thu,15,28,43,22
+88 Noodle Bar,Casual,Thu,16,30,38,22
+88 Noodle Bar,Casual,Thu,17,26,38,22
+88 Noodle Bar,Casual,Thu,18,97,127,22
+88 Noodle Bar,Casual,Thu,19,107,158,22
+88 Noodle Bar,Casual,Thu,20,89,127,22
+88 Noodle Bar,Casual,Thu,21,86,118,22
+88 Noodle Bar,Casual,Thu,22,88,137,22
+88 Noodle Bar,Casual,Thu,23,111,159,22
+88 Noodle Bar,Casual,Thu,24,73,120,22
+88 Noodle Bar,Casual,Fri,7,0,0,22
+88 Noodle Bar,Casual,Fri,8,0,0,22
+88 Noodle Bar,Casual,Fri,9,0,0,22
+88 Noodle Bar,Casual,Fri,10,0,0,22
+88 Noodle Bar,Casual,Fri,11,40,56,22
+88 Noodle Bar,Casual,Fri,12,96,121,22
+88 Noodle Bar,Casual,Fri,13,101,152,22
+88 Noodle Bar,Casual,Fri,14,64,93,22
+88 Noodle Bar,Casual,Fri,15,37,52,22
+88 Noodle Bar,Casual,Fri,16,37,54,22
+88 Noodle Bar,Casual,Fri,17,40,52,22
+88 Noodle Bar,Casual,Fri,18,126,181,22
+88 Noodle Bar,Casual,Fri,19,142,204,22
+88 Noodle Bar,Casual,Fri,20,122,169,22
+88 Noodle Bar,Casual,Fri,21,102,149,22
+88 Noodle Bar,Casual,Fri,22,125,162,22
+88 Noodle Bar,Casual,Fri,23,143,226,22
+88 Noodle Bar,Casual,Fri,24,101,142,22
+88 Noodle Bar,Casual,Sat,7,0,0,22
+88 Noodle Bar,Casual,Sat,8,0,0,22
+88 Noodle Bar,Casual,Sat,9,0,0,22
+88 Noodle Bar,Casual,Sat,10,0,0,22
+88 Noodle Bar,Casual,Sat,11,39,61,22
+88 Noodle Bar,Casual,Sat,12,98,157,22
+88 Noodle Bar,Casual,Sat,13,125,184,22
+88 Noodle Bar,Casual,Sat,14,65,91,22
+88 Noodle Bar,Casual,Sat,15,39,61,22
+88 Noodle Bar,Casual,Sat,16,43,60,22
+88 Noodle Bar,Casual,Sat,17,40,60,22
+88 Noodle Bar,Casual,Sat,18,137,200,22
+88 Noodle Bar,Casual,Sat,19,157,231,22
+88 Noodle Bar,Casual,Sat,20,138,183,22
+88 Noodle Bar,Casual,Sat,21,124,165,22
+88 Noodle Bar,Casual,Sat,22,136,191,22
+88 Noodle Bar,Casual,Sat,23,174,232,22
+88 Noodle Bar,Casual,Sat,24,113,164,22
+88 Noodle Bar,Casual,Sun,7,0,0,22
+88 Noodle Bar,Casual,Sun,8,0,0,22
+88 Noodle Bar,Casual,Sun,9,0,0,22
+88 Noodle Bar,Casual,Sun,10,0,0,22
+88 Noodle Bar,Casual,Sun,11,31,51,22
+88 Noodle Bar,Casual,Sun,12,80,112,22
+88 Noodle Bar,Casual,Sun,13,91,145,22
+88 Noodle Bar,Casual,Sun,14,53,73,22
+88 Noodle Bar,Casual,Sun,15,35,49,22
+88 Noodle Bar,Casual,Sun,16,36,45,22
+88 Noodle Bar,Casual,Sun,17,33,50,22
+88 Noodle Bar,Casual,Sun,18,111,163,22
+88 Noodle Bar,Casual,Sun,19,110,167,22
+88 Noodle Bar,Casual,Sun,20,99,146,22
+88 Noodle Bar,Casual,Sun,21,99,136,22
+88 Noodle Bar,Casual,Sun,22,113,150,22
+88 Noodle Bar,Casual,Sun,23,140,190,22
+88 Noodle Bar,Casual,Sun,24,89,140,22
+Mr Hive,Casual,Mon,7,0,0,18
+Mr Hive,Casual,Mon,8,0,0,18
+Mr Hive,Casual,Mon,9,0,0,18
+Mr Hive,Casual,Mon,10,0,0,18
+Mr Hive,Casual,Mon,11,0,0,18
+Mr Hive,Casual,Mon,12,26,30,18
+Mr Hive,Casual,Mon,13,30,39,18
+Mr Hive,Casual,Mon,14,12,16,18
+Mr Hive,Casual,Mon,15,12,15,18
+Mr Hive,Casual,Mon,16,12,16,18
+Mr Hive,Casual,Mon,17,25,30,18
+Mr Hive,Casual,Mon,18,41,56,18
+Mr Hive,Casual,Mon,19,50,60,18
+Mr Hive,Casual,Mon,20,38,49,18
+Mr Hive,Casual,Mon,21,26,32,18
+Mr Hive,Casual,Mon,22,11,15,18
+Mr Hive,Casual,Mon,23,0,0,18
+Mr Hive,Casual,Mon,24,0,0,18
+Mr Hive,Casual,Tue,7,0,0,18
+Mr Hive,Casual,Tue,8,0,0,18
+Mr Hive,Casual,Tue,9,0,0,18
+Mr Hive,Casual,Tue,10,0,0,18
+Mr Hive,Casual,Tue,11,0,0,18
+Mr Hive,Casual,Tue,12,26,34,18
+Mr Hive,Casual,Tue,13,32,38,18
+Mr Hive,Casual,Tue,14,12,18,18
+Mr Hive,Casual,Tue,15,13,16,18
+Mr Hive,Casual,Tue,16,13,18,18
+Mr Hive,Casual,Tue,17,25,34,18
+Mr Hive,Casual,Tue,18,46,61,18
+Mr Hive,Casual,Tue,19,56,74,18
+Mr Hive,Casual,Tue,20,41,52,18
+Mr Hive,Casual,Tue,21,27,33,18
+Mr Hive,Casual,Tue,22,12,18,18
+Mr Hive,Casual,Tue,23,0,0,18
+Mr Hive,Casual,Tue,24,0,0,18
+Mr Hive,Casual,Wed,7,0,0,18
+Mr Hive,Casual,Wed,8,0,0,18
+Mr Hive,Casual,Wed,9,0,0,18
+Mr Hive,Casual,Wed,10,0,0,18
+Mr Hive,Casual,Wed,11,0,0,18
+Mr Hive,Casual,Wed,12,29,41,18
+Mr Hive,Casual,Wed,13,35,49,18
+Mr Hive,Casual,Wed,14,15,18,18
+Mr Hive,Casual,Wed,15,14,19,18
+Mr Hive,Casual,Wed,16,15,21,18
+Mr Hive,Casual,Wed,17,28,39,18
+Mr Hive,Casual,Wed,18,52,70,18
+Mr Hive,Casual,Wed,19,56,75,18
+Mr Hive,Casual,Wed,20,48,66,18
+Mr Hive,Casual,Wed,21,28,39,18
+Mr Hive,Casual,Wed,22,16,21,18
+Mr Hive,Casual,Wed,23,0,0,18
+Mr Hive,Casual,Wed,24,0,0,18
+Mr Hive,Casual,Thu,7,0,0,18
+Mr Hive,Casual,Thu,8,0,0,18
+Mr Hive,Casual,Thu,9,0,0,18
+Mr Hive,Casual,Thu,10,0,0,18
+Mr Hive,Casual,Thu,11,0,0,18
+Mr Hive,Casual,Thu,12,32,41,18
+Mr Hive,Casual,Thu,13,43,56,18
+Mr Hive,Casual,Thu,14,17,20,18
+Mr Hive,Casual,Thu,15,18,21,18
+Mr Hive,Casual,Thu,16,18,22,18
+Mr Hive,Casual,Thu,17,35,41,18
+Mr Hive,Casual,Thu,18,63,74,18
+Mr Hive,Casual,Thu,19,65,91,18
+Mr Hive,Casual,Thu,20,56,66,18
+Mr Hive,Casual,Thu,21,32,43,18
+Mr Hive,Casual,Thu,22,17,21,18
+Mr Hive,Casual,Thu,23,0,0,18
+Mr Hive,Casual,Thu,24,0,0,18
+Mr Hive,Casual,Fri,7,0,0,18
+Mr Hive,Casual,Fri,8,0,0,18
+Mr Hive,Casual,Fri,9,0,0,18
+Mr Hive,Casual,Fri,10,0,0,18
+Mr Hive,Casual,Fri,11,0,0,18
+Mr Hive,Casual,Fri,12,41,55,18
+Mr Hive,Casual,Fri,13,54,73,18
+Mr Hive,Casual,Fri,14,20,29,18
+Mr Hive,Casual,Fri,15,23,26,18
+Mr Hive,Casual,Fri,16,23,27,18
+Mr Hive,Casual,Fri,17,44,57,18
+Mr Hive,Casual,Fri,18,80,99,18
+Mr Hive,Casual,Fri,19,86,115,18
+Mr Hive,Casual,Fri,20,69,93,18
+Mr Hive,Casual,Fri,21,43,56,18
+Mr Hive,Casual,Fri,22,20,29,18
+Mr Hive,Casual,Fri,23,0,0,18
+Mr Hive,Casual,Fri,24,0,0,18
+Mr Hive,Casual,Sat,7,0,0,18
+Mr Hive,Casual,Sat,8,0,0,18
+Mr Hive,Casual,Sat,9,0,0,18
+Mr Hive,Casual,Sat,10,0,0,18
+Mr Hive,Casual,Sat,11,0,0,18
+Mr Hive,Casual,Sat,12,49,61,18
+Mr Hive,Casual,Sat,13,61,80,18
+Mr Hive,Casual,Sat,14,24,30,18
+Mr Hive,Casual,Sat,15,24,30,18
+Mr Hive,Casual,Sat,16,23,31,18
+Mr Hive,Casual,Sat,17,46,63,18
+Mr Hive,Casual,Sat,18,88,106,18
+Mr Hive,Casual,Sat,19,100,119,18
+Mr Hive,Casual,Sat,20,81,106,18
+Mr Hive,Casual,Sat,21,49,59,18
+Mr Hive,Casual,Sat,22,25,31,18
+Mr Hive,Casual,Sat,23,0,0,18
+Mr Hive,Casual,Sat,24,0,0,18
+Mr Hive,Casual,Sun,7,0,0,18
+Mr Hive,Casual,Sun,8,0,0,18
+Mr Hive,Casual,Sun,9,0,0,18
+Mr Hive,Casual,Sun,10,0,0,18
+Mr Hive,Casual,Sun,11,0,0,18
+Mr Hive,Casual,Sun,12,41,47,18
+Mr Hive,Casual,Sun,13,49,65,18
+Mr Hive,Casual,Sun,14,20,26,18
+Mr Hive,Casual,Sun,15,18,27,18
+Mr Hive,Casual,Sun,16,19,27,18
+Mr Hive,Casual,Sun,17,41,47,18
+Mr Hive,Casual,Sun,18,72,96,18
+Mr Hive,Casual,Sun,19,72,98,18
+Mr Hive,Casual,Sun,20,64,76,18
+Mr Hive,Casual,Sun,21,41,48,18
+Mr Hive,Casual,Sun,22,20,24,18
+Mr Hive,Casual,Sun,23,0,0,18
+Mr Hive,Casual,Sun,24,0,0,18
+Fidels,Casual,Mon,7,0,0,22
+Fidels,Casual,Mon,8,0,0,22
+Fidels,Casual,Mon,9,0,0,22
+Fidels,Casual,Mon,10,0,0,22
+Fidels,Casual,Mon,11,18,32,22
+Fidels,Casual,Mon,12,40,69,22
+Fidels,Casual,Mon,13,49,81,22
+Fidels,Casual,Mon,14,16,28,22
+Fidels,Casual,Mon,15,17,32,22
+Fidels,Casual,Mon,16,18,32,22
+Fidels,Casual,Mon,17,17,31,22
+Fidels,Casual,Mon,18,53,96,22
+Fidels,Casual,Mon,19,72,116,22
+Fidels,Casual,Mon,20,67,108,22
+Fidels,Casual,Mon,21,50,88,22
+Fidels,Casual,Mon,22,33,64,22
+Fidels,Casual,Mon,23,21,35,22
+Fidels,Casual,Mon,24,0,0,22
+Fidels,Casual,Tue,7,0,0,22
+Fidels,Casual,Tue,8,0,0,22
+Fidels,Casual,Tue,9,0,0,22
+Fidels,Casual,Tue,10,0,0,22
+Fidels,Casual,Tue,11,20,31,22
+Fidels,Casual,Tue,12,49,77,22
+Fidels,Casual,Tue,13,51,93,22
+Fidels,Casual,Tue,14,19,30,22
+Fidels,Casual,Tue,15,19,30,22
+Fidels,Casual,Tue,16,20,31,22
+Fidels,Casual,Tue,17,19,34,22
+Fidels,Casual,Tue,18,61,105,22
+Fidels,Casual,Tue,19,73,117,22
+Fidels,Casual,Tue,20,62,108,22
+Fidels,Casual,Tue,21,53,88,22
+Fidels,Casual,Tue,22,38,68,22
+Fidels,Casual,Tue,23,21,37,22
+Fidels,Casual,Tue,24,0,0,22
+Fidels,Casual,Wed,7,0,0,22
+Fidels,Casual,Wed,8,0,0,22
+Fidels,Casual,Wed,9,0,0,22
+Fidels,Casual,Wed,10,0,0,22
+Fidels,Casual,Wed,11,22,33,22
+Fidels,Casual,Wed,12,47,85,22
+Fidels,Casual,Wed,13,56,99,22
+Fidels,Casual,Wed,14,20,37,22
+Fidels,Casual,Wed,15,22,34,22
+Fidels,Casual,Wed,16,22,36,22
+Fidels,Casual,Wed,17,20,39,22
+Fidels,Casual,Wed,18,65,109,22
+Fidels,Casual,Wed,19,80,148,22
+Fidels,Casual,Wed,20,81,136,22
+Fidels,Casual,Wed,21,59,97,22
+Fidels,Casual,Wed,22,39,74,22
+Fidels,Casual,Wed,23,26,42,22
+Fidels,Casual,Wed,24,0,0,22
+Fidels,Casual,Thu,7,0,0,22
+Fidels,Casual,Thu,8,0,0,22
+Fidels,Casual,Thu,9,0,0,22
+Fidels,Casual,Thu,10,0,0,22
+Fidels,Casual,Thu,11,24,40,22
+Fidels,Casual,Thu,12,61,101,22
+Fidels,Casual,Thu,13,64,120,22
+Fidels,Casual,Thu,14,22,41,22
+Fidels,Casual,Thu,15,23,39,22
+Fidels,Casual,Thu,16,22,42,22
+Fidels,Casual,Thu,17,22,41,22
+Fidels,Casual,Thu,18,81,122,22
+Fidels,Casual,Thu,19,90,164,22
+Fidels,Casual,Thu,20,86,149,22
+Fidels,Casual,Thu,21,70,107,22
+Fidels,Casual,Thu,22,46,78,22
+Fidels,Casual,Thu,23,26,51,22
+Fidels,Casual,Thu,24,0,0,22
+Fidels,Casual,Fri,7,0,0,22
+Fidels,Casual,Fri,8,0,0,22
+Fidels,Casual,Fri,9,0,0,22
+Fidels,Casual,Fri,10,0,0,22
+Fidels,Casual,Fri,11,33,55,22
+Fidels,Casual,Fri,12,69,135,22
+Fidels,Casual,Fri,13,91,148,22
+Fidels,Casual,Fri,14,32,53,22
+Fidels,Casual,Fri,15,30,50,22
+Fidels,Casual,Fri,16,30,49,22
+Fidels,Casual,Fri,17,30,55,22
+Fidels,Casual,Fri,18,103,179,22
+Fidels,Casual,Fri,19,129,205,22
+Fidels,Casual,Fri,20,113,189,22
+Fidels,Casual,Fri,21,92,149,22
+Fidels,Casual,Fri,22,60,109,22
+Fidels,Casual,Fri,23,40,61,22
+Fidels,Casual,Fri,24,0,0,22
+Fidels,Casual,Sat,7,0,0,22
+Fidels,Casual,Sat,8,0,0,22
+Fidels,Casual,Sat,9,0,0,22
+Fidels,Casual,Sat,10,0,0,22
+Fidels,Casual,Sat,11,37,55,22
+Fidels,Casual,Sat,12,81,137,22
+Fidels,Casual,Sat,13,102,178,22
+Fidels,Casual,Sat,14,36,58,22
+Fidels,Casual,Sat,15,37,58,22
+Fidels,Casual,Sat,16,34,63,22
+Fidels,Casual,Sat,17,36,61,22
+Fidels,Casual,Sat,18,115,205,22
+Fidels,Casual,Sat,19,139,251,22
+Fidels,Casual,Sat,20,130,226,22
+Fidels,Casual,Sat,21,97,173,22
+Fidels,Casual,Sat,22,71,115,22
+Fidels,Casual,Sat,23,40,73,22
+Fidels,Casual,Sat,24,0,0,22
+Fidels,Casual,Sun,7,0,0,22
+Fidels,Casual,Sun,8,0,0,22
+Fidels,Casual,Sun,9,0,0,22
+Fidels,Casual,Sun,10,0,0,22
+Fidels,Casual,Sun,11,26,50,22
+Fidels,Casual,Sun,12,62,104,22
+Fidels,Casual,Sun,13,72,140,22
+Fidels,Casual,Sun,14,27,44,22
+Fidels,Casual,Sun,15,25,43,22
+Fidels,Casual,Sun,16,28,48,22
+Fidels,Casual,Sun,17,28,49,22
+Fidels,Casual,Sun,18,82,152,22
+Fidels,Casual,Sun,19,108,197,22
+Fidels,Casual,Sun,20,104,179,22
+Fidels,Casual,Sun,21,72,139,22
+Fidels,Casual,Sun,22,59,100,22
+Fidels,Casual,Sun,23,31,53,22
+Fidels,Casual,Sun,24,0,0,22
+The Pub,Pub dining,Mon,7,0,0,25
+The Pub,Pub dining,Mon,8,0,0,25
+The Pub,Pub dining,Mon,9,0,0,25
+The Pub,Pub dining,Mon,10,0,0,25
+The Pub,Pub dining,Mon,11,18,32,25
+The Pub,Pub dining,Mon,12,57,102,25
+The Pub,Pub dining,Mon,13,63,117,25
+The Pub,Pub dining,Mon,14,39,67,25
+The Pub,Pub dining,Mon,15,18,32,25
+The Pub,Pub dining,Mon,16,20,33,25
+The Pub,Pub dining,Mon,17,45,82,25
+The Pub,Pub dining,Mon,18,64,120,25
+The Pub,Pub dining,Mon,19,74,143,25
+The Pub,Pub dining,Mon,20,68,121,25
+The Pub,Pub dining,Mon,21,66,111,25
+The Pub,Pub dining,Mon,22,57,99,25
+The Pub,Pub dining,Mon,23,36,68,25
+The Pub,Pub dining,Mon,24,23,43,25
+The Pub,Pub dining,Tue,7,0,0,25
+The Pub,Pub dining,Tue,8,0,0,25
+The Pub,Pub dining,Tue,9,0,0,25
+The Pub,Pub dining,Tue,10,0,0,25
+The Pub,Pub dining,Tue,11,20,38,25
+The Pub,Pub dining,Tue,12,58,99,25
+The Pub,Pub dining,Tue,13,70,111,25
+The Pub,Pub dining,Tue,14,43,70,25
+The Pub,Pub dining,Tue,15,19,35,25
+The Pub,Pub dining,Tue,16,21,40,25
+The Pub,Pub dining,Tue,17,46,89,25
+The Pub,Pub dining,Tue,18,74,140,25
+The Pub,Pub dining,Tue,19,78,148,25
+The Pub,Pub dining,Tue,20,72,141,25
+The Pub,Pub dining,Tue,21,63,127,25
+The Pub,Pub dining,Tue,22,56,99,25
+The Pub,Pub dining,Tue,23,43,74,25
+The Pub,Pub dining,Tue,24,23,46,25
+The Pub,Pub dining,Wed,7,0,0,25
+The Pub,Pub dining,Wed,8,0,0,25
+The Pub,Pub dining,Wed,9,0,0,25
+The Pub,Pub dining,Wed,10,0,0,25
+The Pub,Pub dining,Wed,11,22,44,25
+The Pub,Pub dining,Wed,12,68,123,25
+The Pub,Pub dining,Wed,13,76,132,25
+The Pub,Pub dining,Wed,14,46,83,25
+The Pub,Pub dining,Wed,15,25,39,25
+The Pub,Pub dining,Wed,16,25,39,25
+The Pub,Pub dining,Wed,17,53,97,25
+The Pub,Pub dining,Wed,18,90,151,25
+The Pub,Pub dining,Wed,19,92,179,25
+The Pub,Pub dining,Wed,20,81,151,25
+The Pub,Pub dining,Wed,21,75,140,25
+The Pub,Pub dining,Wed,22,68,121,25
+The Pub,Pub dining,Wed,23,46,82,25
+The Pub,Pub dining,Wed,24,27,53,25
+The Pub,Pub dining,Thu,7,0,0,25
+The Pub,Pub dining,Thu,8,0,0,25
+The Pub,Pub dining,Thu,9,0,0,25
+The Pub,Pub dining,Thu,10,0,0,25
+The Pub,Pub dining,Thu,11,27,49,25
+The Pub,Pub dining,Thu,12,69,130,25
+The Pub,Pub dining,Thu,13,87,152,25
+The Pub,Pub dining,Thu,14,49,93,25
+The Pub,Pub dining,Thu,15,28,45,25
+The Pub,Pub dining,Thu,16,25,46,25
+The Pub,Pub dining,Thu,17,65,119,25
+The Pub,Pub dining,Thu,18,89,160,25
+The Pub,Pub dining,Thu,19,100,183,25
+The Pub,Pub dining,Thu,20,94,160,25
+The Pub,Pub dining,Thu,21,81,143,25
+The Pub,Pub dining,Thu,22,79,136,25
+The Pub,Pub dining,Thu,23,49,101,25
+The Pub,Pub dining,Thu,24,29,55,25
+The Pub,Pub dining,Fri,7,0,0,25
+The Pub,Pub dining,Fri,8,0,0,25
+The Pub,Pub dining,Fri,9,0,0,25
+The Pub,Pub dining,Fri,10,0,0,25
+The Pub,Pub dining,Fri,11,37,65,25
+The Pub,Pub dining,Fri,12,100,171,25
+The Pub,Pub dining,Fri,13,105,202,25
+The Pub,Pub dining,Fri,14,64,118,25
+The Pub,Pub dining,Fri,15,34,57,25
+The Pub,Pub dining,Fri,16,34,65,25
+The Pub,Pub dining,Fri,17,85,149,25
+The Pub,Pub dining,Fri,18,126,221,25
+The Pub,Pub dining,Fri,19,130,252,25
+The Pub,Pub dining,Fri,20,122,231,25
+The Pub,Pub dining,Fri,21,117,196,25
+The Pub,Pub dining,Fri,22,97,180,25
+The Pub,Pub dining,Fri,23,68,118,25
+The Pub,Pub dining,Fri,24,43,79,25
+The Pub,Pub dining,Sat,7,0,0,25
+The Pub,Pub dining,Sat,8,0,0,25
+The Pub,Pub dining,Sat,9,0,0,25
+The Pub,Pub dining,Sat,10,0,0,25
+The Pub,Pub dining,Sat,11,40,72,25
+The Pub,Pub dining,Sat,12,114,200,25
+The Pub,Pub dining,Sat,13,126,220,25
+The Pub,Pub dining,Sat,14,75,141,25
+The Pub,Pub dining,Sat,15,36,68,25
+The Pub,Pub dining,Sat,16,40,72,25
+The Pub,Pub dining,Sat,17,94,160,25
+The Pub,Pub dining,Sat,18,137,248,25
+The Pub,Pub dining,Sat,19,157,273,25
+The Pub,Pub dining,Sat,20,142,267,25
+The Pub,Pub dining,Sat,21,117,227,25
+The Pub,Pub dining,Sat,22,113,191,25
+The Pub,Pub dining,Sat,23,77,149,25
+The Pub,Pub dining,Sat,24,43,84,25
+The Pub,Pub dining,Sun,7,0,0,25
+The Pub,Pub dining,Sun,8,0,0,25
+The Pub,Pub dining,Sun,9,0,0,25
+The Pub,Pub dining,Sun,10,0,0,25
+The Pub,Pub dining,Sun,11,29,57,25
+The Pub,Pub dining,Sun,12,91,153,25
+The Pub,Pub dining,Sun,13,91,176,25
+The Pub,Pub dining,Sun,14,61,113,25
+The Pub,Pub dining,Sun,15,30,56,25
+The Pub,Pub dining,Sun,16,32,55,25
+The Pub,Pub dining,Sun,17,72,140,25
+The Pub,Pub dining,Sun,18,104,202,25
+The Pub,Pub dining,Sun,19,119,227,25
+The Pub,Pub dining,Sun,20,102,211,25
+The Pub,Pub dining,Sun,21,95,162,25
+The Pub,Pub dining,Sun,22,82,150,25
+The Pub,Pub dining,Sun,23,56,107,25
+The Pub,Pub dining,Sun,24,36,67,25
+Room Service,Hotel,Mon,7,22,30,12
+Room Service,Hotel,Mon,8,30,46,12
+Room Service,Hotel,Mon,9,24,31,12
+Room Service,Hotel,Mon,10,8,12,12
+Room Service,Hotel,Mon,11,8,11,12
+Room Service,Hotel,Mon,12,12,18,12
+Room Service,Hotel,Mon,13,13,18,12
+Room Service,Hotel,Mon,14,8,11,12
+Room Service,Hotel,Mon,15,8,12,12
+Room Service,Hotel,Mon,16,8,11,12
+Room Service,Hotel,Mon,17,8,12,12
+Room Service,Hotel,Mon,18,16,21,12
+Room Service,Hotel,Mon,19,22,29,12
+Room Service,Hotel,Mon,20,27,34,12
+Room Service,Hotel,Mon,21,30,38,12
+Room Service,Hotel,Mon,22,25,34,12
+Room Service,Hotel,Mon,23,19,25,12
+Room Service,Hotel,Mon,24,12,18,12
+Room Service,Hotel,Tue,7,23,32,12
+Room Service,Hotel,Tue,8,33,47,12
+Room Service,Hotel,Tue,9,23,34,12
+Room Service,Hotel,Tue,10,9,12,12
+Room Service,Hotel,Tue,11,9,12,12
+Room Service,Hotel,Tue,12,13,20,12
+Room Service,Hotel,Tue,13,14,20,12
+Room Service,Hotel,Tue,14,8,12,12
+Room Service,Hotel,Tue,15,9,11,12
+Room Service,Hotel,Tue,16,8,13,12
+Room Service,Hotel,Tue,17,9,11,12
+Room Service,Hotel,Tue,18,16,22,12
+Room Service,Hotel,Tue,19,23,35,12
+Room Service,Hotel,Tue,20,26,36,12
+Room Service,Hotel,Tue,21,32,45,12
+Room Service,Hotel,Tue,22,26,40,12
+Room Service,Hotel,Tue,23,21,30,12
+Room Service,Hotel,Tue,24,14,20,12
+Room Service,Hotel,Wed,7,28,40,12
+Room Service,Hotel,Wed,8,36,55,12
+Room Service,Hotel,Wed,9,27,39,12
+Room Service,Hotel,Wed,10,9,14,12
+Room Service,Hotel,Wed,11,10,13,12
+Room Service,Hotel,Wed,12,15,20,12
+Room Service,Hotel,Wed,13,15,20,12
+Room Service,Hotel,Wed,14,10,13,12
+Room Service,Hotel,Wed,15,10,13,12
+Room Service,Hotel,Wed,16,10,14,12
+Room Service,Hotel,Wed,17,9,14,12
+Room Service,Hotel,Wed,18,19,27,12
+Room Service,Hotel,Wed,19,27,40,12
+Room Service,Hotel,Wed,20,30,42,12
+Room Service,Hotel,Wed,21,37,45,12
+Room Service,Hotel,Wed,22,31,44,12
+Room Service,Hotel,Wed,23,21,33,12
+Room Service,Hotel,Wed,24,16,23,12
+Room Service,Hotel,Thu,7,29,45,12
+Room Service,Hotel,Thu,8,43,60,12
+Room Service,Hotel,Thu,9,32,39,12
+Room Service,Hotel,Thu,10,11,15,12
+Room Service,Hotel,Thu,11,10,16,12
+Room Service,Hotel,Thu,12,17,24,12
+Room Service,Hotel,Thu,13,17,25,12
+Room Service,Hotel,Thu,14,10,15,12
+Room Service,Hotel,Thu,15,11,15,12
+Room Service,Hotel,Thu,16,11,14,12
+Room Service,Hotel,Thu,17,11,15,12
+Room Service,Hotel,Thu,18,21,29,12
+Room Service,Hotel,Thu,19,30,45,12
+Room Service,Hotel,Thu,20,35,50,12
+Room Service,Hotel,Thu,21,37,52,12
+Room Service,Hotel,Thu,22,33,49,12
+Room Service,Hotel,Thu,23,26,38,12
+Room Service,Hotel,Thu,24,16,25,12
+Room Service,Hotel,Fri,7,42,56,12
+Room Service,Hotel,Fri,8,52,76,12
+Room Service,Hotel,Fri,9,36,52,12
+Room Service,Hotel,Fri,10,15,20,12
+Room Service,Hotel,Fri,11,14,21,12
+Room Service,Hotel,Fri,12,24,32,12
+Room Service,Hotel,Fri,13,23,32,12
+Room Service,Hotel,Fri,14,15,20,12
+Room Service,Hotel,Fri,15,14,19,12
+Room Service,Hotel,Fri,16,14,20,12
+Room Service,Hotel,Fri,17,15,18,12
+Room Service,Hotel,Fri,18,27,36,12
+Room Service,Hotel,Fri,19,41,59,12
+Room Service,Hotel,Fri,20,46,62,12
+Room Service,Hotel,Fri,21,53,74,12
+Room Service,Hotel,Fri,22,45,61,12
+Room Service,Hotel,Fri,23,33,47,12
+Room Service,Hotel,Fri,24,22,31,12
+Room Service,Hotel,Sat,7,45,66,12
+Room Service,Hotel,Sat,8,59,89,12
+Room Service,Hotel,Sat,9,41,58,12
+Room Service,Hotel,Sat,10,17,22,12
+Room Service,Hotel,Sat,11,17,22,12
+Room Service,Hotel,Sat,12,23,35,12
+Room Service,Hotel,Sat,13,26,38,12
+Room Service,Hotel,Sat,14,17,22,12
+Room Service,Hotel,Sat,15,16,21,12
+Room Service,Hotel,Sat,16,16,21,12
+Room Service,Hotel,Sat,17,15,20,12
+Room Service,Hotel,Sat,18,29,45,12
+Room Service,Hotel,Sat,19,41,66,12
+Room Service,Hotel,Sat,20,47,75,12
+Room Service,Hotel,Sat,21,53,73,12
+Room Service,Hotel,Sat,22,52,68,12
+Room Service,Hotel,Sat,23,39,50,12
+Room Service,Hotel,Sat,24,23,37,12
+Room Service,Hotel,Sun,7,36,51,12
+Room Service,Hotel,Sun,8,51,65,12
+Room Service,Hotel,Sun,9,35,50,12
+Room Service,Hotel,Sun,10,12,19,12
+Room Service,Hotel,Sun,11,12,19,12
+Room Service,Hotel,Sun,12,20,26,12
+Room Service,Hotel,Sun,13,18,28,12
+Room Service,Hotel,Sun,14,13,16,12
+Room Service,Hotel,Sun,15,12,18,12
+Room Service,Hotel,Sun,16,12,18,12
+Room Service,Hotel,Sun,17,12,16,12
+Room Service,Hotel,Sun,18,24,35,12
+Room Service,Hotel,Sun,19,34,50,12
+Room Service,Hotel,Sun,20,37,58,12
+Room Service,Hotel,Sun,21,44,64,12
+Room Service,Hotel,Sun,22,40,55,12
+Room Service,Hotel,Sun,23,29,43,12
+Room Service,Hotel,Sun,24,21,29,12
+Banquets,Events,Mon,7,24,35,40
+Banquets,Events,Mon,8,33,58,40
+Banquets,Events,Mon,9,31,47,40
+Banquets,Events,Mon,10,29,46,40
+Banquets,Events,Mon,11,32,47,40
+Banquets,Events,Mon,12,61,87,40
+Banquets,Events,Mon,13,59,96,40
+Banquets,Events,Mon,14,29,46,40
+Banquets,Events,Mon,15,30,48,40
+Banquets,Events,Mon,16,31,43,40
+Banquets,Events,Mon,17,28,43,40
+Banquets,Events,Mon,18,71,109,40
+Banquets,Events,Mon,19,126,191,40
+Banquets,Events,Mon,20,111,190,40
+Banquets,Events,Mon,21,76,114,40
+Banquets,Events,Mon,22,36,52,40
+Banquets,Events,Mon,23,32,47,40
+Banquets,Events,Mon,24,0,0,40
+Banquets,Events,Tue,7,25,38,40
+Banquets,Events,Tue,8,35,50,40
+Banquets,Events,Tue,9,30,47,40
+Banquets,Events,Tue,10,29,47,40
+Banquets,Events,Tue,11,32,43,40
+Banquets,Events,Tue,12,61,93,40
+Banquets,Events,Tue,13,60,86,40
+Banquets,Events,Tue,14,29,47,40
+Banquets,Events,Tue,15,31,45,40
+Banquets,Events,Tue,16,28,47,40
+Banquets,Events,Tue,17,31,43,40
+Banquets,Events,Tue,18,73,115,40
+Banquets,Events,Tue,19,127,181,40
+Banquets,Events,Tue,20,120,183,40
+Banquets,Events,Tue,21,68,103,40
+Banquets,Events,Tue,22,34,56,40
+Banquets,Events,Tue,23,29,45,40
+Banquets,Events,Tue,24,0,0,40
+Banquets,Events,Wed,7,39,60,40
+Banquets,Events,Wed,8,57,83,40
+Banquets,Events,Wed,9,54,73,40
+Banquets,Events,Wed,10,47,77,40
+Banquets,Events,Wed,11,52,71,40
+Banquets,Events,Wed,12,102,146,40
+Banquets,Events,Wed,13,100,138,40
+Banquets,Events,Wed,14,46,81,40
+Banquets,Events,Wed,15,53,75,40
+Banquets,Events,Wed,16,51,72,40
+Banquets,Events,Wed,17,52,74,40
+Banquets,Events,Wed,18,129,188,40
+Banquets,Events,Wed,19,210,322,40
+Banquets,Events,Wed,20,192,278,40
+Banquets,Events,Wed,21,114,171,40
+Banquets,Events,Wed,22,56,84,40
+Banquets,Events,Wed,23,50,79,40
+Banquets,Events,Wed,24,0,0,40
+Banquets,Events,Thu,7,79,129,40
+Banquets,Events,Thu,8,128,167,40
+Banquets,Events,Thu,9,102,148,40
+Banquets,Events,Thu,10,94,161,40
+Banquets,Events,Thu,11,96,152,40
+Banquets,Events,Thu,12,205,322,40
+Banquets,Events,Thu,13,205,295,40
+Banquets,Events,Thu,14,99,142,40
+Banquets,Events,Thu,15,107,162,40
+Banquets,Events,Thu,16,96,139,40
+Banquets,Events,Thu,17,96,146,40
+Banquets,Events,Thu,18,255,383,40
+Banquets,Events,Thu,19,422,557,40
+Banquets,Events,Thu,20,418,620,40
+Banquets,Events,Thu,21,246,388,40
+Banquets,Events,Thu,22,111,170,40
+Banquets,Events,Thu,23,104,161,40
+Banquets,Events,Thu,24,0,0,40
+Banquets,Events,Fri,7,90,128,40
+Banquets,Events,Fri,8,134,206,40
+Banquets,Events,Fri,9,103,160,40
+Banquets,Events,Fri,10,106,155,40
+Banquets,Events,Fri,11,110,156,40
+Banquets,Events,Fri,12,211,311,40
+Banquets,Events,Fri,13,226,304,40
+Banquets,Events,Fri,14,114,157,40
+Banquets,Events,Fri,15,102,176,40
+Banquets,Events,Fri,16,105,176,40
+Banquets,Events,Fri,17,116,175,40
+Banquets,Events,Fri,18,249,393,40
+Banquets,Events,Fri,19,412,705,40
+Banquets,Events,Fri,20,464,674,40
+Banquets,Events,Fri,21,262,386,40
+Banquets,Events,Fri,22,139,197,40
+Banquets,Events,Fri,23,112,156,40
+Banquets,Events,Fri,24,0,0,40
+Banquets,Events,Sat,7,92,134,40
+Banquets,Events,Sat,8,149,218,40
+Banquets,Events,Sat,9,113,191,40
+Banquets,Events,Sat,10,116,177,40
+Banquets,Events,Sat,11,113,173,40
+Banquets,Events,Sat,12,253,350,40
+Banquets,Events,Sat,13,227,359,40
+Banquets,Events,Sat,14,117,192,40
+Banquets,Events,Sat,15,113,194,40
+Banquets,Events,Sat,16,111,191,40
+Banquets,Events,Sat,17,123,172,40
+Banquets,Events,Sat,18,287,417,40
+Banquets,Events,Sat,19,461,686,40
+Banquets,Events,Sat,20,470,777,40
+Banquets,Events,Sat,21,311,461,40
+Banquets,Events,Sat,22,135,209,40
+Banquets,Events,Sat,23,128,167,40
+Banquets,Events,Sat,24,0,0,40
+Banquets,Events,Sun,7,33,46,40
+Banquets,Events,Sun,8,52,66,40
+Banquets,Events,Sun,9,42,58,40
+Banquets,Events,Sun,10,38,55,40
+Banquets,Events,Sun,11,42,60,40
+Banquets,Events,Sun,12,76,119,40
+Banquets,Events,Sun,13,85,115,40
+Banquets,Events,Sun,14,40,57,40
+Banquets,Events,Sun,15,38,63,40
+Banquets,Events,Sun,16,41,57,40
+Banquets,Events,Sun,17,37,56,40
+Banquets,Events,Sun,18,98,144,40
+Banquets,Events,Sun,19,154,229,40
+Banquets,Events,Sun,20,163,248,40
+Banquets,Events,Sun,21,101,146,40
+Banquets,Events,Sun,22,46,67,40
+Banquets,Events,Sun,23,41,59,40
+Banquets,Events,Sun,24,0,0,40
